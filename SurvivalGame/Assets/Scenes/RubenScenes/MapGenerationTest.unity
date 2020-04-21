@@ -121,6 +121,86 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &440608257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 440608258}
+  - component: {fileID: 440608259}
+  - component: {fileID: 440608260}
+  m_Layer: 0
+  m_Name: WorldGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &440608258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440608257}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &440608259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440608257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5681d52b34221364b88f80bd917dfd32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seed: 133567
+  useManhattanDistance: 1
+  mapSize: 40
+  edgeRadius: 4
+  regionColors:
+  - {r: 0.7830189, g: 0, b: 0, a: 1}
+  - {r: 0.6981132, g: 0.64565563, b: 0, a: 1}
+  - {r: 0, g: 0.43502307, b: 1, a: 1}
+  - {r: 0.086240634, g: 0.9622642, b: 0.5943179, a: 1}
+  - {r: 0.78400433, g: 0.2028302, b: 1, a: 1}
+  - {r: 0.36356154, g: 0.26798192, b: 0.6900857, a: 1}
+  - {r: 0.6721507, g: 0.45011097, b: 0.88087344, a: 1}
+  - {r: 0.2400805, g: 0.31239024, b: 0.28381374, a: 1}
+  - {r: 0.60010856, g: 0.98851275, b: 0.34779277, a: 1}
+  - {r: 0.8771261, g: 0.44999403, b: 0.17134787, a: 1}
+  - {r: 0.8919141, g: 0.95239794, b: 0.16197456, a: 1}
+  - {r: 0.012409212, g: 0.9194132, b: 0.034303192, a: 1}
+  - {r: 0.84227204, g: 0.19915512, b: 0.48355705, a: 1}
+  - {r: 0.41268176, g: 0.010319234, b: 0.82858896, a: 1}
+  - {r: 0.45389777, g: 0.97650707, b: 0.8520384, a: 1}
+--- !u!114 &440608260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440608257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ca353d538bc584db5b71db1831a9ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundTile: {fileID: 8723333516204485097, guid: 54d4fe91423dbad4bb382a73becfbba0,
+    type: 3}
+  map: {fileID: 2800000, guid: 113c81c699c3fec4ea97aa28f94e430f, type: 3}
+  testCoordForSpawnTile: {x: 0, y: 0}
 --- !u!1 &1018920142
 GameObject:
   m_ObjectHideFlags: 0

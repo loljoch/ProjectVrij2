@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace EasyButtons
+namespace EasyAttributes
 {
-    public enum ButtonMode
+    public enum ViewMode
     {
         AlwaysEnabled,
         EnabledInPlayMode,
@@ -10,7 +10,7 @@ namespace EasyButtons
     }
 
     [Flags]
-    public enum ButtonSpacing 
+    public enum Spacing 
     {
         None = 0,
         Before = 1,
@@ -32,12 +32,12 @@ namespace EasyButtons
     public sealed class ButtonAttribute : Attribute
     {
         private string name = null;
-        private ButtonMode mode = ButtonMode.AlwaysEnabled;
-        private ButtonSpacing spacing = ButtonSpacing.None;
+        private ViewMode mode = ViewMode.AlwaysEnabled;
+        private Spacing spacing = Spacing.None;
 
         public string Name { get { return name; } }
-        public ButtonMode Mode { get { return mode; } }
-        public ButtonSpacing Spacing { get { return spacing; } }
+        public ViewMode Mode { get { return mode; } }
+        public Spacing Spacing { get { return spacing; } }
 
         public ButtonAttribute()
         {
@@ -48,29 +48,29 @@ namespace EasyButtons
             this.name = name;
         }
 
-        public ButtonAttribute(ButtonMode mode)
+        public ButtonAttribute(ViewMode mode)
         {
             this.mode = mode;
         }
         
-        public ButtonAttribute(ButtonSpacing spacing) 
+        public ButtonAttribute(Spacing spacing) 
         {
             this.spacing = spacing;
         }
         
-        public ButtonAttribute(string name, ButtonMode mode)
+        public ButtonAttribute(string name, ViewMode mode)
         {
             this.name = name;
             this.mode = mode;
         }
 
-        public ButtonAttribute(string name, ButtonSpacing spacing) 
+        public ButtonAttribute(string name, Spacing spacing) 
         {
             this.name = name;
             this.spacing = spacing;
         }
 
-        public ButtonAttribute(string name, ButtonMode mode, ButtonSpacing spacing) 
+        public ButtonAttribute(string name, ViewMode mode, Spacing spacing) 
         {
             this.name = name;
             this.mode = mode;

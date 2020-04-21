@@ -4,9 +4,11 @@ using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-namespace EasyButtons
+namespace EasyAttributes
 {
-    public static class EasyButtonsEditorExtensions
+
+
+    public static class ButtonsEditorExtensions
     {
         public static void DrawEasyButtons(this Editor editor)
         {
@@ -23,11 +25,11 @@ namespace EasyButtons
                 {
                     // Determine whether the button should be enabled based on its mode
                     var wasEnabled = GUI.enabled;
-                    GUI.enabled = ba.Mode == ButtonMode.AlwaysEnabled
-                        || (EditorApplication.isPlaying ? ba.Mode == ButtonMode.EnabledInPlayMode : ba.Mode == ButtonMode.DisabledInPlayMode);
+                    GUI.enabled = ba.Mode == ViewMode.AlwaysEnabled
+                        || (EditorApplication.isPlaying ? ba.Mode == ViewMode.EnabledInPlayMode : ba.Mode == ViewMode.DisabledInPlayMode);
 
 
-                    if (((int)ba.Spacing & (int)ButtonSpacing.Before) != 0) GUILayout.Space(10);
+                    if (((int)ba.Spacing & (int)Spacing.Before) != 0) GUILayout.Space(10);
                     
                     // Draw a button which invokes the method
                     var buttonName = String.IsNullOrEmpty(ba.Name) ? ObjectNames.NicifyVariableName(method.Name) : ba.Name;
@@ -39,7 +41,7 @@ namespace EasyButtons
                         }
                     }
 
-                    if (((int)ba.Spacing & (int)ButtonSpacing.After) != 0) GUILayout.Space(10);
+                    if (((int)ba.Spacing & (int)Spacing.After) != 0) GUILayout.Space(10);
                     
                     GUI.enabled = wasEnabled;
                 }

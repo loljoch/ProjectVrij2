@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
+using UnityEditor;
 
 namespace Extensions
 {
@@ -93,6 +95,16 @@ namespace Extensions
                     H = 4f + (color.r - color.g) / _Delta;
                 }
             }
+        }
+
+
+        public static void SaveToPNG(this Texture2D t)
+        {
+            byte[] pngBytes = t.EncodeToPNG();
+
+            string path = Application.dataPath + "/Resources/Map.png";
+
+            File.WriteAllBytes(path, pngBytes);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-namespace EasyButtons
+namespace EasyAttributes
 {
     /// <summary>
     /// Custom inspector for Object including derived classes.
@@ -11,6 +11,7 @@ namespace EasyButtons
     {
         public override void OnInspectorGUI()
         {
+            this.DrawTexturePreview();
             this.DrawEasyButtons();
 
             // Draw the rest of the inspector as usual
