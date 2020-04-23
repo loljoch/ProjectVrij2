@@ -20,39 +20,14 @@ public class WorldBuilder : MonoBehaviour
     }
 
     [EasyAttributes.Button]
-    private void SpawnTile()
-    {
-        SpawnTile(testCoordForSpawnTile.x, testCoordForSpawnTile.y);
-    }
-
-    [EasyAttributes.Button]
     private void SpawnAllTiles()
-    {
-        for (int i = 0; i < map.height; i++)
-        {
-            SpawnXRow();
-            testCoordForSpawnTile.y++;
-        }
-    }
-
-    [EasyAttributes.Button]
-    private void DebugAllPixelColors()
     {
         for (int y = 0; y < map.height; y++)
         {
             for (int x = 0; x < map.width; x++)
             {
-                Debug.Log(map.GetPixel(x, y));
+                SpawnTile(x, y);
             }
-        }
-    }
-
-    [EasyAttributes.Button]
-    private void SpawnXRow()
-    {
-        for (int i = 0; i < map.width; i++)
-        {
-            SpawnTile(i, testCoordForSpawnTile.y);
         }
     }
 

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Extensions;
 
@@ -7,7 +6,7 @@ public class WorldGenerator : MonoBehaviour
 {
     public int seed = 0;
 
-    //Generation variables
+    [Header("Generation Variables")]
     [SerializeField] private bool useManhattanDistance = false;
     [SerializeField] private int mapSize = 100;
     [SerializeField] private int edgeRadius = 5;
@@ -16,6 +15,17 @@ public class WorldGenerator : MonoBehaviour
     [EasyAttributes.Preview] private Texture2D regions;
     private List<Vector2Int> centroids;
     private List<ColoredVector2Int> pix;
+
+    [EasyAttributes.Button]
+    private void GenerateNewMap()
+    {
+        InitializeRegions();
+        EqualizeRegions();
+        EqualizeRegions();
+        PerlinNoiseBorder();
+        RemoveAllBlackSpots();
+        RemoveAllBlackSpots();
+    }
 
     [EasyAttributes.Button]
     private void RandomSeed()
@@ -31,10 +41,10 @@ public class WorldGenerator : MonoBehaviour
         seed = newSeed;
     }
 
+    #region HigherFunctions
     /// <summary>
     /// Generate random points based on the seed, then use Voronoi tesselation to generate the regions
     /// </summary>
-    [EasyAttributes.Button]
     private void InitializeRegions()
     {
         GenerateRandomPoints();
@@ -44,14 +54,16 @@ public class WorldGenerator : MonoBehaviour
     /// <summary>
     /// Generate new centroids, then use Voronoi tesselation to generate the regions again
     /// </summary>
-    [EasyAttributes.Button]
     private void EqualizeRegions()
     {
         GenerateCentroids();
         GenerateRegions();
     }
 
-    [EasyAttributes.Button]
+    /// <summary>
+    /// Returns the 2 outer borders of all regions
+    /// </summary>
+    /// <returns></returns>
     private List<ColoredBorders> ColorRegionBorders()
     {
         //Setup
@@ -108,7 +120,9 @@ public class WorldGenerator : MonoBehaviour
         return cBorders;
     }
 
-    [EasyAttributes.Button]
+    /// <summary>
+    /// Makes the border more jaggy
+    /// </summary>
     private void PerlinNoiseBorder()
     {
         var coloredBorders = ColorRegionBorders();
@@ -134,7 +148,9 @@ public class WorldGenerator : MonoBehaviour
         ApplyPixColorsToTexture();
     }
 
-    [EasyAttributes.Button]
+    /// <summary>
+    /// Colors all black pixels to one of their direct neighbours
+    /// </summary>
     private void RemoveAllBlackSpots()
     {
         for (int i = 0; i < pix.Count; i++)
@@ -158,8 +174,9 @@ public class WorldGenerator : MonoBehaviour
 
         ApplyPixColorsToTexture();
     }
+    #endregion
 
-
+    #region Generation
     /// <summary>
     /// Generate a few random points
     /// </summary>
@@ -216,6 +233,7 @@ public class WorldGenerator : MonoBehaviour
 
         ApplyPixColorsToTexture();
     }
+    #endregion
 
     /// <summary>
     /// Gets all regions and puts them in a list of lists
@@ -243,23 +261,28 @@ public class WorldGenerator : MonoBehaviour
     /// Adds a random color to the regions color list (basically adding an extra region)
     /// </summary>
     [EasyAttributes.Button()]
-    private void AddRandomColor()
+    private void AddRegion()
     {
-        regionColors.Add(new Color(Random.value, Random.value, Random.value));
+        Color c;
+        do
+        {
+            c = new Color(Random.value, Random.value, Random.value);
+        } while (regionColors.Contains(c));
+
+        regionColors.Add(c);
     }
 
     [EasyAttributes.Button]
     private void SaveToPng()
     {
         regions.SaveToPNG();
-
-        //THIS WORKS
-        //byte[] pngBytes = regions.EncodeToPNG();
-        //Texture2D nTex = new Texture2D(mapSize, mapSize);
-        //nTex.LoadImage(pngBytes);
-        //nTex.Apply();
     }
 
+    /// <summary>
+    /// Set the pixel color at the desired x,y
+    /// </summary>
+    /// <param name="vec">Coordinate</param>
+    /// <param name="col">Color</param>
     private void SetPixColor(Vector2Int vec, Color col)
     {
         int index = pix.FindIndex(x => x.vector2Int == vec);
