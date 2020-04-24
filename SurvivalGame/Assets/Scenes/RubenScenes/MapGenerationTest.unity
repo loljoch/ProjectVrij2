@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seed: 567431
   useManhattanDistance: 1
-  mapSize: 80
+  mapSize: 320
   edgeRadius: 4
   regionColors:
   - {r: 0.30402306, g: 0.6853606, b: 0.3568497, a: 1}

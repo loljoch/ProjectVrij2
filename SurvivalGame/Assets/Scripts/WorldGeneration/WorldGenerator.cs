@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using Extensions;
+using System.Threading;
 
 public class WorldGenerator : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class WorldGenerator : MonoBehaviour
     [EasyAttributes.Preview] private Texture2D regions;
     private List<Vector2Int> centroids;
     private List<ColoredVector2Int> pix;
+
+    private List<ColoredVector2Int> leftBottomPix, rightBottomPix, leftTopPix, rightTopPix;
 
     [EasyAttributes.Button]
     private void GenerateNewMap()
@@ -42,6 +45,7 @@ public class WorldGenerator : MonoBehaviour
     }
 
     #region HigherFunctions
+    [EasyAttributes.Button]
     /// <summary>
     /// Generate random points based on the seed, then use Voronoi tesselation to generate the regions
     /// </summary>
@@ -49,8 +53,10 @@ public class WorldGenerator : MonoBehaviour
     {
         GenerateRandomPoints();
         GenerateRegions();
+        Debug.Log("regions generated");
     }
 
+    [EasyAttributes.Button]
     /// <summary>
     /// Generate new centroids, then use Voronoi tesselation to generate the regions again
     /// </summary>
@@ -58,6 +64,7 @@ public class WorldGenerator : MonoBehaviour
     {
         GenerateCentroids();
         GenerateRegions();
+        Debug.Log("regions equalized");
     }
 
     /// <summary>
@@ -70,7 +77,7 @@ public class WorldGenerator : MonoBehaviour
         List<List<ColoredVector2Int>> regionList = GetRegions();
         List<ColoredBorders> cBorders = new List<ColoredBorders>();
 
-        for (int i = 0; i < regionList.Count; i++)
+        for (int i = regionList.Count-2; i < regionList.Count; i++)
         {
             List<ColoredVector2Int> l = regionList[i];
             ColoredBorders cBorder = new ColoredBorders(regionList[i][0].color);
@@ -80,22 +87,21 @@ public class WorldGenerator : MonoBehaviour
                 ColoredVector2Int currentCVec = l[r];
                 List<Vector2Int> n = currentCVec.vector2Int.GetDirectNeighbours(mapSize);
 
-                //Check if it's next to mapborder
-                if (n.Count < 4)
-                {
-                    cBorder.outerBorder.Add(currentCVec.vector2Int);
-                    continue;
-                }
+                bool addable = true;
 
                 //Checks if it's next to another color
                 for (int t = 0; t < n.Count; t++)
                 {
-                    if(pix.Exists(x => (x.vector2Int == n[t]) && (x.color != currentCVec.color)))
+                    if(!l.Exists(x => x.vector2Int == n[t]))
                     {
-                        cBorder.outerBorder.Add(currentCVec.vector2Int);
+                        addable = false;
                         break;
                     }
                 }
+
+                if (addable) continue;
+
+                cBorder.outerBorder.Add(currentCVec.vector2Int);
             }
 
             for (int r = 0; r < l.Count; r++)
@@ -103,49 +109,88 @@ public class WorldGenerator : MonoBehaviour
                 ColoredVector2Int currentCVec = l[r];
                 List<Vector2Int> n = currentCVec.vector2Int.GetDirectNeighbours(mapSize);
 
+                bool addable = true;
+
                 //Checks if it's next to another color
                 for (int t = 0; t < n.Count; t++)
                 {
-                    if (pix.Exists(x => (x.vector2Int == n[t]) && (x.color != currentCVec.color)))
+                    if (!l.Exists(x => x.vector2Int == n[t]))
                     {
-                        cBorder.innerBorder.Add(currentCVec.vector2Int);
+                        addable = false;
                         break;
                     }
                 }
+
+                if (!addable) continue;
+                cBorder.innerBorder.Add(currentCVec.vector2Int);
             }
 
             cBorders.Add(cBorder);
         }
 
+        Debug.Log("regions colored");
         return cBorders;
     }
 
+    [EasyAttributes.Button]
     /// <summary>
     /// Makes the border more jaggy
     /// </summary>
     private void PerlinNoiseBorder()
     {
         var coloredBorders = ColorRegionBorders();
-        
+
         //Disable some part of the border
         for (int i = 0; i < coloredBorders.Count; i++)
         {
             ColoredBorders cBorder = coloredBorders[i];
+            Color c = Color.black;
 
+            //for (int r = 0; r < cBorder.innerBorder.Count; r++)
+            //{
+            //    float value = Random.value;
+            //    SetPixColor((value > 0.5f) ? cBorder.innerBorder[r] : cBorder.outerBorder[r], c);
+            //}
+
+            //for (int r = 0; r < cBorder.outerBorder.Count; r++)
+            //{
+            //    float value = Random.value;
+            //    SetPixColor(cBorder.outerBorder[r], (value > 0.5f) ? c : Color.black);
+            //}
             for (int r = 0; r < cBorder.innerBorder.Count; r++)
             {
-                float value = Random.value;
-                SetPixColor((value > 0.5f)? cBorder.innerBorder[r] : cBorder.outerBorder[r], cBorder.color);
-                
+                SetPixColor(cBorder.innerBorder[r], c);
             }
 
             for (int r = 0; r < cBorder.outerBorder.Count; r++)
             {
-                SetPixColor(cBorder.outerBorder[r], (Random.value > 0.5f) ? cBorder.color : Color.black);
+                SetPixColor(cBorder.outerBorder[r], c);
             }
         }
 
         ApplyPixColorsToTexture();
+    }
+
+    private void ColorInnerBorderAsync(List<Vector2Int> cBorder, Color c)
+    {
+        for (int r = 0; r < cBorder.Count; r++)
+        {
+            float value = Random.value;
+            SetPixColor((value > 0.5f) ? cBorder[r] : cBorder[r], c);
+        }
+    }
+
+    private void ColorOuterBorderAsync(List<Vector2Int> cBorder, Color c)
+    {
+        //for (int r = 0; r < cBorder.Count; r++)
+        //{
+        //    float value = Random.value;
+        //    SetPixColor((value > 0.5f) ? cBorder[r] : cBorder[r], c);
+        //}
+        for (int r = 0; r < cBorder.Count; r++)
+        {
+            SetPixColor(cBorder[r], c);
+        }
     }
 
     /// <summary>
@@ -235,6 +280,7 @@ public class WorldGenerator : MonoBehaviour
     }
     #endregion
 
+    [EasyAttributes.Button]
     /// <summary>
     /// Gets all regions and puts them in a list of lists
     /// </summary>
