@@ -87,21 +87,15 @@ public class WorldGenerator : MonoBehaviour
                 ColoredVector2Int currentCVec = l[r];
                 List<Vector2Int> n = currentCVec.vector2Int.GetDirectNeighbours(mapSize);
 
-                bool addable = true;
-
                 //Checks if it's next to another color
                 for (int t = 0; t < n.Count; t++)
                 {
-                    if(!l.Exists(x => x.vector2Int == n[t]))
+                    if (pix.Exists(x => (x.vector2Int == n[t]) && (x.color != currentCVec.color)))
                     {
-                        addable = false;
+                        cBorder.outerBorder.Add(currentCVec.vector2Int);
                         break;
                     }
                 }
-
-                if (addable) continue;
-
-                cBorder.outerBorder.Add(currentCVec.vector2Int);
             }
 
             for (int r = 0; r < l.Count; r++)
@@ -109,20 +103,15 @@ public class WorldGenerator : MonoBehaviour
                 ColoredVector2Int currentCVec = l[r];
                 List<Vector2Int> n = currentCVec.vector2Int.GetDirectNeighbours(mapSize);
 
-                bool addable = true;
-
                 //Checks if it's next to another color
                 for (int t = 0; t < n.Count; t++)
                 {
-                    if (!l.Exists(x => x.vector2Int == n[t]))
+                    if (pix.Exists(x => (x.vector2Int == n[t]) && (x.color != currentCVec.color)))
                     {
-                        addable = false;
+                        cBorder.innerBorder.Add(currentCVec.vector2Int);
                         break;
                     }
                 }
-
-                if (!addable) continue;
-                cBorder.innerBorder.Add(currentCVec.vector2Int);
             }
 
             cBorders.Add(cBorder);
@@ -140,58 +129,29 @@ public class WorldGenerator : MonoBehaviour
     {
         var coloredBorders = ColorRegionBorders();
 
+        Color c = Color.black;
+
         //Disable some part of the border
         for (int i = 0; i < coloredBorders.Count; i++)
         {
             ColoredBorders cBorder = coloredBorders[i];
-            Color c = Color.black;
 
-            //for (int r = 0; r < cBorder.innerBorder.Count; r++)
-            //{
-            //    float value = Random.value;
-            //    SetPixColor((value > 0.5f) ? cBorder.innerBorder[r] : cBorder.outerBorder[r], c);
-            //}
-
-            //for (int r = 0; r < cBorder.outerBorder.Count; r++)
-            //{
-            //    float value = Random.value;
-            //    SetPixColor(cBorder.outerBorder[r], (value > 0.5f) ? c : Color.black);
-            //}
             for (int r = 0; r < cBorder.innerBorder.Count; r++)
             {
-                SetPixColor(cBorder.innerBorder[r], c);
+                float value = Random.value;
+                SetPixColor((value > 0.5f) ? cBorder.innerBorder[r] : cBorder.outerBorder[r], c);
             }
 
             for (int r = 0; r < cBorder.outerBorder.Count; r++)
             {
-                SetPixColor(cBorder.outerBorder[r], c);
+                float value = Random.value;
+                SetPixColor(cBorder.outerBorder[r], (value > 0.5f) ? c : Color.black);
             }
         }
 
         ApplyPixColorsToTexture();
     }
 
-    private void ColorInnerBorderAsync(List<Vector2Int> cBorder, Color c)
-    {
-        for (int r = 0; r < cBorder.Count; r++)
-        {
-            float value = Random.value;
-            SetPixColor((value > 0.5f) ? cBorder[r] : cBorder[r], c);
-        }
-    }
-
-    private void ColorOuterBorderAsync(List<Vector2Int> cBorder, Color c)
-    {
-        //for (int r = 0; r < cBorder.Count; r++)
-        //{
-        //    float value = Random.value;
-        //    SetPixColor((value > 0.5f) ? cBorder[r] : cBorder[r], c);
-        //}
-        for (int r = 0; r < cBorder.Count; r++)
-        {
-            SetPixColor(cBorder[r], c);
-        }
-    }
 
     /// <summary>
     /// Colors all black pixels to one of their direct neighbours
