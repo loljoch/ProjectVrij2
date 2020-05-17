@@ -6,7 +6,27 @@ public class Inventory : MonoBehaviour
     public List<ResourceDisplay> itemSlots;
     [HideInInspector] public List<int> itemIds = new List<int>(24);
     public delegate void onAddItem();
+    public delegate void onHide();
     public onAddItem OnAddItem;
+    public onHide OnHide;
+
+    public bool Active
+    {
+        get
+        {
+            return gameObject.activeSelf;
+        }
+        set
+        {
+            if (value)
+            {
+                Show();
+            } else
+            {
+                Hide();
+            }
+        }
+    }
 
 
     [Header("Test variables")]
@@ -50,6 +70,17 @@ public class Inventory : MonoBehaviour
         {
             rd.resource.Quantity -= amount;
         }
+    }
+
+    public void Show()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+        OnHide?.Invoke();
     }
 
     private int GetOpenIndex()

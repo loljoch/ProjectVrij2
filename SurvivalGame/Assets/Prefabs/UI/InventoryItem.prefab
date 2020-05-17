@@ -87,12 +87,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92652adf06a33704da90c911cff66d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quantityBgDisplay: {fileID: 4782311914769268033}
-  resourceQuantity: {fileID: 4782311914500131103}
-  resourceSprite: {fileID: 4782311913849625719}
   resource:
     item: {fileID: 0}
     quantity: 1
+  quantityBgDisplay: {fileID: 4782311914769268033}
+  resourceQuantity: {fileID: 4782311914500131103}
+  resourceSprite: {fileID: 4782311913849625719}
 --- !u!1 &4782311914500131097
 GameObject:
   m_ObjectHideFlags: 0

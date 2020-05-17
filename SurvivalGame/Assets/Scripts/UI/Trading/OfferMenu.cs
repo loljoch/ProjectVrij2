@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 
 public class OfferMenu : MonoBehaviour
@@ -10,7 +9,7 @@ public class OfferMenu : MonoBehaviour
 
     public void SpawnOffers(List<OfferItem> offerItems)
     {
-        Inventory inventory = TradingManager.Instance.inventory;
+        Inventory inventory = UIManager.Instance.inventory;
 
         for (int i = 0; i < offerItems.Count; i++)
         {

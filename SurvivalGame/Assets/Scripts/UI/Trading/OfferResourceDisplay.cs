@@ -19,7 +19,7 @@ public class OfferResourceDisplay : ResourceDisplay
         {
             if (resource == null) return;
 
-            Inventory inventory = TradingManager.Instance.inventory;
+            Inventory inventory = UIManager.Instance.inventory;
             if (inventory.itemIds.Contains(resource.item.id))
             {
                 int index = inventory.itemIds.IndexOf(resource.item.id);

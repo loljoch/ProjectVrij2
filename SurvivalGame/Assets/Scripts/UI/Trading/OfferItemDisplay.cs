@@ -12,10 +12,10 @@ public class OfferItemDisplay : MonoBehaviour
 
     private void OnEnable()
     {
-        button?.onClick.AddListener(() => TradingManager.Instance.tradePopUp.AssignItem(offerItem));
+        button?.onClick.AddListener(() => UIManager.Instance.tradePopUp.AssignItem(offerItem));
 
         //Update requirements when inventory changes happen
-        Inventory inventory = TradingManager.Instance.inventory;
+        Inventory inventory = UIManager.Instance.inventory;
         for (int i = 0; i < resourceDisplays.Length; i++)
         {
             inventory.OnAddItem += resourceDisplays[i].UpdateRequirement;
@@ -24,10 +24,10 @@ public class OfferItemDisplay : MonoBehaviour
 
     private void OnDisable()
     {
-        button?.onClick.RemoveListener(() => TradingManager.Instance.tradePopUp.AssignItem(offerItem));
+        button?.onClick.RemoveListener(() => UIManager.Instance.tradePopUp.AssignItem(offerItem));
 
         //Update requirements when inventory changes happen
-        Inventory inventory = TradingManager.Instance.inventory;
+        Inventory inventory = UIManager.Instance.inventory;
         for (int i = 0; i < resourceDisplays.Length; i++)
         {
             inventory.OnAddItem -= resourceDisplays[i].UpdateRequirement;

@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class ItemDisplay : MonoBehaviour
+public class ItemDisplay : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private TextMeshProUGUI itemName;
     [SerializeField] private TextMeshProUGUI itemDescription;
     [SerializeField] private Image itemSprite;
+
+    private Item item;
 
     public void AssignItem(Item item)
     {
@@ -24,5 +27,12 @@ public class ItemDisplay : MonoBehaviour
         {
             itemSprite.sprite = item.sprite;
         }
+
+        this.item = item;
+    }
+
+    public virtual void OnPointerClick(PointerEventData eventData)
+    {
+        GlobalItemDisplay.Instance.Show(item);
     }
 }

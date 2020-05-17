@@ -17,6 +17,6 @@ public class Trader : MonoBehaviour
 
     public void OpenShop()
     {
-        TradingManager.Instance.InitializeTradeScreen(this);
+        UIManager.Instance.ShowTradeScreen(this);
     }
 }

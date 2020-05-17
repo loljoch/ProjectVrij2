@@ -15,4 +15,5 @@ MonoBehaviour:
   name: Katana
   description: Used for chopping onions
   sprite: {fileID: 21300000, guid: 9411781c65e961645a6ff0a68aaf3d00, type: 3}
+  useCases: 1
   id: 3

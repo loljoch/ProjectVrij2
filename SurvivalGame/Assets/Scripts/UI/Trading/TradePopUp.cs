@@ -20,8 +20,8 @@ public class TradePopUp : MonoBehaviour
 
     private void UpdateExpBar()
     {
-        int maxExp = TradingManager.Instance.currentTrader.nextLevelXp;
-        int cExp = TradingManager.Instance.currentTrader.currentXp;
+        int maxExp = UIManager.Instance.currentTrader.nextLevelXp;
+        int cExp = UIManager.Instance.currentTrader.currentXp;
 
         currentExpSlider.maxValue = maxExp;
         currentExpSlider.value = cExp;
@@ -43,7 +43,7 @@ public class TradePopUp : MonoBehaviour
             }
 
             OfferResourceDisplay[] rds = offerItemDisplay.resourceDisplays;
-            Inventory inventory = TradingManager.Instance.inventory;
+            Inventory inventory = UIManager.Instance.inventory;
 
             //Remove items from inventory
             for (int i = 0; i < rds.Length; i++)
@@ -57,7 +57,7 @@ public class TradePopUp : MonoBehaviour
             inventory.AddItem(offerItemDisplay.offerItem.item);
 
             //Add EXP
-            TradingManager.Instance.currentTrader.currentXp += offerItemDisplay.offerItem.xp;
+            UIManager.Instance.currentTrader.currentXp += offerItemDisplay.offerItem.xp;
         }
 
         UpdateExpBar();
