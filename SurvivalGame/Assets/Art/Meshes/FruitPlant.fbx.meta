@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 93bb0ddc5bbe4b34c804215296a95831
+guid: d86db1ff084ee1245b0f06242d045955
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
@@ -7,18 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Coral1
-    second: {fileID: 2100000, guid: cba5a6fee25cf184eb498aa19b389b5c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CoralDark
-    second: {fileID: 2100000, guid: 50750cd4a59ffdc459febad75d8768c8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CoralLight
-    second: {fileID: 2100000, guid: 3244b0160705b394488043db9c03e9d3, type: 2}
+      name: Fruit
+    second: {fileID: 2100000, guid: 0dfbe78a7507d3b45bc44fe1d4ab1d75, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -27,8 +17,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wood
-    second: {fileID: 2100000, guid: fc1a9354cf6d3084595ef7abfedd6e84, type: 2}
+      name: PlantDark
+    second: {fileID: 2100000, guid: 741cc7ed9890f7c46aac1c3263a72925, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlantLight
+    second: {fileID: 2100000, guid: c00f8677cab53d14ebc2e980bbf09519, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -69,7 +64,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -105,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
