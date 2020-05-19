@@ -7,6 +7,7 @@ public class RightClickMenu : GenericSingleton<RightClickMenu, RightClickMenu>
     [SerializeField] private Button inspectButton;
     [SerializeField] private Button equipButton;
     [SerializeField] private Button eatButton;
+    [SerializeField] private Button dropButton;
 
     private int cItemID = -1;
 
@@ -48,6 +49,7 @@ public class RightClickMenu : GenericSingleton<RightClickMenu, RightClickMenu>
                 {
                     case UseCases.Inspectable:
                         inspectButton.gameObject.SetActive(true);
+                        dropButton.gameObject.SetActive(false);
                         break;
                     case UseCases.Equipable:
                         equipButton.gameObject.SetActive(true);

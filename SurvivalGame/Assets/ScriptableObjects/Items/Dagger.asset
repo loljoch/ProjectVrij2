@@ -16,4 +16,4 @@ MonoBehaviour:
   name: Dagger
   sprite: {fileID: 21300000, guid: aa1dbab0854247049b18996fb5e7319a, type: 3}
   useCases: 1
-  maxQuantity: 64
+  maxQuantity: 69

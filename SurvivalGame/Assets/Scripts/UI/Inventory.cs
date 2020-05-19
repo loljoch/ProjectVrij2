@@ -9,6 +9,21 @@ public class Inventory : MonoBehaviour
     private List<int> items = new List<int>(24);
     private int occupiedDisplays = 0;
 
+    public int itemId = 0;
+    public int itemAmount = 1;
+
+    [Button]
+    public void FooAddItem()
+    {
+        AddItem(itemId, itemAmount);
+    }
+
+    [Button]
+    public void FooRemoveItem()
+    {
+        RemoveItem(itemId, itemAmount);
+    }
+
 
     public void Show()
     {
