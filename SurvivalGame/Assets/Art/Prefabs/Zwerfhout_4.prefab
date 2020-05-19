@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3597591712485592191}
   - component: {fileID: 5527658528440383049}
   - component: {fileID: 2272832708223896240}
-  - component: {fileID: 8401326929387349859}
   m_Layer: 0
   m_Name: Zwerfhout_4
   m_TagString: Untagged
@@ -82,17 +81,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8401326929387349859
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 555753937211309676}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8189140601693759531, guid: 9bfdb0e9df55cc54aa60c32d24da3d79, type: 3}

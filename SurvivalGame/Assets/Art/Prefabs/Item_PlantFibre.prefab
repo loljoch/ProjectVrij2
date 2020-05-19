@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3958330885518463788}
   - component: {fileID: 5455502131711060250}
   - component: {fileID: 1768048934876206563}
-  - component: {fileID: 8328391808489928712}
+  - component: {fileID: 1092552140366177823}
   m_Layer: 0
-  m_Name: PlantFibre
+  m_Name: Item_PlantFibre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8328391808489928712
-MeshCollider:
+--- !u!65 &1092552140366177823
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,7 +92,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5856884322384957885, guid: 80ffb74bc96e26647bfc120d1df727c8, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 3.6162531, y: 1.6428983, z: 4.580394}
+  m_Center: {x: -0.12839822, y: 0.5711496, z: 0.036491644}

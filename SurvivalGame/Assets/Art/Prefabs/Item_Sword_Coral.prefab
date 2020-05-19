@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1053154592410387214}
   - component: {fileID: 2551909274539920687}
   - component: {fileID: 5123940147924081296}
-  - component: {fileID: 1000855501740856631}
   m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1000855501740856631
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412028694584454421}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.97135925, y: 2.2716346, z: 0.6060984}
-  m_Center: {x: -0.025563478, y: -0.07277775, z: -0.030018806}
 --- !u!1 &6264039354803286756
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,6 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5938741640715668068}
+  - component: {fileID: 7232557453129078995}
   m_Layer: 0
   m_Name: Sword_Coral
   m_TagString: Untagged
@@ -205,6 +192,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7232557453129078995
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7219832973787101303}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.580391, y: 7.2437353, z: 0.57278085}
+  m_Center: {x: 0.0291605, y: 4.394997, z: 0.038502336}
 --- !u!1 &8621375714195559210
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +216,6 @@ GameObject:
   - component: {fileID: 2104372471349851520}
   - component: {fileID: 3041952565466596884}
   - component: {fileID: 3713567126996173371}
-  - component: {fileID: 3623915611336463129}
   m_Layer: 0
   m_Name: Blade
   m_TagString: Untagged
@@ -287,17 +286,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3623915611336463129
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8621375714195559210}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7401353886334607404, guid: 93bb0ddc5bbe4b34c804215296a95831, type: 3}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9192516452507142775}
   - component: {fileID: 734444174741768453}
   - component: {fileID: 5428070410114483215}
-  - component: {fileID: 7121582762676264393}
+  - component: {fileID: 7758776011623791713}
   m_Layer: 0
   m_Name: Fruit7
   m_TagString: Untagged
@@ -80,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264393
-MeshCollider:
+--- !u!135 &7758776011623791713
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,10 +90,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5211100087152095035, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072187
+  m_Center: {x: 0.0000009536743, y: 0.0000076293945, z: 0.000011444092}
 --- !u!1 &1221592489205156468
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +104,7 @@ GameObject:
   - component: {fileID: 8292001632110827263}
   - component: {fileID: 8613107431583568324}
   - component: {fileID: 8226162371647260382}
-  - component: {fileID: 7121582762676264244}
+  - component: {fileID: 1659749794376811187}
   m_Layer: 0
   m_Name: Fruit20
   m_TagString: Untagged
@@ -174,8 +173,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264244
-MeshCollider:
+--- !u!135 &1659749794376811187
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -184,10 +183,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2611975170004297262, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072191
+  m_Center: {x: -0.0000019073486, y: -0.0000076293945, z: -0.00000047683716}
 --- !u!1 &1293972199590478885
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2859298701040727606}
+  - component: {fileID: 3028973744218831709}
   m_Layer: 0
   m_Name: FruitPlant
   m_TagString: Untagged
@@ -220,6 +219,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3028973744218831709
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293972199590478885}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2278106, y: 13.661632, z: 0.25505453}
+  m_Center: {x: 0, y: 6.788032, z: 0}
 --- !u!1 &1414513302255874790
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +243,7 @@ GameObject:
   - component: {fileID: 4332383586942295336}
   - component: {fileID: 3268366122195886516}
   - component: {fileID: 5909651191320147169}
-  - component: {fileID: 7121582762676264242}
+  - component: {fileID: 1317951264151778386}
   m_Layer: 0
   m_Name: Fruit18
   m_TagString: Untagged
@@ -300,8 +312,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264242
-MeshCollider:
+--- !u!135 &1317951264151778386
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -310,10 +322,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7228373281988569893, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072191
+  m_Center: {x: 0, y: -0.0000076293945, z: 0.0000038146973}
 --- !u!1 &1754892652753759335
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +336,7 @@ GameObject:
   - component: {fileID: 5548634250595967608}
   - component: {fileID: 1061242467014715470}
   - component: {fileID: 1504426822976401183}
-  - component: {fileID: 7121582762676264396}
+  - component: {fileID: 2096663960419497298}
   m_Layer: 0
   m_Name: Fruit12
   m_TagString: Untagged
@@ -394,8 +405,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264396
-MeshCollider:
+--- !u!135 &2096663960419497298
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -404,10 +415,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -535928302320509614, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072197
+  m_Center: {x: -0.0000076293945, y: -0.000015258789, z: 0.0000019073486}
 --- !u!1 &2737409593061989315
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +429,6 @@ GameObject:
   - component: {fileID: 1030916943952842762}
   - component: {fileID: 8395001412389219704}
   - component: {fileID: 5139255708820360913}
-  - component: {fileID: 7121582762676264384}
   m_Layer: 0
   m_Name: FruitPlant_Base
   m_TagString: Untagged
@@ -490,20 +499,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264384
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2737409593061989315}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2768797406124780698, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
 --- !u!1 &2820523086322022149
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +510,7 @@ GameObject:
   - component: {fileID: 3098815372719401892}
   - component: {fileID: 3245105021034793215}
   - component: {fileID: 3954497767263936364}
-  - component: {fileID: 7121582762676264391}
+  - component: {fileID: 7819759377756320723}
   m_Layer: 0
   m_Name: Fruit5
   m_TagString: Untagged
@@ -584,8 +579,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264391
-MeshCollider:
+--- !u!135 &7819759377756320723
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -594,10 +589,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7651415912823492900, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072189
+  m_Center: {x: 0, y: -0.0000076293945, z: 0}
 --- !u!1 &3058994632278146276
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +603,7 @@ GameObject:
   - component: {fileID: 7689701945114413073}
   - component: {fileID: 4161370249992749441}
   - component: {fileID: 5571769866062408960}
-  - component: {fileID: 7121582762676264392}
+  - component: {fileID: 545630073550983462}
   m_Layer: 0
   m_Name: Fruit8
   m_TagString: Untagged
@@ -678,8 +672,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264392
-MeshCollider:
+--- !u!135 &545630073550983462
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -688,10 +682,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6308458233131546300, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072194
+  m_Center: {x: -0.0000019073486, y: 0, z: 0.0000019073486}
 --- !u!1 &3913371816531503567
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +696,7 @@ GameObject:
   - component: {fileID: 5470863260209630179}
   - component: {fileID: 5514252206159851432}
   - component: {fileID: 3120444404483766333}
-  - component: {fileID: 7121582762676264247}
+  - component: {fileID: 6069932764396186119}
   m_Layer: 0
   m_Name: Fruit21
   m_TagString: Untagged
@@ -772,8 +765,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264247
-MeshCollider:
+--- !u!135 &6069932764396186119
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -782,10 +775,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -849123420899802450, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072188
+  m_Center: {x: 0, y: -0.0000076293945, z: 0.000015258789}
 --- !u!1 &4315009147162673820
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +789,7 @@ GameObject:
   - component: {fileID: 3999614898566671559}
   - component: {fileID: 4523567838427729692}
   - component: {fileID: 5148397912713150383}
-  - component: {fileID: 7121582762676264241}
+  - component: {fileID: 3799793923921746709}
   m_Layer: 0
   m_Name: Fruit15
   m_TagString: Untagged
@@ -866,8 +858,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264241
-MeshCollider:
+--- !u!135 &3799793923921746709
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -876,10 +868,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2721178699641404746, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072188
+  m_Center: {x: 0.0000019073486, y: 0, z: 0}
 --- !u!1 &4346405768064860469
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,7 +882,7 @@ GameObject:
   - component: {fileID: 125809082516754709}
   - component: {fileID: 6783498647532076423}
   - component: {fileID: 651510185299139378}
-  - component: {fileID: 7121582762676264398}
+  - component: {fileID: 349467715945130661}
   m_Layer: 0
   m_Name: Fruit14
   m_TagString: Untagged
@@ -960,8 +951,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264398
-MeshCollider:
+--- !u!135 &349467715945130661
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -970,10 +961,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 76067458055811795, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072191
+  m_Center: {x: -0.0000038146973, y: -0.0000076293945, z: 0.0000019073486}
 --- !u!1 &4418629028278015975
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +975,7 @@ GameObject:
   - component: {fileID: 3694318318209260369}
   - component: {fileID: 4496505527507577929}
   - component: {fileID: 3746624481495516692}
-  - component: {fileID: 7121582762676264389}
+  - component: {fileID: 4941961104562939701}
   m_Layer: 0
   m_Name: Fruit3
   m_TagString: Untagged
@@ -1054,8 +1044,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264389
-MeshCollider:
+--- !u!135 &4941961104562939701
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1064,10 +1054,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2978698211376295658, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072187
+  m_Center: {x: 0.0000019073486, y: 0, z: 0.0000038146973}
 --- !u!1 &5370579343250155520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,7 +1119,7 @@ GameObject:
   - component: {fileID: 456399591302325544}
   - component: {fileID: 529828533951764285}
   - component: {fileID: 6416504759464270437}
-  - component: {fileID: 7121582762676264388}
+  - component: {fileID: 4952847135638158406}
   m_Layer: 0
   m_Name: Fruit4
   m_TagString: Untagged
@@ -1199,8 +1188,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264388
-MeshCollider:
+--- !u!135 &4952847135638158406
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1209,10 +1198,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2419452420695737103, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072188
+  m_Center: {x: 0.000015258789, y: 0.0000076293945, z: 0.0000076293945}
 --- !u!1 &6107771078630991138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,7 +1212,7 @@ GameObject:
   - component: {fileID: 8836819817188415265}
   - component: {fileID: 4308244319548069738}
   - component: {fileID: 5974105805619818249}
-  - component: {fileID: 7121582762676264390}
+  - component: {fileID: 56566246904323360}
   m_Layer: 0
   m_Name: Fruit6
   m_TagString: Untagged
@@ -1293,8 +1281,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264390
-MeshCollider:
+--- !u!135 &56566246904323360
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1303,10 +1291,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4352250616984282899, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072189
+  m_Center: {x: -0.0000038146973, y: 0, z: -0.0000019073486}
 --- !u!1 &6564629207122237171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,7 +1305,7 @@ GameObject:
   - component: {fileID: 8160709215415257232}
   - component: {fileID: 3123440412151325924}
   - component: {fileID: 1518177695347848573}
-  - component: {fileID: 7121582762676264399}
+  - component: {fileID: 5496840518025120497}
   m_Layer: 0
   m_Name: Fruit13
   m_TagString: Untagged
@@ -1387,8 +1374,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264399
-MeshCollider:
+--- !u!135 &5496840518025120497
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1397,10 +1384,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3868097013267780164, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072188
+  m_Center: {x: 0, y: -0.0000076293945, z: 0.0000009536743}
 --- !u!1 &6974262055487461125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,7 +1398,7 @@ GameObject:
   - component: {fileID: 1093632555675257595}
   - component: {fileID: 4074641705794436178}
   - component: {fileID: 6887882606527512584}
-  - component: {fileID: 7121582762676264245}
+  - component: {fileID: 8793395655372404013}
   m_Layer: 0
   m_Name: Fruit19
   m_TagString: Untagged
@@ -1481,8 +1467,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264245
-MeshCollider:
+--- !u!135 &8793395655372404013
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1491,10 +1477,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5576336425748640497, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072184
+  m_Center: {x: 0, y: 0, z: 0.000002861023}
 --- !u!1 &7696459780844991043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,7 +1491,7 @@ GameObject:
   - component: {fileID: 3681187728189611800}
   - component: {fileID: 3991705468877144389}
   - component: {fileID: 409706495442336855}
-  - component: {fileID: 7121582762676264387}
+  - component: {fileID: 4563224357736797952}
   m_Layer: 0
   m_Name: Fruit1
   m_TagString: Untagged
@@ -1575,8 +1560,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264387
-MeshCollider:
+--- !u!135 &4563224357736797952
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1585,10 +1570,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1708763577697825421, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072189
+  m_Center: {x: -0.0000019073486, y: 0, z: 0}
 --- !u!1 &7774155879060809807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,7 +1584,7 @@ GameObject:
   - component: {fileID: 2150020595848155766}
   - component: {fileID: 5113320960632782992}
   - component: {fileID: 7981405236096077955}
-  - component: {fileID: 7121582762676264395}
+  - component: {fileID: 3947689055369640843}
   m_Layer: 0
   m_Name: Fruit9
   m_TagString: Untagged
@@ -1669,8 +1653,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264395
-MeshCollider:
+--- !u!135 &3947689055369640843
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1679,10 +1663,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3938766467908619773, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072193
+  m_Center: {x: 0, y: -0.0000076293945, z: 0.0000038146973}
 --- !u!1 &7801682863037287517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,7 +1677,7 @@ GameObject:
   - component: {fileID: 3410798772622223010}
   - component: {fileID: 487025904083534473}
   - component: {fileID: 4491246824678028499}
-  - component: {fileID: 7121582762676264394}
+  - component: {fileID: 2394294036803061597}
   m_Layer: 0
   m_Name: Fruit10
   m_TagString: Untagged
@@ -1763,8 +1746,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264394
-MeshCollider:
+--- !u!135 &2394294036803061597
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1773,10 +1756,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8642381660854303848, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072193
+  m_Center: {x: 0, y: -0.000022888184, z: -0.0000019073486}
 --- !u!1 &7907716741324977930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,7 +1770,7 @@ GameObject:
   - component: {fileID: 4286107695969947579}
   - component: {fileID: 6613491543982277458}
   - component: {fileID: 4530002492295166437}
-  - component: {fileID: 7121582762676264386}
+  - component: {fileID: 2382643683372857212}
   m_Layer: 0
   m_Name: Fruit2
   m_TagString: Untagged
@@ -1857,8 +1839,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264386
-MeshCollider:
+--- !u!135 &2382643683372857212
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1867,10 +1849,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7258890894311174543, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072188
+  m_Center: {x: 0.0000038146973, y: 0, z: -0.0000038146973}
 --- !u!1 &8193644809041629888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,7 +1863,7 @@ GameObject:
   - component: {fileID: 822712367219670295}
   - component: {fileID: 4728888410507669108}
   - component: {fileID: 4344534125356245930}
-  - component: {fileID: 7121582762676264243}
+  - component: {fileID: 1268054052682164964}
   m_Layer: 0
   m_Name: Fruit17
   m_TagString: Untagged
@@ -1951,8 +1932,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264243
-MeshCollider:
+--- !u!135 &1268054052682164964
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1961,10 +1942,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1860023987160834719, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072191
+  m_Center: {x: 0, y: 0.0000076293945, z: -0.0000019073486}
 --- !u!1 &8479725512254519762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1976,7 +1956,7 @@ GameObject:
   - component: {fileID: 3779712685957415816}
   - component: {fileID: 7747324457529083896}
   - component: {fileID: 6302040353216471329}
-  - component: {fileID: 7121582762676264240}
+  - component: {fileID: 5143810317144888113}
   m_Layer: 0
   m_Name: Fruit16
   m_TagString: Untagged
@@ -2045,8 +2025,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264240
-MeshCollider:
+--- !u!135 &5143810317144888113
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2055,10 +2035,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8399200310406818438, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072193
+  m_Center: {x: 0, y: -0.000015258789, z: -0.0000076293945}
 --- !u!1 &8723683055645975679
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,7 +2049,7 @@ GameObject:
   - component: {fileID: 1340904847451241491}
   - component: {fileID: 7407379159110470724}
   - component: {fileID: 6002270870953893416}
-  - component: {fileID: 7121582762676264397}
+  - component: {fileID: 5899279896638641948}
   m_Layer: 0
   m_Name: Fruit11
   m_TagString: Untagged
@@ -2139,8 +2118,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7121582762676264397
-MeshCollider:
+--- !u!135 &5899279896638641948
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2149,7 +2128,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 294890248989558411, guid: d86db1ff084ee1245b0f06242d045955, type: 3}
+  serializedVersion: 2
+  m_Radius: 1.3072194
+  m_Center: {x: -0.0000076293945, y: 0, z: -0.000011444092}
