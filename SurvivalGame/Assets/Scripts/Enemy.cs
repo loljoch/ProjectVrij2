@@ -14,10 +14,10 @@ public class Enemy : MonoBehaviour
 	[SerializeField] private float damage = 5f;
 	[SerializeField] private float attackCooldownTimer = 3f;
 	[SerializeField] private bool canAttack = true;
-	[SerializeField] public float rotationDamping;
+	[SerializeField] public float rotationDamping = 3f;
 
 	[Header("References: ")]
-	[SerializeField] private GameObject player;
+	[SerializeField] private GameObject player = null;
 	private Animator anim;
 
 	private float playerDistance;
