@@ -8,6 +8,8 @@ public class PlayerHP : MonoBehaviour
 	[Header("Settings: ")]
 	[SerializeField] private float maxHealth = 100f;
 
+
+
 	private float currentHealth;
 
 	private void Start()
