@@ -5,16 +5,20 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+	public static Action<int> EnemyAttackHitEvent;
+
 	[Header("Settings: ")]
 	[SerializeField] private float maxHealth = 100f;
 	[SerializeField] private float playerSpottedRange = 50f;
 	[SerializeField] private float movingToPlayerRange = 40f;
 	[SerializeField] private float movementSpeed = 4f;
-	[SerializeField] private float attackDistance = 2f;
-	[SerializeField] private float damage = 5f;
-	[SerializeField] private float attackCooldownTimer = 3f;
-	[SerializeField] private bool canAttack = true;
 	[SerializeField] public float rotationDamping = 3f;
+
+	[Header("Combat Settings")]
+	[SerializeField] protected float attackRange = 6f;
+	[SerializeField] protected float attackInterval = 1f;
+	[SerializeField] protected int attackdamage = 1;
+	[SerializeField] protected float nextAttack = 0;
 
 	[Header("References: ")]
 	[SerializeField] private GameObject player = null;
@@ -22,8 +26,8 @@ public class Enemy : MonoBehaviour
 
 	private float playerDistance;
 	private float rotationSpeed = 10f;
-	private float tempMoveSpeed;
 	private float currentHealth;
+	private float tempSpeed;
 
 	public virtual void Awake()
 	{
@@ -54,11 +58,11 @@ public class Enemy : MonoBehaviour
 
 			if (playerDistance < movingToPlayerRange)
 			{
-				if (playerDistance > attackDistance)
+				if (playerDistance > attackRange)
 				{
 					MoveTowardsPlayer();
 				}
-				else if (playerDistance <= attackDistance)
+				else if (playerDistance <= attackRange)
 				{
 					DoAttack();
 				}
@@ -68,6 +72,7 @@ public class Enemy : MonoBehaviour
 		}
 		else
 		{
+			anim.SetTrigger("Idle");
 			return;
 		}
 	}
@@ -80,34 +85,39 @@ public class Enemy : MonoBehaviour
 
 	public virtual void MoveTowardsPlayer()
 	{
+		tempSpeed = movementSpeed;
 		anim.SetTrigger("Walking");
-		transform.Translate(Vector3.forward * 10f * Time.deltaTime);
+		transform.Translate(Vector3.forward * tempSpeed * Time.deltaTime);
 	}
 
-	public virtual void TakeDamage(float damage)
+	public virtual void TakeDamage(int damage)
 	{
 		currentHealth -= damage;
 	}
 
-	public virtual void ReactivateAttackState()
-	{
-		canAttack = true;
-	}
-
 	public virtual void DoAttack()
 	{
-		Debug.Log("Clamp: Attacking Player");
+		tempSpeed = 0;
 		anim.SetTrigger("Attack");
-		tempMoveSpeed = 0f;
 	}
 
 	public virtual void CheckDeathState()
 	{
 		if (currentHealth <= 0)
 		{
+			tempSpeed = 0;
 			anim.SetTrigger("Death");
-
 			Destroy(gameObject, 5f);
 		}
+	}
+
+	private void OnEnable()
+	{
+		CombatSystem.MeleeAttackHitEvent += TakeDamage;
+	}
+
+	private void OnDisable()
+	{
+		CombatSystem.MeleeAttackHitEvent -= TakeDamage;
 	}
 }

@@ -56,13 +56,30 @@ public class PlayerHP : MonoBehaviour
 		}
 	}
 
+	private void TakeDamage(int damageTaken)
+	{
+		currentHealth -= damageTaken;
+		DeathState();
+	}
+
 	private void DeathState()
 	{
 		if (currentHealth <= 0)
 		{
 			Debug.Log("Player Death");
 
-			Destroy(gameObject);
+			Destroy(gameObject,1f);
 		}
 	}
+
+	private void OnEnable()
+	{
+		Enemy.EnemyAttackHitEvent += TakeDamage;
+	}
+
+	private void OnDisable()
+	{
+		Enemy.EnemyAttackHitEvent += TakeDamage;
+	}
+
 }

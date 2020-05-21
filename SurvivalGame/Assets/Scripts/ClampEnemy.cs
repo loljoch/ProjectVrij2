@@ -5,14 +5,29 @@ using UnityEngine;
 
 public class ClampEnemy : Enemy
 {
-	//public override void TakeDamage(int damage)
-	//{
-	//	base.TakeDamage();
-	//}
-
 	public override void DoAttack()
 	{
 		base.DoAttack();
+	}
+
+	private void ClampAttack()
+	{
+		Collider[] colliders = Physics.OverlapSphere(transform.position, attackRange);
+
+		foreach (Collider hit in colliders)
+		{
+			if (hit && hit.tag == Tags.Player)
+			{
+				float distance = Vector3.Magnitude(hit.transform.position - transform.position);
+				if (distance <= attackRange)
+				{
+					if (EnemyAttackHitEvent != null)
+					{
+						EnemyAttackHitEvent(attackdamage);
+					}
+				}
+			}
+		}
 	}
 
 	public override void CheckDeathState()
