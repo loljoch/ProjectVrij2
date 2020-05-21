@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+	[Header("Settings: ")]
 	[SerializeField] private float moveSpeed = 10f;
 
 	private Rigidbody rigid;
-
 	private Vector3 movement;
 	private Vector3 mousePos;
 
@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
 		rigid = GetComponent<Rigidbody>();
 	}
 
-	// Update is called once per frame
 	private void Update()
 	{
 		movement.x = Input.GetAxis("Horizontal");

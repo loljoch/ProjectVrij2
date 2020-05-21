@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class PlayerHP : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+	[Header("Settings: ")]
+	[SerializeField] private float maxHealth = 100f;
+
+	private float currentHealth;
+
+	private void Start()
     {
-        
+		currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private void DeathState()
+	{
+		if(currentHealth <= 0)
+		{
+			Debug.Log("Player Death");
+
+			Destroy(gameObject);
+		}
+	}
 }
