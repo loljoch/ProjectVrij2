@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 7e22b6f633383024eaa616c1b21c5870
+=======
+guid: 954e75c65c7921b48b0e2ff40e788667
+>>>>>>> origin/PimBranch
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
