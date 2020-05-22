@@ -314,11 +314,21 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EnemyClamp
       objectReference: {fileID: 0}
+    - target: {fileID: -681132117933724387, guid: fd842d1219004244f82cd1bd601c7d0c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1651062367082650294, guid: fd842d1219004244f82cd1bd601c7d0c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5b77110fdde18b348a9bd29c0062dabf, type: 2}
+    - target: {fileID: 5133913965574556032, guid: fd842d1219004244f82cd1bd601c7d0c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5386459499423375193, guid: fd842d1219004244f82cd1bd601c7d0c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

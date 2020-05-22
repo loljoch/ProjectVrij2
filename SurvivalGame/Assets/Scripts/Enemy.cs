@@ -36,6 +36,11 @@ public class Enemy : MonoBehaviour
 
 	public virtual void Update()
 	{
+		if (player == null)
+		{
+			anim.SetTrigger("Idle");
+		}
+
 		if (player != null)
 		{
 			playerDistance = Vector3.Distance(player.transform.position, transform.position);

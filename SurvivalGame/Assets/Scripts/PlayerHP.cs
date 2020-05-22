@@ -68,7 +68,7 @@ public class PlayerHP : MonoBehaviour
 		{
 			Debug.Log("Player Death");
 
-			Destroy(gameObject,1f);
+			Destroy(gameObject, 1f);
 		}
 	}
 
