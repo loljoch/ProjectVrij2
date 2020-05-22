@@ -25,19 +25,13 @@ public class Enemy : MonoBehaviour
 	private Animator anim;
 
 	private float playerDistance;
-	private float rotationSpeed = 10f;
 	private float currentHealth;
-	private float tempSpeed;
 
 	public virtual void Awake()
 	{
 		ResetHealth();
 		anim = GetComponent<Animator>();
-	}
-
-	private void ResetHealth()
-	{
-		currentHealth = maxHealth;
+		anim.SetTrigger("Idle");
 	}
 
 	public virtual void Update()
@@ -45,11 +39,6 @@ public class Enemy : MonoBehaviour
 		if (player != null)
 		{
 			playerDistance = Vector3.Distance(player.transform.position, transform.position);
-
-			if(playerDistance > playerSpottedRange)
-			{
-				anim.SetTrigger("Idle");
-			}
 
 			if (playerDistance < playerSpottedRange)
 			{
@@ -72,22 +61,25 @@ public class Enemy : MonoBehaviour
 		}
 		else
 		{
-			anim.SetTrigger("Idle");
 			return;
 		}
 	}
 
+	private void ResetHealth()
+	{
+		currentHealth = maxHealth;
+	}
+
 	public virtual void LookAtPlayer()
 	{
-		Quaternion rotation = Quaternion.LookRotation(player.transform.position - transform.position);
-		transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationDamping);
+		Quaternion _rotation = Quaternion.LookRotation(player.transform.position - transform.position);
+		transform.rotation = Quaternion.Slerp(transform.rotation, _rotation, Time.deltaTime * rotationDamping);
 	}
 
 	public virtual void MoveTowardsPlayer()
 	{
-		tempSpeed = movementSpeed;
 		anim.SetTrigger("Walking");
-		transform.Translate(Vector3.forward * tempSpeed * Time.deltaTime);
+		transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime);
 	}
 
 	public virtual void TakeDamage(int damage)
@@ -97,7 +89,6 @@ public class Enemy : MonoBehaviour
 
 	public virtual void DoAttack()
 	{
-		tempSpeed = 0;
 		anim.SetTrigger("Attack");
 	}
 
@@ -105,9 +96,9 @@ public class Enemy : MonoBehaviour
 	{
 		if (currentHealth <= 0)
 		{
-			tempSpeed = 0;
+			movementSpeed = 0;
 			anim.SetTrigger("Death");
-			Destroy(gameObject, 5f);
+			Destroy(gameObject, 3f);
 		}
 	}
 
