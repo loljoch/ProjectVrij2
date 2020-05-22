@@ -19,11 +19,6 @@ public class PlayerHP : MonoBehaviour
 		ResetHealth();
 	}
 
-	private void Update()
-	{
-		ChangeSpriteBasedOnLives();
-	}
-
 	private void ResetHealth()
 	{
 		currentHealth = maxHealth;
@@ -60,12 +55,15 @@ public class PlayerHP : MonoBehaviour
 	private void TakeDamage(int _damageTaken)
 	{
 		currentHealth -= _damageTaken;
+		ChangeSpriteBasedOnLives();
 		DeathState();
 	}
 
 	private void HealPlayer(int _healAmount)
 	{
+		Debug.Log("healed");
 		currentHealth += _healAmount;
+		ChangeSpriteBasedOnLives();
 	}
 
 	private void DeathState()

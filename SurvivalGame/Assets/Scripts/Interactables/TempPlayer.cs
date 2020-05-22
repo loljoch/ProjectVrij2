@@ -7,6 +7,8 @@ public class TempPlayer : MonoBehaviour
     [Header("Interact variables")]
     [SerializeField] private Vector3 rayOrigin;
     [SerializeField] private Vector3 rayDirection;
+    [SerializeField] private float forwardMultiplier;
+    [SerializeField] private int rayLength = 2;
     private IInteractable currentInteractable;
 
     [Header("Item pick-up variables")]
@@ -32,7 +34,7 @@ public class TempPlayer : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, range);
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position + rayOrigin, transform.forward + rayDirection);
+        Gizmos.DrawRay(transform.position + rayOrigin, (forwardMultiplier * transform.forward) + rayDirection);
     }
 
     private void CheckForItemDrops()
@@ -52,7 +54,7 @@ public class TempPlayer : MonoBehaviour
 
     private void CastRay()
     {
-        if (Physics.Raycast(GetRay(), out RaycastHit hit, 2))
+        if (Physics.Raycast(GetRay(), out RaycastHit hit, rayLength, LayerMasks.Interactable))
         {
             IInteractable obj = hit.collider.GetComponent<IInteractable>();
             currentInteractable = obj;
@@ -69,6 +71,6 @@ public class TempPlayer : MonoBehaviour
 
     private Ray GetRay()
     {
-        return new Ray(transform.position + rayOrigin, transform.forward + rayDirection);
+        return new Ray(transform.position + rayOrigin, (forwardMultiplier * transform.forward) + rayDirection);
     }
 }

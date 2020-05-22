@@ -13,7 +13,7 @@ public class RightClickMenu : GenericSingleton<RightClickMenu, RightClickMenu>
     protected override void Awake()
     {
         base.Awake();
-        eatButton.onClick.AddListener(() => PlayerHP.HealingPlayerEvent?.Invoke(((FoodItem)UIManager.Instance.itemInformation.itemsById[cItemID]).healAmount));
+        eatButton.onClick.AddListener(EatItem);
     }
 
     private void Update()
@@ -24,6 +24,13 @@ public class RightClickMenu : GenericSingleton<RightClickMenu, RightClickMenu>
         {
             Hide();
         }
+    }
+
+    private void EatItem()
+    {
+        FoodItem mango = (FoodItem)UIManager.Instance.itemInformation.itemsById[cItemID];
+        Debug.Log("heal: " + mango.healAmount);
+        //PlayerHP.HealingPlayerEvent?.Invoke(().healAmount)
     }
 
     public void Show(int itemId, Vector3 pos)

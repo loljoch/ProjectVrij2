@@ -2669,7 +2669,7 @@ GameObject:
   - component: {fileID: 1028557260}
   - component: {fileID: 1028557259}
   - component: {fileID: 1028557263}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FakeNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3991,7 +3991,7 @@ GameObject:
   - component: {fileID: 1480283907}
   - component: {fileID: 1480283906}
   - component: {fileID: 1480283905}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FakeCoral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5234,6 +5234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayOrigin: {x: 0, y: 0.7, z: 0}
   rayDirection: {x: 0, y: -1.2, z: 0}
+  forwardMultiplier: 1
   range: 4
 --- !u!114 &1830957264
 MonoBehaviour:
@@ -6008,6 +6009,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FruitPlant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293972199590478885, guid: 7a28995ebeda97d42a709f6f69401297,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2859298701040727606, guid: 7a28995ebeda97d42a709f6f69401297,
         type: 3}
