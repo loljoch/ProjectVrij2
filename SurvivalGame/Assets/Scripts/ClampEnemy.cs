@@ -34,4 +34,10 @@ public class ClampEnemy : Enemy
 	{
 		base.CheckDeathState();
 	}
+
+	private void OnDrawGizmosSelected()
+	{
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireSphere(transform.position, attackRange);
+	}
 }
