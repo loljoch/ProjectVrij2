@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d76fc8b0674c7b1469f1830b54d736e2
+=======
+guid: 440dffd874430a94f838d22d7f3d749c
+>>>>>>> RubenBranch
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

@@ -1,76 +1,29 @@
-﻿using System.Collections.Generic;
+﻿using EasyAttributes;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<ResourceDisplay> itemSlots;
-    [HideInInspector] public List<int> itemIds = new List<int>(24);
-    public delegate void onAddItem();
-    public delegate void onHide();
-    public onAddItem OnAddItem;
-    public onHide OnHide;
+    [SerializeField] private List<InventoryStackDisplay> stackDisplays;
 
-    public bool Active
+    private List<int> items = new List<int>(24);
+    private int occupiedDisplays = 0;
+
+    public int itemId = 0;
+    public int itemAmount = 1;
+
+    [Button]
+    public void FooAddItem()
     {
-        get
-        {
-            return gameObject.activeSelf;
-        }
-        set
-        {
-            if (value)
-            {
-                Show();
-            } else
-            {
-                Hide();
-            }
-        }
+        AddItem(itemId, itemAmount);
     }
 
-
-    [Header("Test variables")]
-    public Item testItem;
-
-    [EasyAttributes.Button]
-    public void TestAddItem()
+    [Button]
+    public void FooRemoveItem()
     {
-        AddItem(testItem);
+        RemoveItem(itemId, itemAmount);
     }
 
-    public void AddItem(Item item, int quantity = 1)
-    {
-        if (itemIds.Contains(item.id))
-        {
-            ResourceDisplay rd = itemSlots[itemIds.IndexOf(item.id)];
-            rd.resource.Quantity += quantity;
-        } else
-        {
-            int index = GetOpenIndex();
-            itemIds[index] = item.id;
-            itemSlots[index].AssignResource(new Resource(item, quantity));
-        }
-
-        OnAddItem?.Invoke();
-    }
-
-    public void RemoveItem(int id, int amount)
-    {
-        int index = itemIds.IndexOf(id);
-        ResourceDisplay rd = itemSlots[index];
-        int cQuantity = rd.resource.Quantity;
-
-        cQuantity -= amount;
-
-        if (cQuantity < 1)
-        {
-            rd.RemoveResource();
-            itemIds[index] = -1;
-        } else
-        {
-            rd.resource.Quantity -= amount;
-        }
-    }
 
     public void Show()
     {
@@ -80,19 +33,175 @@ public class Inventory : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
-        OnHide?.Invoke();
     }
 
-    private int GetOpenIndex()
+    //Just an items.Contains shortcut for outside classes
+    public bool Contains(int itemId)
     {
-        int index = itemIds.IndexOf(-1);
+        return items.Contains(itemId);
+    }
 
-        if(index == -1)
+    //Returns the total amount of one item
+    public int AmountOf(int itemId)
+    {
+        int total = 0;
+
+        for (int i = 0; i < stackDisplays.Count; i++)
         {
-            itemIds.Add(-1);
-            index = itemIds.Count - 1;
+            if (stackDisplays[i].itemID == itemId)
+            {
+                total += stackDisplays[i].Quantity;
+            }
         }
 
-        return index;
+        return total;
+    }
+
+    /// <summary>
+    /// Adds item is possible, returns true if item was added succesfully
+    /// </summary>
+    /// <param name="itemId"></param>
+    /// <returns>True if item was added</returns>
+    public bool AddItem(int itemId, int quantity = 1)
+    {
+        if (items.Contains(itemId))
+        {
+            do
+            {
+                InventoryStackDisplay sd = GetItemStackWithRoom(itemId);
+                if (sd == null)
+                {
+                    return AddNewItem(itemId, quantity);
+                } else if (sd.HasRoom(quantity))
+                {
+                    sd.Quantity += quantity;
+                    break;
+                } else
+                {
+                    int temp = (sd.maxQuantity - sd.Quantity);
+                    quantity -= temp;
+                    sd.Quantity += temp;
+                }
+            } while (quantity > 0);
+        } else
+        {
+            return AddNewItem(itemId, quantity);
+        }
+
+        return true;
+    }
+
+    public void RemoveItem(int itemId, int removalQuantity)
+    {
+        if (!items.Contains(itemId))
+        {
+            Debug.LogError($"Tried to remove item ID: {itemId} while it doesn't exist");
+        }
+
+        do
+        {
+            StackDisplay sd = GetItemStack(itemId);
+            int sdQuantity = sd.Quantity;
+
+            if(sdQuantity >= removalQuantity)
+            {
+                sd.Quantity -= removalQuantity;
+                removalQuantity -= removalQuantity;
+            } else
+            {
+                removalQuantity -= sdQuantity;
+                sd.Quantity -= sdQuantity;
+            }
+
+        } while (removalQuantity > 0);
+    }
+
+    private bool AddNewItem(int itemId, int quantity)
+    {
+        if (HasRoom())
+        {
+            items.Add(itemId);
+            InventoryStackDisplay sd = GetEmptyStack();
+
+            sd.AssignItem(itemId, quantity);
+
+            //If for some reason the quantity is bigger than a full stack, fix it
+            if(quantity > sd.maxQuantity)
+            {
+                sd.Quantity = sd.maxQuantity;
+                quantity -= sd.maxQuantity;
+                return AddItem(itemId, quantity);
+            }
+
+            if(sd.OnStackEmpty == null)
+            {
+                sd.OnStackEmpty += RemoveItemStack;
+            }
+
+            occupiedDisplays += 1;
+            return true;
+        } else
+        {
+            return false;
+        }
+    }
+
+    private void RemoveItemStack(int itemId)
+    {
+        occupiedDisplays -= 1;
+        int index = items.IndexOf(itemId);
+        items.RemoveAt(index);
+    }
+
+    private bool HasRoom()
+    {
+        return (items.Capacity > occupiedDisplays);
+    }
+
+    private InventoryStackDisplay GetItemStackWithRoom(int itemId)
+    {
+        //Find stackdisplay with the itemID
+        for (int i = 0; i < stackDisplays.Count; i++)
+        {
+            if (stackDisplays[i].itemID == itemId && stackDisplays[i].HasRoom())
+            {
+                return stackDisplays[i];
+            }
+        }
+
+        return null;
+    }
+
+    private InventoryStackDisplay GetItemStack(int itemId)
+    {
+        int lowestQuantity = int.MaxValue;
+        int index = 0;
+
+        //Find stackdisplay with the itemID
+        for (int i = 0; i < stackDisplays.Count; i++)
+        {
+            if (stackDisplays[i].itemID == itemId && stackDisplays[i].Quantity < lowestQuantity)
+            {
+                index = i;
+            }
+        }
+
+        return stackDisplays[index];
+    }
+
+    private InventoryStackDisplay GetEmptyStack()
+    {
+        //Find stackdisplay with the itemID
+        for (int i = 0; i < stackDisplays.Count; i++)
+        {
+            if (stackDisplays[i].isEmpty)
+            {
+                return stackDisplays[i];
+            }
+        }
+
+        return null;
     }
 }
+
+
