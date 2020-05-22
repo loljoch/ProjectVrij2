@@ -5,7 +5,7 @@ using UnityEngine;
 public class ToolTip : GenericSingleton<ToolTip, ToolTip>
 {
     [SerializeField] private TextMeshProUGUI textField;
-    private int cItemID;
+    private int cItemID = -1;
 
     public void Show(int itemId, Vector3 pos)
     {

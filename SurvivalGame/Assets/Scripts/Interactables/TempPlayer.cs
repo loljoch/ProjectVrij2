@@ -9,10 +9,13 @@ public class TempPlayer : MonoBehaviour
     [SerializeField] private Vector3 rayDirection;
     private IInteractable currentInteractable;
 
-    [Button]
-    private void ShowRayOrigin()
+    [Header("Item pick-up variables")]
+    [SerializeField] private float range = 4f;
+    private LayerMask itemDropMask;
+
+    private void Start()
     {
-        DebugExtensions.DrawBox(transform.position + rayOrigin, Vector3.one * 0.05f, Quaternion.identity, Color.red, 2f);
+        itemDropMask = LayerMask.GetMask("ItemDrop");
     }
 
     [Button]
@@ -33,6 +36,27 @@ public class TempPlayer : MonoBehaviour
     private void FixedUpdate()
     {
         CastRay();
+        CheckForItemDrops();
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    private void CheckForItemDrops()
+    {
+        //Check proximity for itemdrops
+        var hits = Physics.OverlapSphere(transform.position, range, itemDropMask);
+
+        //Check if it has hit anything
+        if (hits.Length == 0) return;
+
+        //Pick up items
+        for (int i = 0; i < hits.Length; i++)
+        {
+            hits[i].GetComponent<IItemDrop>().PickUp(transform);
+        }
     }
 
     private void CastRay()
@@ -41,6 +65,14 @@ public class TempPlayer : MonoBehaviour
         {
             IInteractable obj = hit.collider.GetComponent<IInteractable>();
             currentInteractable = obj;
+            if(obj != null)
+            {
+                InteractableText.Instance.Show(obj.UseName);
+            }
+        } else
+        {
+            currentInteractable = null;
+            InteractableText.Instance.Hide();
         }
     }
 
