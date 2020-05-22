@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6032215706065520786}
   - component: {fileID: 3381563982436266660}
   - component: {fileID: 9066084621541019229}
-  - component: {fileID: 1642697821050692490}
+  - component: {fileID: 6591944031289042896}
   m_Layer: 0
   m_Name: Item_Zwerfhout
   m_TagString: Untagged
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1642697821050692490
+--- !u!65 &6591944031289042896
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,5 +93,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.0243957, y: 0.52608997, z: 12.454233}
-  m_Center: {x: 0, y: -0.1397353, z: 0}
+  m_Size: {x: 3.0243976, y: 0.7922181, z: 12.45423}
+  m_Center: {x: 0, y: -0.0066715637, z: 0}

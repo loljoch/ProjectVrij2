@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4185975566571870121}
   - component: {fileID: 885555938510059490}
   - component: {fileID: 5127459773771530499}
-  - component: {fileID: 6142772594533730559}
+  - component: {fileID: 7619798749889312038}
   m_Layer: 0
-  m_Name: pSphere1
+  m_Name: RockType_Boulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3240517479742044876}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.019, z: 0}
-  m_LocalScale: {x: 15.611529, y: 15.611529, z: 15.611529}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -55,6 +55,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -79,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6142772594533730559
-MeshCollider:
+--- !u!135 &7619798749889312038
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -89,7 +90,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 2540817853737639666, guid: 11f967360337de94199f854e05fc0ece, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.01081846
+  m_Center: {x: -0.00046772655, y: -0.00044215558, z: -0.0003601929}
