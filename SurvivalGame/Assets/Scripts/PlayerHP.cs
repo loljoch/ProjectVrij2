@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class PlayerHP : MonoBehaviour
 {
+	public static Action<int> HealingPlayerEvent;
+
 	[Header("Settings: ")]
 	[SerializeField] private int maxHealth = 3;
 	[SerializeField] private List<Image> heartSprites = new List<Image>();
@@ -56,10 +59,15 @@ public class PlayerHP : MonoBehaviour
 		}
 	}
 
-	private void TakeDamage(int damageTaken)
+	private void TakeDamage(int _damageTaken)
 	{
-		currentHealth -= damageTaken;
+		currentHealth -= _damageTaken;
 		DeathState();
+	}
+
+	private void HealPlayer(int _healAmount)
+	{
+		currentHealth += _healAmount;
 	}
 
 	private void DeathState()
@@ -75,11 +83,12 @@ public class PlayerHP : MonoBehaviour
 	private void OnEnable()
 	{
 		Enemy.EnemyAttackHitEvent += TakeDamage;
+		HealingPlayerEvent += HealPlayer;
 	}
 
 	private void OnDisable()
 	{
-		Enemy.EnemyAttackHitEvent += TakeDamage;
+		Enemy.EnemyAttackHitEvent -= TakeDamage;
+		HealingPlayerEvent -= HealPlayer;
 	}
-
 }
