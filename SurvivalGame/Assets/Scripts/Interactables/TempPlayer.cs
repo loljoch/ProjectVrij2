@@ -18,12 +18,6 @@ public class TempPlayer : MonoBehaviour
         itemDropMask = LayerMask.GetMask("ItemDrop");
     }
 
-    [Button]
-    private void ShowRay()
-    {
-        DebugExtensions.DrawArrow(transform.position + rayOrigin, transform.forward + rayDirection, Color.red, 2f);
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -41,7 +35,10 @@ public class TempPlayer : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, range);
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position + rayOrigin, transform.forward + rayDirection);
     }
 
     private void CheckForItemDrops()

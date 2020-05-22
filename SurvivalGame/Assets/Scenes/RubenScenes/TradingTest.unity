@@ -1076,7 +1076,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &481139571
 PrefabInstance:
@@ -2373,7 +2373,7 @@ Transform:
   m_Children:
   - {fileID: 1981037425}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 40.71, y: 0, z: 0}
 --- !u!1001 &793088306
 PrefabInstance:
@@ -2748,7 +2748,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1028557263
 MonoBehaviour:
@@ -2822,7 +2822,7 @@ PrefabInstance:
     - target: {fileID: 3958330885518463788, guid: 4dc6797d8dd32b54fbde699a4118a407,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3958330885518463788, guid: 4dc6797d8dd32b54fbde699a4118a407,
         type: 3}
@@ -2856,6 +2856,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc6797d8dd32b54fbde699a4118a407, type: 3}
+--- !u!1001 &1116088333
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 984097123389017087, guid: ab0300867bdefab4296dcf753d667312,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 984097123389017087, guid: ab0300867bdefab4296dcf753d667312,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.208
+      objectReference: {fileID: 0}
+    - target: {fileID: 984097123389017087, guid: ab0300867bdefab4296dcf753d667312,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.912
+      objectReference: {fileID: 0}
+    - target: {fileID: 984097123389017087, guid: ab0300867bdefab4296dcf753d667312,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 984097123389017087, guid: ab0300867bdefab4296dcf753d667312,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 984097123389017087, guid: ab0300867bdefab4296dcf753d667312,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 984097123389017087, guid: ab0300867bdefab4296dcf753d667312,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 984097123389017087, guid: ab0300867bdefab4296dcf753d667312,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 984097123389017087, guid: ab0300867bdefab4296dcf753d667312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 984097123389017087, guid: ab0300867bdefab4296dcf753d667312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 984097123389017087, guid: ab0300867bdefab4296dcf753d667312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319918265460652524, guid: ab0300867bdefab4296dcf753d667312,
+        type: 3}
+      propertyPath: m_Name
+      value: Item_Coral
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab0300867bdefab4296dcf753d667312, type: 3}
 --- !u!1001 &1117714739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3083,7 +3152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1163537163
 PrefabInstance:
@@ -3314,7 +3383,7 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1249684514
 PrefabInstance:
@@ -3921,13 +3990,30 @@ GameObject:
   - component: {fileID: 1480283908}
   - component: {fileID: 1480283907}
   - component: {fileID: 1480283906}
+  - component: {fileID: 1480283905}
   m_Layer: 0
-  m_Name: FruitPlant
+  m_Name: FakeCoral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1480283905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480283904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3c5ed752ebfbf4e8a9c70e84cdf1cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropPrefab: {fileID: 4319918265460652524, guid: ab0300867bdefab4296dcf753d667312,
+    type: 3}
+  harvestTime: 1
+  useName: Coral
 --- !u!65 &1480283906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4000,7 +4086,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.339, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1484824114
 PrefabInstance:
@@ -5115,7 +5201,7 @@ Transform:
   m_Children:
   - {fileID: 2010180395}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1830957262
 MonoBehaviour:
@@ -5954,7 +6040,7 @@ PrefabInstance:
     - target: {fileID: 2859298701040727606, guid: 7a28995ebeda97d42a709f6f69401297,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2859298701040727606, guid: 7a28995ebeda97d42a709f6f69401297,
         type: 3}
@@ -6021,8 +6107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57134473fe8173a4389e7017a36ccc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropPrefab: {fileID: 51097806569464127, guid: 4dc6797d8dd32b54fbde699a4118a407,
-    type: 3}
+  dropPrefab: {fileID: 0}
   harvestTime: 2
   useName: Mango plant
   dropFruits:
@@ -10514,7 +10599,7 @@ RectTransform:
   - {fileID: 3267243381469211264}
   - {fileID: 1837083290}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
