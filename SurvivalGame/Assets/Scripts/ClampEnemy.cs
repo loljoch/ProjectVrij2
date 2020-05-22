@@ -33,5 +33,11 @@ public class ClampEnemy : Enemy
 	{
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(transform.position, attackRange);
+
+		Gizmos.color = Color.blue;
+		Gizmos.DrawWireSphere(transform.position, playerSpottedRange);
+
+		Gizmos.color = Color.green;
+		Gizmos.DrawWireSphere(transform.position, movingToPlayerRange);
 	}
 }
