@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6fe699d5a74665429f41c075a5757e8, type: 3}
-  m_Name: 3_Mango
+  m_Script: {fileID: 11500000, guid: a720d255b5d50ac40adf96cd2c9b62a9, type: 3}
+  m_Name: PlayTestOffer
   m_EditorClassIdentifier: 
-  id: 3
-  name: Mango
-  sprite: {fileID: 21300000, guid: 44cccb64e0d37c843b3171d56cae087b, type: 3}
-  useCases: 2
-  maxQuantity: 16
-  healAmount: 2
+  item: {fileID: 11400000, guid: 96e138c97e2e1704dbd500fe24d74a7a, type: 2}
+  neededItems:
+  - item: {fileID: 11400000, guid: 53559a954cb751942b2911c7f339b8d2, type: 2}
+    quantity: 3
+  xp: 0

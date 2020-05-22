@@ -4,12 +4,22 @@ using UnityEngine.UI;
 
 public class RightClickMenu : GenericSingleton<RightClickMenu, RightClickMenu>
 {
-    [SerializeField] private Button inspectButton;
     [SerializeField] private Button equipButton;
     [SerializeField] private Button eatButton;
     [SerializeField] private Button dropButton;
 
     private int cItemID = -1;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        PlayerHP pHP = FindObjectOfType<PlayerHP>();
+
+        if(pHP != null)
+        {
+            //eatButton.onClick.AddListener();
+        }
+    }
 
     private void Update()
     {
@@ -33,7 +43,7 @@ public class RightClickMenu : GenericSingleton<RightClickMenu, RightClickMenu>
         transform.position = pos;
 
         //Deactivate all buttons
-        inspectButton.gameObject.SetActive(false);
+        dropButton.gameObject.SetActive(false);
         equipButton.gameObject.SetActive(false);
         eatButton.gameObject.SetActive(false);
 
@@ -47,8 +57,7 @@ public class RightClickMenu : GenericSingleton<RightClickMenu, RightClickMenu>
             {
                 switch (value)
                 {
-                    case UseCases.Inspectable:
-                        inspectButton.gameObject.SetActive(true);
+                    case UseCases.Droppable:
                         dropButton.gameObject.SetActive(false);
                         break;
                     case UseCases.Equipable:

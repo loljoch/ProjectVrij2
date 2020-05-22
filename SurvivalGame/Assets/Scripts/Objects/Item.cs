@@ -16,7 +16,7 @@ public class Item : ScriptableObject
 [System.Flags]
 public enum UseCases
 {
-    Inspectable = 0,
+    Droppable = 0,
     Equipable = 1,
     Eatable = 2
 }
