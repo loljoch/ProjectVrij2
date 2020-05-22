@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
 public class PlayerHP : MonoBehaviour
 {
-	public static Action<int> HealingPlayerEvent;
+	public static System.Action<int> HealingPlayerEvent;
 
 	[Header("Settings: ")]
 	[SerializeField] private int maxHealth = 3;

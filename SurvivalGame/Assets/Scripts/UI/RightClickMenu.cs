@@ -13,12 +13,7 @@ public class RightClickMenu : GenericSingleton<RightClickMenu, RightClickMenu>
     protected override void Awake()
     {
         base.Awake();
-        PlayerHP pHP = FindObjectOfType<PlayerHP>();
-
-        if(pHP != null)
-        {
-            //eatButton.onClick.AddListener();
-        }
+        eatButton.onClick.AddListener(() => PlayerHP.HealingPlayerEvent?.Invoke(((FoodItem)UIManager.Instance.itemInformation.itemsById[cItemID]).healAmount));
     }
 
     private void Update()

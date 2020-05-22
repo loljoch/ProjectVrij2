@@ -12,20 +12,14 @@ public class ClampEnemy : Enemy
 
 	private void ClampAttack()
 	{
-		Collider[] colliders = Physics.OverlapSphere(transform.position, attackRange);
+		Collider[] colliders = Physics.OverlapSphere(transform.position, attackRange, LayerMasks.Player);
 
-		foreach (Collider hit in colliders)
+		if(colliders[0] != null)
 		{
-			if (hit && hit.tag == Tags.Player)
+			float distance = Vector3.Magnitude(colliders[0].transform.position - transform.position);
+			if (distance <= attackRange)
 			{
-				float distance = Vector3.Magnitude(hit.transform.position - transform.position);
-				if (distance <= attackRange)
-				{
-					if (EnemyAttackHitEvent != null)
-					{
-						EnemyAttackHitEvent(attackdamage);
-					}
-				}
+				EnemyAttackHitEvent?.Invoke(attackdamage);
 			}
 		}
 	}

@@ -30,20 +30,12 @@ public class CombatSystem : MonoBehaviour
 
 			Collider[] colliders = Physics.OverlapSphere(transform.position, attackRange);
 
-			foreach (Collider hit in colliders)
+			if(colliders[0] != null)
 			{
-				if(hit && hit.tag == Tags.EnemyClamp)
+				float distance = Vector3.Magnitude(colliders[0].transform.position - transform.position);
+				if (distance <= attackRange)
 				{
-					float distance = Vector3.Magnitude(hit.transform.position - transform.position);
-					if(distance <= attackRange)
-					{
-						Debug.Log("PlayerAttack");
-
-						if(MeleeAttackHitEvent != null)
-						{
-							MeleeAttackHitEvent(meleeDamage);
-						}
-					}
+					MeleeAttackHitEvent?.Invoke(meleeDamage);
 				}
 			}
 		}

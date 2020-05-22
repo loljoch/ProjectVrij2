@@ -11,12 +11,6 @@ public class TempPlayer : MonoBehaviour
 
     [Header("Item pick-up variables")]
     [SerializeField] private float range = 4f;
-    private LayerMask itemDropMask;
-
-    private void Start()
-    {
-        itemDropMask = LayerMask.GetMask("ItemDrop");
-    }
 
     private void Update()
     {
@@ -44,7 +38,7 @@ public class TempPlayer : MonoBehaviour
     private void CheckForItemDrops()
     {
         //Check proximity for itemdrops
-        var hits = Physics.OverlapSphere(transform.position, range, itemDropMask);
+        var hits = Physics.OverlapSphere(transform.position, range, LayerMasks.ItemDrop);
 
         //Check if it has hit anything
         if (hits.Length == 0) return;
