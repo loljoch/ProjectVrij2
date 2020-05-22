@@ -7,7 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Coral_Dark
+<<<<<<< HEAD:SurvivalGame/Assets/Art/Materials/Coral.mat
+  m_Name: Coral
+=======
+  m_Name: Coral Purple
+>>>>>>> WouterBranch:SurvivalGame/Assets/Art/Materials/Coral Purple.mat
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF
   m_LightmapFlags: 4
@@ -90,8 +94,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.5759209, g: 0.3754005, b: 0.7169812, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.82720315, g: 0.6023496, b: 0.9056604, a: 1}
+    - _Color: {r: 0.8880198, g: 0.6745283, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
 --- !u!114 &6282245189386118849
