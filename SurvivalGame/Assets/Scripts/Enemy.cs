@@ -8,11 +8,11 @@ public class Enemy : MonoBehaviour
 	public static Action<int> EnemyAttackHitEvent;
 
 	[Header("Settings: ")]
-	[SerializeField] private float maxHealth = 100f;
-	[SerializeField] private float playerSpottedRange = 50f;
-	[SerializeField] private float movingToPlayerRange = 40f;
-	[SerializeField] private float movementSpeed = 4f;
-	[SerializeField] public float rotationDamping = 3f;
+	[SerializeField] protected float maxHealth = 100f;
+	[SerializeField] protected float playerSpottedRange = 50f;
+	[SerializeField] protected float movingToPlayerRange = 40f;
+	[SerializeField] protected float movementSpeed = 4f;
+	[SerializeField] protected float rotationDamping = 3f;
 
 	[Header("Combat Settings")]
 	[SerializeField] protected float attackRange = 6f;
@@ -62,7 +62,6 @@ public class Enemy : MonoBehaviour
 				}
 			}
 
-			CheckDeathState();
 		}
 		else
 		{
@@ -90,6 +89,7 @@ public class Enemy : MonoBehaviour
 	public virtual void TakeDamage(int damage)
 	{
 		currentHealth -= damage;
+		CheckDeathState();
 	}
 
 	public virtual void DoAttack()

@@ -28,9 +28,9 @@ public class CombatSystem : MonoBehaviour
 		{
 			nextAttack = Time.time + attackInterval;
 
-			Collider[] colliders = Physics.OverlapSphere(transform.position, attackRange);
+			Collider[] colliders = Physics.OverlapSphere(transform.position, attackRange, LayerMasks.Enemy);
 
-			if(colliders[0] != null)
+			if(colliders.Length > 0)
 			{
 				float distance = Vector3.Magnitude(colliders[0].transform.position - transform.position);
 				if (distance <= attackRange)
