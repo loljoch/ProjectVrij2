@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LayerMasks
 {
-	public static LayerMask Player => LayerMask.NameToLayer("Player");
-	public static LayerMask ItemDrop => LayerMask.NameToLayer("ItemDrop");
-	public static LayerMask Enemy => LayerMask.NameToLayer("Enemy");
+	public static LayerMask Player => LayerMask.GetMask("Player");
+	public static LayerMask ItemDrop => LayerMask.GetMask("ItemDrop");
+	public static LayerMask Enemy => LayerMask.GetMask("Enemy");
 }
