@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1603411843767428707}
   - component: {fileID: 6928131513342061687}
   - component: {fileID: 7507526295879909158}
+  - component: {fileID: 191991011924626181}
   m_Layer: 0
   m_Name: CoralType_Toeter_2
   m_TagString: Untagged
@@ -58,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5940368799187512514, guid: 11f967360337de94199f854e05fc0ece, type: 3}
+  - {fileID: 2100000, guid: 50750cd4a59ffdc459febad75d8768c8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &191991011924626181
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5365719248953339485}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.040434282, y: 0.043712888, z: 0.02318259}
+  m_Center: {x: -0.0069837067, y: -0.0054811616, z: -4.656613e-10}
