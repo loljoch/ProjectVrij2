@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 1850483171640056934}
   - component: {fileID: 5894448658658692882}
   - component: {fileID: 4968592266058171028}
-  - component: {fileID: 2135873095}
-  - component: {fileID: 2135873094}
   m_Layer: 11
   m_Name: CoralType_Bush
   m_TagString: Untagged
@@ -81,32 +79,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2135873095
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9126570059815874212}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.07523281, y: 0.32415298, z: 0.046288323}
-  m_Center: {x: -0.019479597, y: 0, z: -0.042286713}
---- !u!114 &2135873094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9126570059815874212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b3c5ed752ebfbf4e8a9c70e84cdf1cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropPrefab: {fileID: 4319918265460652524, guid: ab0300867bdefab4296dcf753d667312,
-    type: 3}
-  harvestTime: 2
-  useName: Coral

@@ -52,17 +52,22 @@ public class PlayerHP : MonoBehaviour
 		}
 	}
 
+	private void ChangeHealth(int _amount)
+	{
+		currentHealth += _amount;
+		Mathf.Clamp(currentHealth, 0, maxHealth);
+	}
+
 	private void TakeDamage(int _damageTaken)
 	{
-		currentHealth -= _damageTaken;
+		ChangeHealth(-_damageTaken);
 		ChangeSpriteBasedOnLives();
 		DeathState();
 	}
 
 	private void HealPlayer(int _healAmount)
 	{
-		Debug.Log("healed");
-		currentHealth += _healAmount;
+		ChangeHealth(+_healAmount);
 		ChangeSpriteBasedOnLives();
 	}
 

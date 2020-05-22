@@ -1,36 +1,42 @@
 ﻿using Extensions.Generics.Singleton;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class RightClickMenu : GenericSingleton<RightClickMenu, RightClickMenu>
+public class RightClickMenu : GenericSingleton<RightClickMenu, RightClickMenu>, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private Button equipButton;
     [SerializeField] private Button eatButton;
     [SerializeField] private Button dropButton;
 
+    private bool isPointerOnMe = false;
     private int cItemID = -1;
 
-    protected override void Awake()
+    private void Start()
     {
-        base.Awake();
         eatButton.onClick.AddListener(EatItem);
+
+        eatButton.onClick.AddListener(Hide);
+        equipButton.onClick.AddListener(Hide);
+        dropButton.onClick.AddListener(Hide);
     }
 
     private void Update()
     {
-        if (!gameObject.activeSelf) return;
+        if (isPointerOnMe) return;
 
         if (Input.GetMouseButtonDown(0))
         {
             Hide();
+            isPointerOnMe = false;
         }
     }
 
     private void EatItem()
     {
-        FoodItem mango = (FoodItem)UIManager.Instance.itemInformation.itemsById[cItemID];
-        Debug.Log("heal: " + mango.healAmount);
-        //PlayerHP.HealingPlayerEvent?.Invoke(().healAmount)
+        FoodItem food = (FoodItem)UIManager.Instance.itemInformation.itemsById[cItemID];
+        PlayerHP.HealingPlayerEvent?.Invoke(food.healAmount);
+        UIManager.Instance.inventory.RemoveItem(cItemID, 1);
     }
 
     public void Show(int itemId, Vector3 pos)
@@ -78,5 +84,15 @@ public class RightClickMenu : GenericSingleton<RightClickMenu, RightClickMenu>
     public void Hide()
     {
         gameObject.SetActive(false);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        isPointerOnMe = true;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isPointerOnMe = false;
     }
 }

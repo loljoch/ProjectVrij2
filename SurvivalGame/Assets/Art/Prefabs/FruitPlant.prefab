@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 2859298701040727606}
   - component: {fileID: 3028973744218831709}
   - component: {fileID: 2102338794}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FruitPlant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ Transform:
   m_GameObject: {fileID: 1293972199590478885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.650513, y: 2.1277603e-17, z: -0.95825803}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1030916943952842762}
   - {fileID: 4001946288850780445}
@@ -262,8 +262,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2278106, y: 13.661632, z: 0.25505453}
-  m_Center: {x: 0, y: 6.788032, z: 0}
+  m_Size: {x: 0.45578784, y: 13.661632, z: 0.6776388}
+  m_Center: {x: -0.11398861, y: 6.788032, z: 0.2112922}
 --- !u!114 &2102338794
 MonoBehaviour:
   m_ObjectHideFlags: 0
