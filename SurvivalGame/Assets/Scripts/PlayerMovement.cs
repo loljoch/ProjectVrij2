@@ -21,17 +21,19 @@ public class PlayerMovement : MonoBehaviour
 	{
 		movement.x = Input.GetAxis("Horizontal");
 		movement.z = Input.GetAxis("Vertical");
-
-		if (movement != Vector3.zero)
-		{
-			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), smootDampRotation);
-		}
+		
+		/*
+		
+		*/
 	}
 
 	private void FixedUpdate()
 	{
-		rigid.MovePosition(rigid.position + movement * moveSpeed * Time.deltaTime);
+		if (movement != Vector3.zero)
+		{
+			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), smootDampRotation);
+		}
 
-		
+		rigid.MovePosition(rigid.position + movement * moveSpeed * Time.deltaTime);	
 	}	
 }
