@@ -13,7 +13,7 @@ public class InteractableText : GenericSingleton<InteractableText, InteractableT
 
     public void Show(string name)
     {
-        textField.text = $"Press F to interact with {name}";
+        textField.text = $"Hold F to interact with {name}";
         gameObject.SetActive(true);
     }
 
