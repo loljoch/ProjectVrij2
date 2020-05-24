@@ -1,17 +1,33 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using Extensions;
 using UnityEngine;
 
 public class TradeScreen : MonoBehaviour
 {
+    [SerializeField] private Player player;
+
     [SerializeField] private Transform offersParent;
     [SerializeField] private TradeOfferDisplay offerDisplayPrefab;
 
     private List<TradeOfferDisplay> tradeOfferDisplays;
 
-    public void Show(Trader trader)
+
+    public void DynamicShowHide(Trader trader)
     {
+        if (gameObject.activeSelf)
+        {
+            Hide();
+        } else
+        {
+            Show(trader);
+        }
+    }
+
+    private void Show(Trader trader)
+    {
+        player.OnLostInteractable += Hide;
+
         var offers = trader.offers;
         tradeOfferDisplays = new List<TradeOfferDisplay>();
 
@@ -27,8 +43,9 @@ public class TradeScreen : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public void Hide()
+    private void Hide()
     {
+        player.OnLostInteractable -= Hide;
         gameObject.SetActive(false);
     }
 

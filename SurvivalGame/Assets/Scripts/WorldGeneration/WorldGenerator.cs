@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using Extensions;
+using Extensions.Vector;
 using System.Threading;
 
 public class WorldGenerator : MonoBehaviour

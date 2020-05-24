@@ -1,19 +1,27 @@
-﻿using Extensions.Generics.Singleton;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
-public class InteractableText : GenericSingleton<InteractableText, InteractableText>
+public class InteractableText : MonoBehaviour
 {
+    private const string PRESS_SUFFIX = "Press ";
+    private const string HOLD_SUFFIX = "Press and hold ";
+    private const string INTERACT_TEXT = "F to ";
+    
     [SerializeField] private TextMeshProUGUI textField;
 
-    private void Start()
+    private void Awake()
     {
+        Player p = FindObjectOfType<Player>();
+        p.OnFindInteractable += Show;
+        p.OnLostInteractable += Hide;
+
         gameObject.SetActive(false);
     }
 
-    public void Show(string name)
+    public void Show(IInteractable obj)
     {
-        textField.text = $"Press F to interact with {name}";
+        string suffix = (obj.HoldTime > 0) ? HOLD_SUFFIX : PRESS_SUFFIX;
+        textField.text = suffix + INTERACT_TEXT + obj.InteractionType + obj.UseName;
         gameObject.SetActive(true);
     }
 

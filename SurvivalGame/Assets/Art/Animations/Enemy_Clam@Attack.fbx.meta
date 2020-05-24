@@ -70,7 +70,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.67787117
-        functionName: ClampAttack
+        functionName: AnimAttack
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -129,7 +129,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1.5
+    globalScale: 150
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

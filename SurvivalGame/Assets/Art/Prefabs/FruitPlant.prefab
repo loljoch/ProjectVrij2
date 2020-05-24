@@ -276,9 +276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57134473fe8173a4389e7017a36ccc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropPrefab: {fileID: 0}
-  harvestTime: 2
   useName: Mango plant
+  interactTime: 2
+  interactionType: 'shake the '
+  dropPrefab: {fileID: 0}
   dropFruits:
   - {fileID: 2102338823}
   - {fileID: 2102338822}
