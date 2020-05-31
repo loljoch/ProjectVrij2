@@ -9,21 +9,23 @@ public class Inventory : MonoBehaviour
     private List<int> items = new List<int>(24);
     private int occupiedDisplays = 0;
 
-    public int itemId = 0;
-    public int itemAmount = 1;
-
-    [Button]
-    public void FooAddItem()
+    private void Awake()
     {
-        AddItem(itemId, itemAmount);
+        VirtualController.Instance.InventoryActionPerformed += DynamicShowHide;
+
+        Hide();
     }
 
-    [Button]
-    public void FooRemoveItem()
+    public void DynamicShowHide()
     {
-        RemoveItem(itemId, itemAmount);
+        if (gameObject.activeSelf)
+        {
+            Hide();
+        } else
+        {
+            Show();
+        }
     }
-
 
     public void Show()
     {

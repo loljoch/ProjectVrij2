@@ -1,46 +1,37 @@
 ﻿using UnityEngine;
 
+
 public abstract class Harvestable : MonoBehaviour, IInteractable
 {
-    [SerializeField] protected GameObject dropPrefab;
-    [SerializeField] protected float harvestTime = 2f;
-    private float cTime = 0;
-    private bool isHarvesting = false;
-
     public string UseName => useName;
     [SerializeField] protected string useName;
 
+    public float HoldTime => interactTime;
+    [SerializeField] protected float interactTime = 2f;
+
+    public string InteractionType => interactionType;
+    [SerializeField] private string interactionType = "harvest the ";
+
+    [SerializeField] protected GameObject dropPrefab;
+
     public void Interact()
     {
-        StartHarvesting();
+        VirtualController.Instance.InteractHoldActionPerformed += EndHarvest;
+        VirtualController.Instance.InteractHoldActionCanceled += CancelHarvest;
+
+        StartHarvest();
     }
 
-    private void Update()
+    protected abstract void StartHarvest();
+
+    protected virtual void EndHarvest()
     {
-        if (!isHarvesting) return;
-
-        if (Input.GetKeyUp(KeyCode.F))
-        {
-            isHarvesting = false;
-            return;
-        }
-
-
-        if(cTime < harvestTime)
-        {
-            cTime += Time.deltaTime;
-        } else
-        {
-            cTime = 0;
-            isHarvesting = false;
-            EndHarvest();
-        }
+        CancelHarvest();
     }
 
-    protected virtual void StartHarvesting()
+    protected virtual void CancelHarvest()
     {
-        isHarvesting = true;
+        VirtualController.Instance.InteractHoldActionPerformed -= EndHarvest;
+        VirtualController.Instance.InteractHoldActionCanceled -= CancelHarvest;
     }
-
-    protected abstract void EndHarvest();
 }

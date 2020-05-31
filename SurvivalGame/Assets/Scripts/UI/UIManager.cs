@@ -9,17 +9,4 @@ public class UIManager : GenericSingleton<UIManager, UIManager>
     [Header("Player")]
     public Inventory inventory;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            inventory.gameObject.SetActive(!inventory.gameObject.activeSelf);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            inventory.Hide();
-            tradeScreen.Hide();
-        }
-    }
 }
