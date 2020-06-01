@@ -83,13 +83,13 @@ public class PlayerHP : MonoBehaviour
 
 	private void OnEnable()
 	{
-		Enemy.EnemyAttackHitEvent += TakeDamage;
+		//Enemy.EnemyAttackHitEvent += TakeDamage;
 		HealingPlayerEvent += HealPlayer;
 	}
 
 	private void OnDisable()
 	{
-		Enemy.EnemyAttackHitEvent -= TakeDamage;
+		//Enemy.EnemyAttackHitEvent -= TakeDamage;
 		HealingPlayerEvent -= HealPlayer;
 	}
 }

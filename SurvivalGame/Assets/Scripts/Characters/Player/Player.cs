@@ -81,12 +81,12 @@ public class Player : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, range);
-        UnityEditor.Handles.Label(transform.position + Vector3.up * range, "Item pick-up range", style);
+        //UnityEditor.Handles.Label(transform.position + Vector3.up * range, "Item pick-up range", style);
 
         Gizmos.color = Color.green;
         Gizmos.DrawRay(transform.position + rayOrigin, ((forwardMultiplier * transform.forward) + rayDirection) * rayLength);
         style.normal.textColor = Color.green;
         style.fontSize = 16;
-        UnityEditor.Handles.Label(transform.position + (rayOrigin * 0.5f) + (forwardMultiplier * transform.forward), "Interactable ray", style);
+        //UnityEditor.Handles.Label(transform.position + (rayOrigin * 0.5f) + (forwardMultiplier * transform.forward), "Interactable ray", style);
     }
 }
