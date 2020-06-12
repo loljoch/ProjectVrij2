@@ -5,13 +5,14 @@ public class FruitPlant : Harvestable
     [SerializeField] private Rigidbody[] dropFruits;
     [SerializeField] private GameObject[] cosmeticFruits;
 
-    protected override void StartHarvesting()
+    protected override void StartHarvest()
     {
-        base.StartHarvesting();
+        
     }
 
     protected override void EndHarvest()
     {
+        base.EndHarvest();
         for (int i = 0; i < dropFruits.Length; i++)
         {
             dropFruits[i].GetComponent<ItemDrop>().enabled = true;

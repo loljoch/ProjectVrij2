@@ -1,42 +1,75 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Extensions;
+﻿using Extensions;
+using System.Collections;
 using UnityEngine;
 
 public class TradeScreen : MonoBehaviour
 {
-    [SerializeField] private Transform offersParent;
-    [SerializeField] private TradeOfferDisplay offerDisplayPrefab;
+    [SerializeField] private Player player;
+    [SerializeField] private TradeOffer tradeOfferPrefab;
+    [SerializeField] private DetailedTradeOffer detailedTradeOffer;
 
-    private List<TradeOfferDisplay> tradeOfferDisplays;
-
-    public void Show(Trader trader)
+    private void Awake()
     {
-        var offers = trader.offers;
-        tradeOfferDisplays = new List<TradeOfferDisplay>();
+        if (player == null)
+        {
+            player = FindObjectOfType<Player>();
+        }
+    }
 
-        offersParent.gameObject.DestroyChildren();
+    public void DynamicShowHide(Trader trader)
+    {
+        if (gameObject.activeSelf)
+        {
+            Hide();
+        } else
+        {
+            Show(trader);
+        }
+    }
+
+    private void Show(Trader trader)
+    {
+        VirtualController.Instance.CancelItemOptionsPerformed += Hide;
+        UIManager.Instance.inventory.Hide();
+        player.OnLostInteractable += Hide;
+        UIManager.State = UIState.TradeScreen;
+
+        var offers = trader.offers;
+
+        gameObject.DestroyChildren();
+
+        TradeOffer firstChild = null;
 
         for (int i = 0; i < offers.Count; i++)
         {
-            TradeOfferDisplay tod = Instantiate(offerDisplayPrefab, offersParent);
-            tod.AssignOffer(offers[i]);
-            tradeOfferDisplays.Add(tod);
+            var temp = Instantiate(tradeOfferPrefab, transform);
+            temp.Initialize(offers[i], ref detailedTradeOffer);
+            if (i != 0) continue;
+            firstChild = temp;
         }
 
         gameObject.SetActive(true);
+
+        StartCoroutine(LateSelect(firstChild));
     }
 
-    public void Hide()
+    private IEnumerator LateSelect(TradeOffer offer)
     {
+        yield return new WaitForEndOfFrame();
+        offer.Select();
+    }
+
+    private void Hide()
+    {
+        VirtualController.Instance.CancelItemOptionsPerformed -= Hide;
+        player.OnLostInteractable -= Hide;
         gameObject.SetActive(false);
+        detailedTradeOffer.gameObject.SetActive(false);
+        UIManager.State = UIState.None;
     }
 
     public void UpdateAllOffers()
     {
-        for (int i = 0; i < tradeOfferDisplays.Count; i++)
-        {
-            tradeOfferDisplays[i].UpdateOffers();
-        }
+
     }
 }

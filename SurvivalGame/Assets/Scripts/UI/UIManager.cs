@@ -3,23 +3,40 @@ using UnityEngine;
 
 public class UIManager : GenericSingleton<UIManager, UIManager>
 {
-    public ItemInformation itemInformation;
+    public static UIState State
+    {
+        get => state;
+        set
+        {
+            switch (value)
+            {
+                case UIState.None:
+                    VirtualController.Instance.ListenForMovement = true;
+                    break;
+                default:
+                    VirtualController.Instance.ListenForMovement = false;
+                    break;
+            }
+            state = value;
+        }
+    }
+    private static UIState state = UIState.None;
+
     public TradeScreen tradeScreen;
 
     [Header("Player")]
     public Inventory inventory;
 
-    private void Update()
+    protected override void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            inventory.gameObject.SetActive(!inventory.gameObject.activeSelf);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            inventory.Hide();
-            tradeScreen.Hide();
-        }
+        
     }
+
+}
+
+public enum UIState
+{
+    None = 0,
+    Inventory,
+    TradeScreen
 }
