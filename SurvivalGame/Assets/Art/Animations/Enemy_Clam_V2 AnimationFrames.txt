@@ -1,0 +1,8 @@
+Wake-up:	0-380
+Go to sleep:	380-0
+Walkcycle:	400-470
+Melee:		475-720
+AOE:		850-1200
+Stunned:	1220-1300
+Idle(Awake):	1310-1700
+Death:		1710-2100
