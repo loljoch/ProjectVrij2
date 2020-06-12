@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Trader : MonoBehaviour, IInteractable
 {
-    public List<TradeOffer> offers;
+    public List<ScriptableObjects.TradeOffer> offers;
     public int currentEXP = 0;
     public int nextLevelEXP = 100;
 

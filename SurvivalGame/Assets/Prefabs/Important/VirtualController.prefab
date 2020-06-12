@@ -91,6 +91,46 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Movement
       m_Flags: 8
+    - m_Name: Controller
+      m_Id: ec44e4eb-8061-422a-bf78-3b71cbc17445
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 4
+    - m_Name: up
+      m_Id: be726a9b-26dc-4dab-a2c3-ce191bfd4b02
+      m_Path: <Gamepad>/leftStick/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 5e07e4a5-c9ae-4598-a74d-d02b7f9f6e74
+      m_Path: <Gamepad>/leftStick/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 55af476f-75ef-4a85-8603-de36e6349192
+      m_Path: <Gamepad>/leftStick/left
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 48645b97-1e1c-4ac8-9dce-68b92d1c523f
+      m_Path: <Gamepad>/leftStick/right
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
   attackAction:
     m_Name: Attack
     m_Type: 1
@@ -102,6 +142,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 6d909603-84f1-4a7b-9ad8-2b34ab1c46fa
       m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Attack
+      m_Flags: 0
+    - m_Name: 
+      m_Id: dbcb7bca-5448-46d7-809f-1c371bc47466
+      m_Path: <Gamepad>/buttonWest
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -123,6 +171,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Interact Press
       m_Flags: 0
+    - m_Name: 
+      m_Id: 03cd2f98-b4af-4f2c-af52-8da429d9bfd6
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact Press
+      m_Flags: 0
   inventoryAction:
     m_Name: Inventory
     m_Type: 1
@@ -138,4 +194,36 @@ MonoBehaviour:
       m_Processors: 
       m_Groups: 
       m_Action: Inventory
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 6eb470b4-e084-4796-adc2-6d195d563397
+      m_Path: <Gamepad>/buttonNorth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Inventory
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 64148fe3-464e-4282-9c1c-dbd14d8dd9a4
+      m_Path: <DualShockGamepad>/touchpadButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Inventory
+      m_Flags: 0
+  cancelItemOptionsAction:
+    m_Name: Cancel Item Options
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 795bf981-9d63-4840-8ef0-cc16596bfdb2
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 3ad4abd4-fbcf-49d0-8003-7a098e9c8bfc
+      m_Path: <Gamepad>/buttonEast
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Cancel Item Options
       m_Flags: 0

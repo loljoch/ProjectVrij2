@@ -17,6 +17,6 @@ public class Item : ScriptableObject
 public enum UseCases
 {
     Droppable = 0,
-    Equipable = 1,
-    Eatable = 2
+    Weapon = 1,
+    Consumable = 2
 }

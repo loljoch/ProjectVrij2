@@ -76,6 +76,7 @@ public abstract class BaseEnemy : BaseCombat
         Destroy(gameObject, 3f);
     }
 
+#if UNITY_EDITOR
     protected override void OnDrawGizmosSelected()
     {
         base.OnDrawGizmosSelected();
@@ -94,4 +95,5 @@ public abstract class BaseEnemy : BaseCombat
         style.normal.textColor = Color.yellow;
         UnityEditor.Handles.Label(transform.position + Vector3.up * movingToPlayerRange, "Move range", style);
     }
+#endif
 }
