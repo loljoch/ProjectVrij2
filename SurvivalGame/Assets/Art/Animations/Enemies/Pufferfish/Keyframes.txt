@@ -1,0 +1,5 @@
+Chase: 		1-75
+Inflate: 	80-100
+Idle: 		110-680
+
+Death Charge = Chase maar dan toenemende snelheid en dan de ogen veranderen naar rode emission. Gameobject daarna gewoon uitzetten en dan particle effect.
