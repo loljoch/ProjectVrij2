@@ -93,6 +93,7 @@ public abstract class BaseCombat : MonoBehaviour, IDamagable
     protected abstract void OnDeath();
     #endregion
 
+#if UNITY_EDITOR
     protected virtual void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
@@ -103,6 +104,7 @@ public abstract class BaseCombat : MonoBehaviour, IDamagable
         style.fontSize = 24;
         //UnityEditor.Handles.Label(transform.position + Vector3.up * AttackRange, "Attack range", style);
     }
+#endif
 }
 
 public interface IDamagable

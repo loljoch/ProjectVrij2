@@ -9,6 +9,7 @@ public class VirtualController : GenericSingleton<VirtualController, VirtualCont
     [SerializeField] private InputAction interactPressAction;
     private InputAction interactHoldAction; //Doesn't need to be serialized
     [SerializeField] private InputAction inventoryAction;
+    [SerializeField] private InputAction cancelItemOptionsAction;
 
     public static Pointer pointer = new Pointer();
 
@@ -20,6 +21,22 @@ public class VirtualController : GenericSingleton<VirtualController, VirtualCont
     public System.Action InteractHoldActionPerformed;
     public System.Action InteractHoldActionCanceled;
     public System.Action InventoryActionPerformed;
+    public System.Action CancelItemOptionsPerformed;
+
+    public bool ListenForMovement
+    {
+        set
+        {
+            if (value)
+            {
+                movementAction.Enable();
+            } else
+            {
+                movementAction.Disable();
+                MovementActionPerformed?.Invoke(Vector2.zero);
+            }
+        }
+    }
 
     protected override void Awake()
     {
@@ -27,10 +44,11 @@ public class VirtualController : GenericSingleton<VirtualController, VirtualCont
         attackAction.performed += AttackAction_performed;
         interactPressAction.performed += InteractPressReleaseAction_performed;
         inventoryAction.performed += InventoryAction_performed;
+        cancelItemOptionsAction.performed += CancelItemOptionsAction_performed;
 
         InteractPressActionPerformed += movementAction.Disable;
         InteractPressActionPerformed += () => MovementActionPerformed?.Invoke(Vector2.zero);
-        InteractReleaseActionPerformed += movementAction.Enable;
+        InteractReleaseActionPerformed += () => ListenForMovement = true;
 
         Player p = FindObjectOfType<Player>();
         p.OnFindInteractable += SetInteractHoldTimer;
@@ -43,6 +61,7 @@ public class VirtualController : GenericSingleton<VirtualController, VirtualCont
         attackAction.Enable();
         interactPressAction.Enable();
         inventoryAction.Enable();
+        cancelItemOptionsAction.Enable();
     }
 
     private void OnDisable()
@@ -51,6 +70,7 @@ public class VirtualController : GenericSingleton<VirtualController, VirtualCont
         attackAction.Disable();
         interactPressAction.Disable();
         inventoryAction.Disable();
+        cancelItemOptionsAction.Disable();
     }
 
     private void OnDestroy()
@@ -105,7 +125,7 @@ public class VirtualController : GenericSingleton<VirtualController, VirtualCont
         if (isPressed)
         {
             InteractPressActionPerformed?.Invoke();
-        } else
+        } else if (UIManager.State == UIState.None)
         {
             InteractReleaseActionPerformed?.Invoke();
         }
@@ -125,5 +145,10 @@ public class VirtualController : GenericSingleton<VirtualController, VirtualCont
     private void InventoryAction_performed(InputAction.CallbackContext obj)
     {
         InventoryActionPerformed?.Invoke();
+    }
+
+    private void CancelItemOptionsAction_performed(InputAction.CallbackContext obj)
+    {
+        CancelItemOptionsPerformed?.Invoke();
     }
 }

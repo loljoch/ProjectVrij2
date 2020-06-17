@@ -1,12 +1,12 @@
-﻿using UnityEngine;
+﻿using UnityEditorInternal;
+using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     [Header("Interact variables")]
-    [SerializeField] private Vector3 rayOrigin;
-    [SerializeField] private Vector3 rayDirection;
+    [SerializeField] private Vector3 boxOrigin;
+    [SerializeField] private Vector3 boxSize;
     [SerializeField] private float forwardMultiplier;
-    [SerializeField] private int rayLength = 2;
     private IInteractable currentInteractable;
 
     public System.Action<IInteractable> OnFindInteractable;
@@ -54,10 +54,13 @@ public class Player : MonoBehaviour
     //Look for interactable objects
     private void CastRay()
     {
-        if (Physics.Raycast(GetRay(), out RaycastHit hit, rayLength, LayerMasks.Interactable))
+        var colliders = Physics.OverlapBox((transform.forward * forwardMultiplier) + boxOrigin + transform.position, boxSize, Quaternion.identity, LayerMasks.Interactable);
+
+        if(colliders.Length > 0)
         {
-            IInteractable obj = hit.collider.GetComponent<IInteractable>();
-            if (obj == currentInteractable) return; //Dont invoke if we found the same interactable
+            IInteractable obj = colliders[0].GetComponent<IInteractable>();
+
+            if (obj == currentInteractable) return;
 
             OnFindInteractable?.Invoke(obj);
         } else
@@ -68,11 +71,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private Ray GetRay()
-    {
-        return new Ray(transform.position + rayOrigin, (forwardMultiplier * transform.forward) + rayDirection);
-    }
-
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         GUIStyle style = new GUIStyle();
@@ -81,12 +80,14 @@ public class Player : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, range);
-        //UnityEditor.Handles.Label(transform.position + Vector3.up * range, "Item pick-up range", style);
+        UnityEditor.Handles.Label(transform.position + Vector3.up * range, "Item pick-up range", style);
 
         Gizmos.color = Color.green;
-        Gizmos.DrawRay(transform.position + rayOrigin, ((forwardMultiplier * transform.forward) + rayDirection) * rayLength);
+        Gizmos.DrawWireCube((transform.forward * forwardMultiplier) + boxOrigin + transform.position, boxSize);
         style.normal.textColor = Color.green;
         style.fontSize = 16;
-        //UnityEditor.Handles.Label(transform.position + (rayOrigin * 0.5f) + (forwardMultiplier * transform.forward), "Interactable ray", style);
+        UnityEditor.Handles.Label((transform.forward * forwardMultiplier) + boxOrigin + transform.position, "Interactable cast", style);
+
     }
+#endif
 }
