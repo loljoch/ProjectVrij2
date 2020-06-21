@@ -1,0 +1,8 @@
+Idle: 			1-192
+AOE: 			193-675
+Stunned:		680-757
+Tail Whip: 		760-1020
+Death: 			1030-1700
+
+Dash: stationairy idle animatie die steeds sneller gaat, daarna launcht ie naar voren. Ik had bedacht dat dit gewoon in unity zelf kan.
+Swimcycle: Idle maar dan sneller

@@ -13,10 +13,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - ItemDrop
+  - Player
+  - Enemy
+  - Interactable
   - 
   - 
   - 

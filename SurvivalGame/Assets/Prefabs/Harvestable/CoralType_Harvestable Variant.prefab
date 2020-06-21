@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!65 &7564446362770739736
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608445867440122613}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3461828, y: 0.32415298, z: 0.26852012}
+  m_Center: {x: 0.00000035762787, y: 0, z: -0.000000059604645}
+--- !u!114 &7564446362770739735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608445867440122613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3c5ed752ebfbf4e8a9c70e84cdf1cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropPrefab: {fileID: 4319918265460652524, guid: ab0300867bdefab4296dcf753d667312,
+    type: 3}
+  harvestTime: 2
+  useName: Coral
+--- !u!1001 &7564446364663071825
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1850483171640056934, guid: 9fd3129fa11766648803a180d746d695,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 176.8418
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850483171640056934, guid: 9fd3129fa11766648803a180d746d695,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850483171640056934, guid: 9fd3129fa11766648803a180d746d695,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -48.363365
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850483171640056934, guid: 9fd3129fa11766648803a180d746d695,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850483171640056934, guid: 9fd3129fa11766648803a180d746d695,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850483171640056934, guid: 9fd3129fa11766648803a180d746d695,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850483171640056934, guid: 9fd3129fa11766648803a180d746d695,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850483171640056934, guid: 9fd3129fa11766648803a180d746d695,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850483171640056934, guid: 9fd3129fa11766648803a180d746d695,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850483171640056934, guid: 9fd3129fa11766648803a180d746d695,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850483171640056934, guid: 9fd3129fa11766648803a180d746d695,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126570059815874212, guid: 9fd3129fa11766648803a180d746d695,
+        type: 3}
+      propertyPath: m_Name
+      value: CoralType_Harvestable
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9fd3129fa11766648803a180d746d695, type: 3}
+--- !u!1 &1608445867440122613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9126570059815874212, guid: 9fd3129fa11766648803a180d746d695,
+    type: 3}
+  m_PrefabInstance: {fileID: 7564446364663071825}
+  m_PrefabAsset: {fileID: 0}

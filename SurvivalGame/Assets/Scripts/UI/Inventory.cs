@@ -1,98 +1,68 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using EasyAttributes;
 
-public class Inventory : MonoBehaviour
+public class Inventory : ItemStorage
 {
-    public List<ResourceDisplay> itemSlots;
-    [HideInInspector] public List<int> itemIds = new List<int>(24);
-    public delegate void onAddItem();
-    public delegate void onHide();
-    public onAddItem OnAddItem;
-    public onHide OnHide;
+    private ItemSlot lastSelected;
 
-    public bool Active
+    [Header("Foo settings: ")]
+    public int itemId = 0;
+    public int itemAmount = 1;
+
+    [Button]
+    private void FooAddItem()
     {
-        get
-        {
-            return gameObject.activeSelf;
-        }
-        set
-        {
-            if (value)
-            {
-                Show();
-            } else
-            {
-                Hide();
-            }
-        }
+        AddItem(itemId, itemAmount);
     }
 
-
-    [Header("Test variables")]
-    public Item testItem;
-
-    [EasyAttributes.Button]
-    public void TestAddItem()
+    protected override void Awake()
     {
-        AddItem(testItem);
+        base.Awake();
+        VirtualController.Instance.InventoryActionPerformed += DynamicShowHide;
+
+        lastSelected = itemSlots[0];
     }
 
-    public void AddItem(Item item, int quantity = 1)
+    public override void Show()
     {
-        if (itemIds.Contains(item.id))
-        {
-            ResourceDisplay rd = itemSlots[itemIds.IndexOf(item.id)];
-            rd.resource.Quantity += quantity;
-        } else
-        {
-            int index = GetOpenIndex();
-            itemIds[index] = item.id;
-            itemSlots[index].AssignResource(new Resource(item, quantity));
-        }
+        //Only open inventory when nothing else is open
+        if (UIManager.State != UIState.None) return;
 
-        OnAddItem?.Invoke();
+        base.Show();
+        lastSelected.Select();
+        UIManager.State = UIState.Inventory;
     }
 
-    public void RemoveItem(int id, int amount)
+    public override void Hide()
     {
-        int index = itemIds.IndexOf(id);
-        ResourceDisplay rd = itemSlots[index];
-        int cQuantity = rd.resource.Quantity;
-
-        cQuantity -= amount;
-
-        if (cQuantity < 1)
-        {
-            rd.RemoveResource();
-            itemIds[index] = -1;
-        } else
-        {
-            rd.resource.Quantity -= amount;
-        }
+        lastSelected = GetLastSelected();
+        lastSelected.OnDeselect(null);
+        base.Hide();
+        ItemOptionMenu.Instance.Hide();
+        UIManager.State = UIState.None;
     }
 
-    public void Show()
+    public void SelectInventory()
     {
-        gameObject.SetActive(true);
+        lastSelected.Select();
     }
 
-    public void Hide()
+    public void SetLastSelected()
     {
-        gameObject.SetActive(false);
-        OnHide?.Invoke();
+        lastSelected = GetLastSelected();
     }
 
-    private int GetOpenIndex()
+    private ItemSlot GetLastSelected()
     {
-        int index = itemIds.IndexOf(-1);
-
-        if(index == -1)
+        for (int i = 0; i < itemSlots.Count; i++)
         {
-            itemIds.Add(-1);
-            index = itemIds.Count - 1;
+            if (itemSlots[i].isSelected) return itemSlots[i];
         }
 
-        return index;
+        return itemSlots[0];
     }
 }
+
