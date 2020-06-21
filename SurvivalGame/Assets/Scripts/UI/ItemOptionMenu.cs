@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 using Extensions.Generics.Singleton;
-using UnityEngine.EventSystems;
-using TMPro;
 
 public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
 {
@@ -17,6 +14,7 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
     protected override void Awake()
     {
         consumeButton.onClick.AddListener(EatItem);
+        equipButton.onClick.AddListener(Equip);
 
         dropItemButton.onClick.AddListener(Hide);
         consumeButton.onClick.AddListener(Hide);
@@ -31,6 +29,12 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
         FoodItem food = (FoodItem)ItemInformation.itemsById[cItemID];
         PlayerCombat.HealingPlayerEvent?.Invoke(food.healAmount);
         UIManager.Instance.inventory.RemoveItem(cItemID, 1);
+    }
+
+    private void Equip()
+    {
+        WeaponItem weapon = (WeaponItem)ItemInformation.itemsById[cItemID];
+        Equipment.EquipWeaponEvent?.Invoke(weapon);
     }
 
     public void Show(int itemId, Vector3 pos)

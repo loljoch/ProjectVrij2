@@ -6,14 +6,17 @@ public abstract class BaseCombat : MonoBehaviour, IDamagable
     [SerializeField] protected int maxHealth = 3;
 
     [Header("Combat Settings: ")]
-    [SerializeField] protected float attackRange = 5f;
-    [SerializeField] protected float attackInterval = 1f;
+    [SerializeField] protected float baseAttackRange = 5f;
+    [SerializeField] protected float baseAttackInterval = 1f;
     [SerializeField] protected int baseDamage = 1;
     [Tooltip("Only attack objects on this layer")]
     [SerializeField] protected LayerMask hitMask;
+    [SerializeField] protected Transform baseAttackFrom;
 
-    protected virtual float AttackRange => attackRange;
+    protected virtual float AttackRange => baseAttackRange;
     protected virtual int Damage => baseDamage;
+    protected virtual float AttackInterval => baseAttackInterval;
+    protected virtual Transform AttackFrom => baseAttackFrom;
     protected bool CanAttack => (Time.time > nextAttack); 
     protected int currentHealth = 0;
 
@@ -22,13 +25,17 @@ public abstract class BaseCombat : MonoBehaviour, IDamagable
     protected virtual void Awake()
     {
         ResetHealth();
+        if(baseAttackFrom == null)
+        {
+            baseAttackFrom = transform;
+        }
     }
 
     #region CombatFunctions
     protected virtual bool TryAttack()
     {
         if (!CanAttack) return false;
-        nextAttack = Time.time + attackInterval;
+        nextAttack = Time.time + AttackInterval;
 
         Attack();
         return true;
@@ -36,12 +43,12 @@ public abstract class BaseCombat : MonoBehaviour, IDamagable
 
     protected virtual bool CheckForHits()
     {
-        return (Physics.OverlapSphere(transform.position, attackRange, hitMask).Length > 0);
+        return (Physics.OverlapSphere(AttackFrom.position, baseAttackRange, hitMask).Length > 0);
     }
 
     protected virtual bool CheckForHits(out Collider[] hits)
     {
-        hits = Physics.OverlapSphere(transform.position, attackRange, hitMask);
+        hits = Physics.OverlapSphere(AttackFrom.position, baseAttackRange, hitMask);
         return (hits.Length > 0);
     }
 
@@ -97,7 +104,7 @@ public abstract class BaseCombat : MonoBehaviour, IDamagable
     protected virtual void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.DrawWireSphere(AttackFrom.position, AttackRange);
 
         GUIStyle style = new GUIStyle();
         style.normal.textColor = Color.red;

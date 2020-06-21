@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Equipment))]
 public class PlayerCombat : BaseCombat
 {
 	public static System.Action<int> HealingPlayerEvent;
@@ -11,8 +12,16 @@ public class PlayerCombat : BaseCombat
 	[SerializeField] private Sprite fullHeart = null;
 	[SerializeField] private Sprite brokenHeart = null;
 
+	private Equipment equipment;
+
+	protected override int Damage => equipment.weapon.damage;
+	protected override float AttackRange => equipment.weapon.attackRange;
+	protected override float AttackInterval => equipment.weapon.attackInterval;
+	protected override Transform AttackFrom => equipment.current3dWeapon.transform;
+
 	protected override void Awake()
 	{
+		equipment = GetComponent<Equipment>();
 		VirtualController.Instance.AttackActionPerformed += () => TryAttack();
 		base.Awake();
 	}
@@ -59,9 +68,18 @@ public class PlayerCombat : BaseCombat
 		Debug.Log("Player Death");
 		Destroy(gameObject, 1f);
 	}
-    #endregion
+	#endregion
 
-    private void OnEnable()
+	protected override void OnDrawGizmosSelected()
+	{
+		if(equipment == null)
+		{
+			equipment = GetComponent<Equipment>();
+		}
+		base.OnDrawGizmosSelected();
+	}
+
+	private void OnEnable()
 	{
 		HealingPlayerEvent += Heal;
 	}
