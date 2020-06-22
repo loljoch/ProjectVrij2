@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a720d255b5d50ac40adf96cd2c9b62a9, type: 3}
   m_Name: PlayTestOffer
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 96e138c97e2e1704dbd500fe24d74a7a, type: 2}
+  item: {fileID: 11400000, guid: a55af5abf3eec8045b46841c5acc8e9b, type: 2}
   neededItems:
   - item: {fileID: 11400000, guid: 53559a954cb751942b2911c7f339b8d2, type: 2}
     quantity: 3

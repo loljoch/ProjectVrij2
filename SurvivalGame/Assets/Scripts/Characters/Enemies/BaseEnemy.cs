@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public abstract class BaseEnemy : BaseCombat
 {
-    [Header("Ënemy settings: ")]
+	[Header("Ënemy settings: ")]
     [SerializeField] protected float spotRange = 50f;
     [SerializeField] protected float movingToPlayerRange = 40f;
 
@@ -87,13 +87,13 @@ public abstract class BaseEnemy : BaseCombat
         GUIStyle style = new GUIStyle();
         style.normal.textColor = Color.blue;
         style.fontSize = 24;
-        UnityEditor.Handles.Label(transform.position + Vector3.up * spotRange, "Spot range", style);
+        //UnityEditor.Handles.Label(transform.position + Vector3.up * spotRange, "Spot range", style);
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, movingToPlayerRange);
 
         style.normal.textColor = Color.yellow;
-        UnityEditor.Handles.Label(transform.position + Vector3.up * movingToPlayerRange, "Move range", style);
+       // UnityEditor.Handles.Label(transform.position + Vector3.up * movingToPlayerRange, "Move range", style);
     }
 #endif
 }

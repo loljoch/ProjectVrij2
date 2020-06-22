@@ -63,7 +63,7 @@ public class ItemStorage : MonoBehaviour
     /// </summary>
     /// <param name="itemId"></param>
     /// <returns>True if item was added</returns>
-    public bool AddItem(int itemId, int quantity = 1)
+    public virtual bool AddItem(int itemId, int quantity = 1)
     {
         if (items.Contains(itemId))
         {

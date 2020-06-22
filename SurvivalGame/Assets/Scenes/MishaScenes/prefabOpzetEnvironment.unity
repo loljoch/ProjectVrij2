@@ -292,7 +292,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1301131085
 PrefabInstance:
@@ -7689,7 +7689,7 @@ Transform:
   - {fileID: 8582137786786320489}
   - {fileID: 2542826585483196231}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &5792130934734035290
 MeshRenderer:
@@ -11499,11 +11499,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8068616031233025233, guid: c8cab3d5df129944c86c7b2d8ed7fe27,
-        type: 3}
-      propertyPath: m_Name
-      value: environmentRotspartijV3
-      objectReference: {fileID: 0}
     - target: {fileID: 6458762607510443714, guid: c8cab3d5df129944c86c7b2d8ed7fe27,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11558,6 +11553,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068616031233025233, guid: c8cab3d5df129944c86c7b2d8ed7fe27,
+        type: 3}
+      propertyPath: m_Name
+      value: environmentRotspartijV3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8cab3d5df129944c86c7b2d8ed7fe27, type: 3}

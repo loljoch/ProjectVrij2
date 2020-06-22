@@ -3,14 +3,19 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using EasyAttributes;
+using System;
 
 public class Inventory : ItemStorage
 {
-    private ItemSlot lastSelected;
+    /// <summary>
+    /// Gives the player an item (ItemID, Quantity), returns if succesfully added
+    /// </summary>
+    public static Action<int, int> OnObtainItem;
 
     [Header("Foo settings: ")]
     public int itemId = 0;
     public int itemAmount = 1;
+    private ItemSlot lastSelected;
 
     [Button]
     private void FooAddItem()
@@ -21,9 +26,16 @@ public class Inventory : ItemStorage
     protected override void Awake()
     {
         base.Awake();
+
         VirtualController.Instance.InventoryActionPerformed += DynamicShowHide;
 
         lastSelected = itemSlots[0];
+    }
+
+    private void OnDestroy()
+    {
+        VirtualController.Instance.InventoryActionPerformed += DynamicShowHide;
+
     }
 
     public override void Show()
@@ -43,6 +55,17 @@ public class Inventory : ItemStorage
         base.Hide();
         ItemOptionMenu.Instance.Hide();
         UIManager.State = UIState.None;
+    }
+
+    public override bool AddItem(int itemId, int quantity = 1)
+    {
+        bool success = base.AddItem(itemId, quantity);
+        if (success)
+        {
+            OnObtainItem?.Invoke(itemId, quantity);
+        }
+
+        return success;
     }
 
     public void SelectInventory()

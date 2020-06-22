@@ -19,7 +19,7 @@ public class ItemSlot : Selectable, ISubmitHandler, IPointerClickHandler, IEvent
             }
         }
     }
-    private int quantity;
+    private int quantity = 0;
 
     public int MaxQuantity
     {
@@ -33,17 +33,12 @@ public class ItemSlot : Selectable, ISubmitHandler, IPointerClickHandler, IEvent
     [SerializeField] private Image slotBackground;
     [SerializeField] private Image itemSprite;
     [SerializeField] private GameObject quantityBackground;
-    [SerializeField] private TextMeshProUGUI itemQuantity;
+    [SerializeField] protected TextMeshProUGUI itemQuantity;
 
     //Actions
     public System.Action<int> OnStackEmpty;
 
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-    }
-
-    public void AssignItem(int itemId, int initialQuantity = 1)
+    public virtual void AssignItem(int itemId, int initialQuantity = 1)
     {
         isEmpty = false;
 
