@@ -6,6 +6,7 @@
 			_Color("Tint", Color) = (1, 1, 1, 1)
 			_MainTex("Texture", 2D) = "white" {}
 			_Specular("Specular Color", Color) = (1,1,1,1)
+			_EmissionMap("Emission Map", 2D) = "black" {}
 			[HDR] _Emission("Emission", color) = (0 ,0 ,0 , 1)
 
 			[Header(Lighting Parameters)]
@@ -29,6 +30,7 @@
 
 				sampler2D _MainTex;
 				fixed4 _Color;
+				sampler2D _EmissionMap;
 				half3 _Emission;
 				fixed4 _Specular;
 
@@ -107,6 +109,7 @@
 				//input struct which is automatically filled by unity
 				struct Input {
 					float2 uv_MainTex;
+					float2 uv_EmissionMap;
 				};
 
 				//the surface shader function which sets parameters the lighting function then uses
@@ -119,7 +122,7 @@
 					o.Specular = _Specular;
 
 					float3 shadowColor = col.rgb * _ShadowTint;
-					o.Emission = _Emission + shadowColor;
+					o.Emission = tex2D(_EmissionMap, i.uv_EmissionMap) * _Emission + shadowColor;
 				}
 				ENDCG
 			}
