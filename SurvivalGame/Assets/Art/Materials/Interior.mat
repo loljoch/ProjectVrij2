@@ -70,12 +70,12 @@ Material:
     - _RimAmount: 0.575
     - _RimThreshold: 0
     - _SmoothnessTextureChannel: 0
-    - _SpecularFalloff: 1
+    - _SpecularFalloff: 0
     - _SpecularHighlights: 1
-    - _SpecularSize: 0.1
+    - _SpecularSize: 0.065
     - _SrcBlend: 1
     - _StepAmount: 2
-    - _StepWidth: 0.25
+    - _StepWidth: 0.198
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
