@@ -26,6 +26,8 @@ public class ObtainFeedback : MonoBehaviour
     private void SpawnMessage(int itemId, int quantity)
     {
         Item item = ItemInformation.itemsById[itemId];
-        Instantiate(messagePrefab, transform).AssignItem(itemId, quantity);
+        ObtainMessage obj = Instantiate(messagePrefab, transform);
+        obj.AssignItem(itemId, quantity);
+        Destroy(obj.gameObject, 1.2f);
     }
 }

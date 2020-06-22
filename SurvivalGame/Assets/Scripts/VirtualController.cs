@@ -53,6 +53,8 @@ public class VirtualController : GenericSingleton<VirtualController, VirtualCont
         Player p = FindObjectOfType<Player>();
         p.OnFindInteractable += SetInteractHoldTimer;
         p.OnLostInteractable += ResetInteractHoldTimer;
+
+        ListenForMovement = true;
     }
 
     private void OnEnable()
@@ -116,7 +118,10 @@ public class VirtualController : GenericSingleton<VirtualController, VirtualCont
 
     private void AttackAction_performed(InputAction.CallbackContext obj)
     {
-        AttackActionPerformed?.Invoke();
+        if(UIManager.State == UIState.None)
+        {
+            AttackActionPerformed?.Invoke();
+        }
     }
 
     private void InteractPressReleaseAction_performed(InputAction.CallbackContext obj)
