@@ -82,7 +82,7 @@ QualitySettings:
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: High
-    pixelLightCount: 2
+    pixelLightCount: 10
     shadows: 1
     shadowResolution: 3
     shadowProjection: 1
