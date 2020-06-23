@@ -81,7 +81,7 @@ Material:
     m_Colors:
     - _AmbientColor: {r: 0.60628664, g: 0.60628664, b: 0.60628664, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Emission: {r: 1, g: 0.51687396, b: 0, a: 1}
+    - _Emission: {r: 4, g: 2.0705884, b: 0, a: 1}
     - _EmissionColor: {r: 7.464265, g: 3.351909, b: 0, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
