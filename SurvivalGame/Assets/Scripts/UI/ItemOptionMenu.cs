@@ -34,7 +34,7 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
     private void Equip()
     {
         WeaponItem weapon = (WeaponItem)ItemInformation.itemsById[cItemID];
-        Equipment.EquipWeaponEvent?.Invoke(weapon);
+        PlayerCombat.EquipWeaponEvent?.Invoke(weapon);
     }
 
     public void Show(int itemId, Vector3 pos)

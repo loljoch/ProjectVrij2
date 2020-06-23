@@ -13,12 +13,9 @@ MonoBehaviour:
   m_Name: 4_Sword_Coral
   m_EditorClassIdentifier: 
   id: 4
-  name: Coral Sword
+  name: Coral Dagger
   sprite: {fileID: 21300000, guid: 8f11bf178a31eb048ad0adc687615b29, type: 3}
   useCases: 1
   maxQuantity: 1
-  damage: 1
-  attackRange: 2
-  attackInterval: 1
-  weaponPrefab: {fileID: 7219832973787101303, guid: 91e67fbb63354da4e90a1361586c70b8,
+  weaponPrefab: {fileID: 3670703347706587507, guid: 458eb0928def5014cbaa9993fddb732a,
     type: 3}

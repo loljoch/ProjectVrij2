@@ -9,12 +9,12 @@ public class EquipmentSlot : MonoBehaviour
 
     private void Awake()
     {
-        Equipment.EquipWeaponEvent += SetWeapon;
+        PlayerCombat.EquipWeaponEvent += SetWeapon;
     }
 
     private void OnDestroy()
     {
-        Equipment.EquipWeaponEvent -= SetWeapon;
+        PlayerCombat.EquipWeaponEvent -= SetWeapon;
     }
 
     private void SetWeapon(WeaponItem weapon)

@@ -2,28 +2,35 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Equipment))]
 public class PlayerCombat : BaseCombat
 {
+	public static System.Action<WeaponItem> EquipWeaponEvent;
 	public static System.Action<int> HealingPlayerEvent;
 
 	[Header("Player Settings: ")]
+	[SerializeField] private Animator anim;
 	[SerializeField] private List<Image> heartSprites = new List<Image>();
 	[SerializeField] private Sprite fullHeart = null;
 	[SerializeField] private Sprite brokenHeart = null;
 
-	private Equipment equipment;
+	[Header("Equipment settings: ")]
+	public WeaponItem weaponItem;
+	[HideInInspector] public Transform current3dWeapon;
+	[SerializeField] private Transform weaponHand;
+	private IWeapon weapon;
 
-	protected override int Damage => equipment.weapon.damage;
-	protected override float AttackRange => equipment.weapon.attackRange;
-	protected override float AttackInterval => equipment.weapon.attackInterval;
-	protected override Transform AttackFrom => equipment.current3dWeapon.transform;
+	protected override float AttackInterval => weapon.AttackInterval;
 
 	protected override void Awake()
 	{
-		equipment = GetComponent<Equipment>();
 		VirtualController.Instance.AttackActionPerformed += () => TryAttack();
+		EquipWeaponEvent += Equip;
 		base.Awake();
+	}
+
+	private void Start()
+	{
+		EquipWeaponEvent?.Invoke(weaponItem);
 	}
 
 	private void ChangeSpriteBasedOnLives()
@@ -54,6 +61,30 @@ public class PlayerCombat : BaseCombat
 		}
 	}
 
+	private void OnDestroy()
+	{
+		EquipWeaponEvent -= Equip;
+	}
+
+	public void Equip(WeaponItem weapon)
+	{
+		weaponItem = weapon;
+
+		if (current3dWeapon != null)
+		{
+			Destroy(current3dWeapon.gameObject);
+		}
+
+		current3dWeapon = Instantiate(weapon.weaponPrefab, weaponHand).transform;
+		this.weapon = current3dWeapon.GetComponent<IWeapon>();
+		this.weapon.PlayerAnim = anim;
+	}
+
+	protected override void Attack()
+	{
+		weapon.DoAttackAnimation();
+	}
+
 	#region HealthFunctions
 	protected override void ChangeHealth(int _amount)
 	{
@@ -69,15 +100,6 @@ public class PlayerCombat : BaseCombat
 		Destroy(gameObject, 1f);
 	}
 	#endregion
-
-	protected override void OnDrawGizmosSelected()
-	{
-		if(equipment == null)
-		{
-			equipment = GetComponent<Equipment>();
-		}
-		base.OnDrawGizmosSelected();
-	}
 
 	private void OnEnable()
 	{
