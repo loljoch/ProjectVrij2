@@ -85,9 +85,9 @@ Material:
     - _RimThreshold: 0.1
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
-    - _SpecularFalloff: 1
+    - _SpecularFalloff: 0
     - _SpecularHighlights: 1
-    - _SpecularSize: 0.1
+    - _SpecularSize: 0
     - _SrcBlend: 1
     - _StepAmount: 2
     - _StepWidth: 0.25

@@ -70,18 +70,18 @@ Material:
     - _RimAmount: 0.575
     - _RimThreshold: 0
     - _SmoothnessTextureChannel: 0
-    - _SpecularFalloff: 1
+    - _SpecularFalloff: 0
     - _SpecularHighlights: 1
-    - _SpecularSize: 0.1
+    - _SpecularSize: 0.065
     - _SrcBlend: 1
     - _StepAmount: 2
-    - _StepWidth: 0.25
+    - _StepWidth: 0.198
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _AmbientColor: {r: 0.60628664, g: 0.60628664, b: 0.60628664, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Emission: {r: 0.9245283, g: 0.8433723, b: 0.3009078, a: 1}
+    - _Emission: {r: 4, g: 2.0705884, b: 0, a: 1}
     - _EmissionColor: {r: 7.464265, g: 3.351909, b: 0, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
