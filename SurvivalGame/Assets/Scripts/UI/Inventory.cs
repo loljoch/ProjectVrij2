@@ -30,11 +30,12 @@ public class Inventory : ItemStorage
         VirtualController.Instance.InventoryActionPerformed += DynamicShowHide;
 
         lastSelected = itemSlots[0];
+        Hide();
     }
 
     private void OnDestroy()
     {
-        VirtualController.Instance.InventoryActionPerformed += DynamicShowHide;
+        VirtualController.Instance.InventoryActionPerformed -= DynamicShowHide;
 
     }
 

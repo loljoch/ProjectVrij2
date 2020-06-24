@@ -19,7 +19,6 @@
 			SubShader{
 				//the material is completely non-transparent and is rendered at the same time as the other opaque geometry
 				Tags{ "RenderType" = "Opaque" "Queue" = "Geometry"}
-
 				CGPROGRAM
 
 				//the shader is a surface shader, meaning that it will be extended by unity in the background to have fancy lighting and other features
@@ -124,6 +123,7 @@
 					float3 shadowColor = col.rgb * _ShadowTint;
 					o.Emission = tex2D(_EmissionMap, i.uv_EmissionMap) * _Emission + shadowColor;
 				}
+
 				ENDCG
 			}
 				FallBack "Standard"
