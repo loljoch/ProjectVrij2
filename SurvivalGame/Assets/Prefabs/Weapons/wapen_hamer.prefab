@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5964944432105347395}
   - component: {fileID: 1426772292553389347}
   - component: {fileID: 5582161454532229138}
+  - component: {fileID: 6157406006176531269}
   m_Layer: 0
   m_Name: wapen_hamer
   m_TagString: Untagged
@@ -58,9 +59,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3866615717796446470, guid: 4557d3cf4b379da4cae90ae9fea81a2c, type: 3}
-  - {fileID: -7768587559125901347, guid: 4557d3cf4b379da4cae90ae9fea81a2c, type: 3}
-  - {fileID: 8320467286261670138, guid: 4557d3cf4b379da4cae90ae9fea81a2c, type: 3}
+  - {fileID: 2100000, guid: bb110130e7ad73747a35ea3d4e066350, type: 2}
+  - {fileID: 2100000, guid: 90684968bcd9927409754c45154dbcfb, type: 2}
+  - {fileID: 2100000, guid: c9f5896ce8eb1b147b2a84f7dc121d81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,3 +82,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!95 &6157406006176531269
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7176627942500311445}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d65849eef71e0e488eb641ef75d4ded, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
