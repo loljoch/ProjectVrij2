@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3670703347706587507}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0.086014315}
+  m_LocalRotation: {x: -0.05530319, y: 0.000000059604616, z: 0.00000011920923, w: 0.9984696}
+  m_LocalPosition: {x: 0.763, y: 0.191, z: 0.086}
   m_LocalScale: {x: 5.2798047, y: 0.40366554, z: 0.40366554}
   m_Children: []
   m_Father: {fileID: 0}
@@ -93,9 +93,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2891ba274262e4ea5098eed00a6173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSFX: event:/SFX/Player/Player_weapons
+  attackSFX: event:/SFX/Weapons/Melee/Melee_Dolk_slash
   damage: 1
-  animationName: Slash
+  weaponAnimation: 0
   center: {x: 2, y: 0, z: 0}
   halfExtents: {x: 3, y: 0.3, z: 0.5}
   attackInterval: 1

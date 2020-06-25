@@ -123,9 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2891ba274262e4ea5098eed00a6173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSFX: event:/SFX/Player/Player_weapons
+  attackSFX: event:/SFX/Weapons/Melee/Melee_krab_klauwen
   damage: 1
   weaponAnimation: 2
   center: {x: 0, y: 0, z: 0}
-  halfExtents: {x: 0, y: 0, z: 0}
-  attackInterval: 1
+  halfExtents: {x: 2, y: 3, z: 2}
+  attackInterval: 0.3

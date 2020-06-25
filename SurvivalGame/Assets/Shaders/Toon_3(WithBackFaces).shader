@@ -1,4 +1,4 @@
-﻿Shader "Custom/Toon_2"
+﻿Shader "Custom/Toon_3(backface culling)"
 {
 		//show values to edit in inspector
 		Properties{
