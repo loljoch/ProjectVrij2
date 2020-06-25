@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: fmodplayertest/fmodplayertest.fspro
-  sourceBankPath: fmodplayertest\Build
+  sourceProjectPath: fmod_PV_audio/fmod_PV_audio.fspro
+  sourceBankPath: fmod_PV_audio\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -79,6 +79,8 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - AMB
+  - MUSIC
   - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264

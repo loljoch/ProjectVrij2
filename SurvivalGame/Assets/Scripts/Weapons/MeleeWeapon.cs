@@ -7,7 +7,8 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
     [SerializeField] private string attackSFX;
 
     [SerializeField] private int damage;
-    [SerializeField] private string animationName;
+    [SerializeField] private Animations.WeaponAnimation weaponAnimation;
+    private string weaponAnimationName;
 
     [Header("Collider")]
     [SerializeField] private Vector3 center;
@@ -19,15 +20,20 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
     public float AttackInterval => attackInterval;
     public float attackInterval = 1f;
 
+    private void Awake()
+    {
+        weaponAnimationName = Animations.GetWeaponAnimation(weaponAnimation);
+    }
+
     public void DoAttackAnimation()
     {
         FMODUnity.RuntimeManager.PlayOneShot(attackSFX, transform.position);
-        //playerAnim.Play(animationName);
+        playerAnim.Play(weaponAnimationName);
     }
 
     private bool CheckForHits(out Collider[] hits)
     {
-        hits = Physics.OverlapBox(transform.position + center, halfExtents);
+        hits = Physics.OverlapBox(transform.position + center, halfExtents, transform.rotation);
         return (hits.Length > 0);
     }
 

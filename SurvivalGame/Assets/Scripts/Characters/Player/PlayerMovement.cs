@@ -12,7 +12,18 @@ public class PlayerMovement : BaseMovement
 
 	private Vector3 movementDirection;
 
-	private bool IsMoving => (movementDirection != Vector3.zero);
+	private bool IsMoving
+	{
+		set
+		{
+			if(isMoving != value)
+			{
+				FMODUnity.RuntimeManager.PlayOneShot((value) ? walkingSound : idleSound);
+				isMoving = value;
+			}
+		}
+	}
+	private bool isMoving = true;
 
 	protected override void Awake()
 	{
@@ -20,14 +31,10 @@ public class PlayerMovement : BaseMovement
 		VirtualController.Instance.MovementActionPerformed += TranslateInput;
 	}
 
-	private void Start()
-	{
-		InvokeRepeating("CallFootsteps", 0, (moveSpeed/30));
-	}
-
 	private void FixedUpdate()
 	{
-		if (IsMoving)
+		IsMoving = (movementDirection != Vector3.zero);
+		if (isMoving)
 		{
 			LerpLookDirection(movementDirection);
 		}
@@ -37,16 +44,5 @@ public class PlayerMovement : BaseMovement
 	{
 		movementDirection = input.ToVector3XZ();
 		base.Move(movementDirection);
-	}
-
-	private void CallFootsteps()
-	{
-		if (IsMoving)
-		{
-			FMODUnity.RuntimeManager.PlayOneShot(walkingSound, transform.position);
-		} else
-		{
-			FMODUnity.RuntimeManager.PlayOneShot(idleSound, transform.position);
-		}
 	}
 }

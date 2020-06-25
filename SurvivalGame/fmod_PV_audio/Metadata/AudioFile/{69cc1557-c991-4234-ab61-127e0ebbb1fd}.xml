@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{69cc1557-c991-4234-ab61-127e0ebbb1fd}">
+		<property name="assetPath">
+			<value>SFX/SFX - Audio - Aal_stunned.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.9165833333333335</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f94fc2cc-6b8f-4ee1-8c90-6d2ccd26ba27}</destination>
+		</relationship>
+	</object>
+</objects>

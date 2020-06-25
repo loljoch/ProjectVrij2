@@ -1,5 +1,109 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8270496508905931743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Homebase/Workbench_open_blueprint
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Homebase/Workbench_open_blueprint
+  guid: 708a7571af61064eac7ff0973b77c4c8
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
+--- !u!114 &-8265430201171524720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Aal_dashattack/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-8181805350395288898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AMB/AMB_school
+  m_EditorClassIdentifier: 
+  Path: event:/AMB/AMB_school
+  guid: 7bc55cd2d5c0f349b4dcf6ca20f07054
+  Banks:
+  - {fileID: 1668198991995873547}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 9101773318422468675}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2024
+--- !u!114 &-8132604795343154539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Ranged/Ranged_harpoen_reload
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Ranged/Ranged_harpoen_reload
+  guid: cf9303940eeac04ba902e59f50a41c7e
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &-8030780684204914640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ranged_harpoen_projectile/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
 --- !u!114 &-7886118779220566419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23,6 +127,725 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2916
+--- !u!114 &-7799626369765733940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PF_death/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-7366711463248484538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Homebase/Chest_open
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Homebase/Chest_open
+  guid: 12d89f52d37cad47bbfd103969d7ae65
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1300
+--- !u!114 &-7164698904411057555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: fmod_PV_audio/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637287143295228351
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4170
+  Exists: 1
+--- !u!114 &-6983168204110492306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ranged_impact_steen/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-6656392646305354124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Ranged/Ranged_harpoen_afvuur
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Ranged/Ranged_harpoen_afvuur
+  guid: 1893485f09945e408f1f619943721917
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &-6641123099277880400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Player_death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Player_death
+  guid: 18c75696d3c53349a66fce76e34318ad
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2916
+--- !u!114 &-6479452166915826283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MUSIC.bank
+  m_EditorClassIdentifier: 
+  Path: fmod_PV_audio/Build/Desktop/MUSIC.bank
+  SubDir: 
+  lastModified: 637287143296580157
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-6025044302162943450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Aal/Aal_AOE_charge
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Aal/Aal_AOE_charge
+  guid: 64a321d0d3dcc046b84941cee1409727
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2545943663051655387}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4672
+--- !u!114 &-5970201764944041374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Clam_death/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-5963444574519281276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Homebase/Chest_withdraw
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Homebase/Chest_withdraw
+  guid: a985823047a00d4ea994d9a7186952ef
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1300
+--- !u!114 &-5930623387192195946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC/Ice_biome
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC/Ice_biome
+  guid: 12df4f3fba1e7e44bbea25c3a78056cd
+  Banks:
+  - {fileID: -6479452166915826283}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -2122444040543874710}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 113333
+--- !u!114 &-5894607631588961558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Ranged/Ranged_impact_enemy
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Ranged/Ranged_impact_enemy
+  guid: 7e67556b5febe84a9266c8d22dda8633
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8965786955613672371}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 510
+--- !u!114 &-5423212293740790988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Melee/Melee_Shield_impact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Melee/Melee_Shield_impact
+  guid: 72c5275f7b58d042bfdb8fc2167b27c4
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 500
+--- !u!114 &-5281715635147936487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Smid_background/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-4897571241478861325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Trades/Item_gather_parel
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Trades/Item_gather_parel
+  guid: 410c8483a3818e4e8fadcd9e8ba631f5
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 150
+--- !u!114 &-4212515941629207194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Ranged/Ranged_impact_steen
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Ranged/Ranged_impact_steen
+  guid: 4ad7a04bdbf2324dacb0eac5259ef974
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6983168204110492306}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1300
+--- !u!114 &-4187808042436469024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Clam/Clam_asleep
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Clam/Clam_asleep
+  guid: 7b9cebc7b1cf904ebe5665ef340e68c3
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5692423606572094839}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1700
+--- !u!114 &-4148956385553932963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Aal/Aal_dashattack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Aal/Aal_dashattack
+  guid: 9d28817a03bdef4396f9df0a9ce59557
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8265430201171524720}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1300
+--- !u!114 &-4089965989410746771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Aal/Aal_idle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Aal/Aal_idle
+  guid: 850e700c7084e04ab05497425d1e111d
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3606885111791726735}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 850
+--- !u!114 &-4042890901536139120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Aal_tailwhip/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-3913479201129654484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Aal/Aal_tailwhip
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Aal/Aal_tailwhip
+  guid: cbe87d4e72b9a64182e257a4ee28b48d
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4042890901536139120}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &-3874841335852871625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Kok/Kok_Trade_begin
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Kok/Kok_Trade_begin
+  guid: aaaa8ee86c46a94baa6089d78be1f4ef
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1300
+--- !u!114 &-3727553583848836032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Homebase/Chest_close
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Homebase/Chest_close
+  guid: 7616890898b845468cb233fa5b53c6df
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1300
+--- !u!114 &-3166043331653347797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Homebase/Door_open_close
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Homebase/Door_open_close
+  guid: c8752c4b7913e341a2803af129b5d66b
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2916
+--- !u!114 &-2882867517108638020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Kok/Kok_Trade_complete
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Kok/Kok_Trade_complete
+  guid: 849f027a8bb26649827343bcd0fa145f
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1300
+--- !u!114 &-2799944217170787043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC/Underwater_biome
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC/Underwater_biome
+  guid: 4fb96409e0da124996c0606636c2d27e
+  Banks:
+  - {fileID: -6479452166915826283}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6723879588906614645}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 137142
+--- !u!114 &-2521067442484700607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: fmod_PV_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637287143294969033
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2476517692473065535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Ranged/Ranged_kruisboog_reload
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Ranged/Ranged_kruisboog_reload
+  guid: 52bfaebc4e013e4e9cace5d98aaabe7c
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &-2427041832703613375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Clam/Clam_stunned
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Clam/Clam_stunned
+  guid: 73e2c86985e41947a63d7e8eef71a1c8
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-2225017934389301654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Trades/Item_gather_mango
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Trades/Item_gather_mango
+  guid: a9ccf7ed74ac2e41a9198f6c57e99bc9
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 300
+--- !u!114 &-2122444040543874710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ice_biome/BATTLE
+  m_EditorClassIdentifier: 
+  Name: BATTLE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-1848341175529766910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Player_movement
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Player_movement
+  guid: 84abc876fa5a2344ad61367a9bf81915
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1100
+--- !u!114 &-1821261798312431956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Melee/Melee_Shield_guardup
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Melee/Melee_Shield_guardup
+  guid: fdfd4094221afe4b924897790165ebdd
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
 --- !u!114 &-1561387889282905697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,6 +864,199 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-1470920098649896305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: fmod_PV_audio/Build/Desktop/SFX.bank
+  SubDir: 
+  lastModified: 637287143296889336
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1414159660511514734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Pufferfish/PF_idle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Pufferfish/PF_idle
+  guid: fa80cca18f8ae148a5bc9d5838c894d0
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1178974225787372469}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1300
+--- !u!114 &-1184881422370230853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Trades/Item_drop
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Trades/Item_drop
+  guid: 480c0195b2b2d84094e711dc386e65d2
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 150
+--- !u!114 &-1122376025171752557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PF_charge/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-1035025780837938095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Clam_aOE_shockwave/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-897251391192435593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Clam/Clam_awaken
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Clam/Clam_awaken
+  guid: f1389218fd0b234aa9f3fc63f1ab37f3
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6979979275760165911}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1300
+--- !u!114 &-800889542135497204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Melee/Melee_Dolk_slash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Melee/Melee_Dolk_slash
+  guid: 2c8bd4ec219e4843b26f552e5275b5f0
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 960
+--- !u!114 &-598912838695316105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Ranged/Ranged_impact_zand
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Ranged/Ranged_impact_zand
+  guid: 90d132be160a2444a2417a195d2bdb36
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4975300152751696304}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1300
+--- !u!114 &-532189577062623103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Smid/Smid_Trade_complete
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Smid/Smid_Trade_complete
+  guid: bf2b0e8a513ed84b91b55be59352b17f
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1300
 --- !u!114 &-125535804225958710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,22 +1093,180 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 632518297463896296}
-  - {fileID: 8585479429492990686}
-  - {fileID: -1561387889282905697}
+  - {fileID: -7164698904411057555}
+  - {fileID: 1668198991995873547}
+  - {fileID: -2521067442484700607}
+  - {fileID: -6479452166915826283}
+  - {fileID: -1470920098649896305}
   EditorEvents:
-  - {fileID: 8686500759510975795}
-  - {fileID: 3124771040916974839}
-  - {fileID: -7886118779220566419}
-  - {fileID: 3645748343540096508}
-  - {fileID: -125535804225958710}
+  - {fileID: 4461450453661213602}
+  - {fileID: -8181805350395288898}
+  - {fileID: -5930623387192195946}
+  - {fileID: -2799944217170787043}
+  - {fileID: 3871295862795100881}
+  - {fileID: 5320020988791690625}
+  - {fileID: -7366711463248484538}
+  - {fileID: 454385886740989047}
+  - {fileID: -6656392646305354124}
+  - {fileID: -6641123099277880400}
+  - {fileID: 2412007530830292802}
+  - {fileID: 4624454726998770729}
+  - {fileID: -800889542135497204}
+  - {fileID: 7714213681799260869}
+  - {fileID: 6764456843695105542}
+  - {fileID: 2754293824119546575}
+  - {fileID: -4897571241478861325}
+  - {fileID: -1184881422370230853}
+  - {fileID: -4212515941629207194}
+  - {fileID: -2476517692473065535}
+  - {fileID: 9220533261105412806}
+  - {fileID: 7613176730843906572}
+  - {fileID: 6724654388023193478}
+  - {fileID: -6025044302162943450}
+  - {fileID: -8270496508905931743}
+  - {fileID: -5423212293740790988}
+  - {fileID: -2427041832703613375}
+  - {fileID: 3371697409542347576}
+  - {fileID: -3727553583848836032}
+  - {fileID: 6152522180351603369}
+  - {fileID: 4496019543527192721}
+  - {fileID: -4187808042436469024}
+  - {fileID: -5894607631588961558}
+  - {fileID: 6393080665319156206}
+  - {fileID: -2882867517108638020}
+  - {fileID: 6784715113597835812}
+  - {fileID: -1848341175529766910}
+  - {fileID: 7290412641504334714}
+  - {fileID: -4089965989410746771}
+  - {fileID: 7851681126610880598}
+  - {fileID: 6459312023669128376}
+  - {fileID: 8563973353398828718}
+  - {fileID: -598912838695316105}
+  - {fileID: -4148956385553932963}
+  - {fileID: 5937636374442848616}
+  - {fileID: 8543180466344578355}
+  - {fileID: -5963444574519281276}
+  - {fileID: -2225017934389301654}
+  - {fileID: -3874841335852871625}
+  - {fileID: 3968228378683561004}
+  - {fileID: 5414166137861398780}
+  - {fileID: 8661153203528775826}
+  - {fileID: -532189577062623103}
+  - {fileID: 6326261480464979747}
+  - {fileID: 3998081769823677409}
+  - {fileID: -3166043331653347797}
+  - {fileID: -3913479201129654484}
+  - {fileID: -8132604795343154539}
+  - {fileID: 2319988019982105232}
+  - {fileID: 382296527341999459}
+  - {fileID: 130271235556459174}
+  - {fileID: 9119219926206344532}
+  - {fileID: 3806272147565868103}
+  - {fileID: -897251391192435593}
+  - {fileID: 3171864870163608192}
+  - {fileID: -1414159660511514734}
+  - {fileID: 503958472640073985}
+  - {fileID: -1821261798312431956}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 8585479429492990686}
+  - {fileID: -2521067442484700607}
   StringsBanks:
-  - {fileID: 632518297463896296}
-  stringsBankWriteTime: 637286107034770011
+  - {fileID: -7164698904411057555}
+  stringsBankWriteTime: 637287143295228351
   cacheVersion: 3
+--- !u!114 &130271235556459174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Homebase/Workbench_assembly_complete
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Homebase/Workbench_assembly_complete
+  guid: de1b2f7ef0625043a30c4b036bd0a162
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1200
+--- !u!114 &382296527341999459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Ranged/Ranged_harpoen_projectile
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Ranged/Ranged_harpoen_projectile
+  guid: dd8b431be9ad624fb9531eb64e42c520
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8030780684204914640}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 600
+--- !u!114 &454385886740989047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Melee/Melee_zwaard_slash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Melee/Melee_zwaard_slash
+  guid: 15afc29a7e485241999805268b4c622c
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &503958472640073985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Melee/Melee_Trident_stab
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Melee/Melee_Trident_stab
+  guid: fb0bd492dc03194990e78e7dad2a4535
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
 --- !u!114 &632518297463896296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,6 +1287,75 @@ MonoBehaviour:
   - Name: Desktop
     Value: 952
   Exists: 1
+--- !u!114 &1031951637656986868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jungle_biome/BATTLE
+  m_EditorClassIdentifier: 
+  Name: BATTLE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &1178974225787372469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PF_idle/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &1442699013767649238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Aal_swimcycle/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &1668198991995873547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/AMB.bank
+  m_EditorClassIdentifier: 
+  Path: fmod_PV_audio/Build/Desktop/AMB.bank
+  SubDir: 
+  lastModified: 637287143294699752
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &1907606380031712165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +1374,110 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &2319988019982105232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Fletcher/Fletcher_Trade_complete
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Fletcher/Fletcher_Trade_complete
+  guid: d8caa3cc31e6e5418fa23385ee099e21
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2916
+--- !u!114 &2412007530830292802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Pufferfish/PF_death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Pufferfish/PF_death
+  guid: 1c687a64906def478b74f455f67d25b0
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7799626369765733940}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1300
+--- !u!114 &2435912564122878550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Clam_walkcycle/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &2545943663051655387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Aal_AOE_charge/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &2754293824119546575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Aal/Aal_stunned
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Aal/Aal_stunned
+  guid: 40c9cb827596de48a4481b13c3694f12
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &3124771040916974839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +1501,86 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1300
+--- !u!114 &3171864870163608192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Homebase/Chest_deposit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Homebase/Chest_deposit
+  guid: f8f60cada6b6774398d5ccd75f3831cc
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1300
+--- !u!114 &3371697409542347576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Melee/Melee_Impact_enemy
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Melee/Melee_Impact_enemy
+  guid: 73e802a3ffb7204f84fbb44a9fb35d7b
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 560
+--- !u!114 &3428492277846064800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ranged_kruisboog_projectile/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &3606885111791726735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Aal_idle/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
 --- !u!114 &3645748343540096508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +1604,507 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1300
+--- !u!114 &3794569983425648653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fletcher_background/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &3806272147565868103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Aal/Aal_death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Aal/Aal_death
+  guid: e272d276ed0cb445961180754cab0d07
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7568785920102742292}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
+--- !u!114 &3871295862795100881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC/Main_theme
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC/Main_theme
+  guid: 66175548d398f745aac0b8924f12e17d
+  Banks:
+  - {fileID: -6479452166915826283}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 88421
+--- !u!114 &3968228378683561004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Fletcher/Fletcher_background
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Fletcher/Fletcher_background
+  guid: ac5542563b66474f85eac1b84dfcd788
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3794569983425648653}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3500
+--- !u!114 &3998081769823677409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Melee/Melee_hamer_swing
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Melee/Melee_hamer_swing
+  guid: c6ff5ca5365df44d9977d7ad4a15c116
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1300
+--- !u!114 &4461450453661213602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AMB/AMB_water
+  m_EditorClassIdentifier: 
+  Path: event:/AMB/AMB_water
+  guid: 21ed0be4dbc78d49be24fb953bf61e68
+  Banks:
+  - {fileID: 1668198991995873547}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 13969
+--- !u!114 &4496019543527192721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Melee/Melee_krab_klauwen
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Melee/Melee_krab_klauwen
+  guid: 7918fb1ab33d1d45838c9f821ffac18e
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1300
+--- !u!114 &4624454726998770729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Ranged/Ranged_kruisboog_projectile
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Ranged/Ranged_kruisboog_projectile
+  guid: 29968f74371d5041a1ba3db689c5f792
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3428492277846064800}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &4975300152751696304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ranged_impact_zand/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &5037806768192989661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Kok_background/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &5320020988791690625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC/Jungle_biome
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC/Jungle_biome
+  guid: aa4f251e2eeae342ab6b42224181a052
+  Banks:
+  - {fileID: -6479452166915826283}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1031951637656986868}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 81600
+--- !u!114 &5414166137861398780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Pufferfish/PF_charge
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Pufferfish/PF_charge
+  guid: bebb20973e7867488d3889ce2a80f81d
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1122376025171752557}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &5692423606572094839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Clam_asleep/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &5937636374442848616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Smid/Smid_background
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Smid/Smid_background
+  guid: a00462d9c6f1904cbd546c779ccdb8bb
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5281715635147936487}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 850
+--- !u!114 &5977953421409815728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Clam_meleeattack/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &6152522180351603369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Player_idle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Player_idle
+  guid: 784891102ac4914ebbc286e4e947407e
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1200
+--- !u!114 &6326261480464979747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Trades/Item_gather_hout
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Trades/Item_gather_hout
+  guid: c60511b74927c5439c47583463e9f765
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 200
+--- !u!114 &6393080665319156206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Kok/Kok_background
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Kok/Kok_background
+  guid: 80207a0fa2737144b253b499687d2983
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5037806768192989661}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 600
+--- !u!114 &6459312023669128376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Weapons/Ranged/Ranged_kruisboog_afvuur
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Weapons/Ranged/Ranged_kruisboog_afvuur
+  guid: 8a471923ff51234d9f5e04f7bca7938d
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1100
+--- !u!114 &6723879588906614645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Underwater_biome/BATTLE
+  m_EditorClassIdentifier: 
+  Name: BATTLE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &6724654388023193478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Trades/Item_pickup
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Trades/Item_pickup
+  guid: 61688a965a6b884c9e476056ab33f472
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 100
+--- !u!114 &6764456843695105542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Player_weapons
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Player_weapons
+  guid: 3cbd89334fe8564a83ad9ceafa84ff52
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 800
+--- !u!114 &6784715113597835812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Clam/Clam_meleeattack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Clam/Clam_meleeattack
+  guid: 84a94b70c15dd340b9c46403f6749829
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5977953421409815728}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 550
 --- !u!114 &6973029442206852362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +2123,181 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &6979979275760165911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Clam_awaken/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &7290412641504334714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Clam/Clam_death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Clam/Clam_death
+  guid: 84c117628202174084850e32ede6948a
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5970201764944041374}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1400
+--- !u!114 &7568785920102742292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Aal_death/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &7613176730843906572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Trades/Item_gather_koraal
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Trades/Item_gather_koraal
+  guid: 58ce3de9cdc1164c90faed8544813a7e
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 250
+--- !u!114 &7714213681799260869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Player_hit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Player_hit
+  guid: 3419f4d461516d49bbf4aad66019b253
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 900
+--- !u!114 &7851681126610880598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Clam/Clam_walkcycle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Clam/Clam_walkcycle
+  guid: 898f1fe922782e43a4c0768a166dc853
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2435912564122878550}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 275
+--- !u!114 &8543180466344578355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Trades/Item_gather_kelp
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Trades/Item_gather_kelp
+  guid: a96c549f01655647bbde2447245b974b
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 300
+--- !u!114 &8563973353398828718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Clam/Clam_aOE_shockwave
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Clam/Clam_aOE_shockwave
+  guid: 8cb9a493ccd4f04cac035a3a69522c0e
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1035025780837938095}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3500
 --- !u!114 &8585479429492990686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +2316,30 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &8661153203528775826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Aal/Aal_swimcycle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Aal/Aal_swimcycle
+  guid: bf169539b406f54e8ca91eff14d6fcc5
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1442699013767649238}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 650
 --- !u!114 &8686500759510975795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,3 +2363,83 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &8965786955613672371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ranged_impact_enemy/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &9101773318422468675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB_school/DISTANCE
+  m_EditorClassIdentifier: 
+  Name: DISTANCE
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &9119219926206344532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Smid/Smid_Trade_begin
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Smid/Smid_Trade_begin
+  guid: e13905bea90a3548ae470c6cf7888fc9
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1300
+--- !u!114 &9220533261105412806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Fletcher/Fletcher_Trade_begin
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Fletcher/Fletcher_Trade_begin
+  guid: 57db58c4ccd2e04492ad3d31e982ef34
+  Banks:
+  - {fileID: -1470920098649896305}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2916
