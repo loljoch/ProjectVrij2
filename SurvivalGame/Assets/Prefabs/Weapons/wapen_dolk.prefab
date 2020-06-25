@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2891ba274262e4ea5098eed00a6173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSFX: event:/SFX/Player/Player_weapons
   damage: 1
   animationName: Slash
   center: {x: 2, y: 0, z: 0}

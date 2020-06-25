@@ -30,7 +30,6 @@ public class Inventory : ItemStorage
         VirtualController.Instance.InventoryActionPerformed += DynamicShowHide;
 
         lastSelected = itemSlots[0];
-        Hide();
     }
 
     private void OnDestroy()
@@ -49,6 +48,7 @@ public class Inventory : ItemStorage
         UIManager.State = UIState.Inventory;
     }
 
+    [Button]
     public override void Hide()
     {
         lastSelected = GetLastSelected();

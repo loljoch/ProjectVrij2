@@ -2,6 +2,10 @@
 
 public class MeleeWeapon : MonoBehaviour, IWeapon
 {
+    [Header("Sound settings")]
+    [FMODUnity.EventRef]
+    [SerializeField] private string attackSFX;
+
     [SerializeField] private int damage;
     [SerializeField] private string animationName;
 
@@ -9,7 +13,7 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
     [SerializeField] private Vector3 center;
     [SerializeField] private Vector3 halfExtents;
 
-    public Animator PlayerAnim { get; set; }
+    public Animator PlayerAnim { get => playerAnim; set => playerAnim = value; }
 
     private Animator playerAnim;
     public float AttackInterval => attackInterval;
@@ -17,7 +21,8 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
 
     public void DoAttackAnimation()
     {
-        playerAnim.Play(animationName);
+        FMODUnity.RuntimeManager.PlayOneShot(attackSFX, transform.position);
+        //playerAnim.Play(animationName);
     }
 
     private bool CheckForHits(out Collider[] hits)
