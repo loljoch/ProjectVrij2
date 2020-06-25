@@ -85,6 +85,11 @@ public class PlayerCombat : BaseCombat
 		weapon.DoAttackAnimation();
 	}
 
+	public void WeaponAttack()
+	{
+		weapon.Attack();
+	}
+
 	#region HealthFunctions
 	protected override void ChangeHealth(int _amount)
 	{
