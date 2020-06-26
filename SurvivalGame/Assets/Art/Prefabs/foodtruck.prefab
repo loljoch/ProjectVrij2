@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &199240641192961978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9137172867003398159}
+  - component: {fileID: 6868674236859889973}
+  - component: {fileID: 4803370419442737296}
+  - component: {fileID: 4792446428671656582}
+  - component: {fileID: 3033198848354281630}
+  m_Layer: 0
+  m_Name: foodtruck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9137172867003398159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199240641192961978}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0.63339347}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6868674236859889973
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199240641192961978}
+  m_Mesh: {fileID: 8452204348396378144, guid: 56005c6b305f46546aa13966fa0d4f9c, type: 3}
+--- !u!23 &4803370419442737296
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199240641192961978}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 5940368799187512514, guid: 56005c6b305f46546aa13966fa0d4f9c, type: 3}
+  - {fileID: -7150003204963200755, guid: 56005c6b305f46546aa13966fa0d4f9c, type: 3}
+  - {fileID: 8320467286261670138, guid: 56005c6b305f46546aa13966fa0d4f9c, type: 3}
+  - {fileID: -7440624942157649838, guid: 56005c6b305f46546aa13966fa0d4f9c, type: 3}
+  - {fileID: -3913906817265349062, guid: 56005c6b305f46546aa13966fa0d4f9c, type: 3}
+  - {fileID: -5553223221027373207, guid: 56005c6b305f46546aa13966fa0d4f9c, type: 3}
+  - {fileID: 2552952209690050987, guid: 56005c6b305f46546aa13966fa0d4f9c, type: 3}
+  - {fileID: -6997652254019430630, guid: 56005c6b305f46546aa13966fa0d4f9c, type: 3}
+  - {fileID: -6236301104572831838, guid: 56005c6b305f46546aa13966fa0d4f9c, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &4792446428671656582
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199240641192961978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07624353, y: 0.09041568, z: 0.07119134}
+  m_Center: {x: 0.0009332975, y: 0.04771688, z: 0.028650431}
+--- !u!65 &3033198848354281630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199240641192961978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04094841, y: 0.047259916, z: 0.05781464}
+  m_Center: {x: 0.0056502246, y: 0.024376139, z: -0.020651957}
