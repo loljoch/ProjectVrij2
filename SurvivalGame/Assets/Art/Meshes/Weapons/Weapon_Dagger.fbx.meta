@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Weapons
+    second: {fileID: 2100000, guid: 3fa920b7c5ad6624db177c88fecc7b39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: glas1
     second: {fileID: 2100000, guid: cba5a6fee25cf184eb498aa19b389b5c, type: 2}
   - first:

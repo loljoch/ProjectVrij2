@@ -1,9 +1,29 @@
 fileFormatVersion: 2
-guid: 95e256c6b9d547849b0bdb57f269cec5
+guid: d563a2ed1a7184e4db2a4f5173952bcf
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Weapons
+    second: {fileID: 2100000, guid: 3fa920b7c5ad6624db177c88fecc7b39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: anker
+    second: {fileID: 2100000, guid: 85abed081ba52a44b98e4c5b148715aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__bln_aluminium
+    second: {fileID: 2100000, guid: b331cb1bce02f7646a25b096324d53e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: zeester
+    second: {fileID: 2100000, guid: b95129eefef4f5a4c9bdf31634a26f85, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -80,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
