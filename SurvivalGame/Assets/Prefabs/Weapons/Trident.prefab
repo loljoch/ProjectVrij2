@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8840953122734402781}
   - component: {fileID: 3549219507501807094}
   m_Layer: 0
-  m_Name: wapen_trident
+  m_Name: Trident
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,6 +95,6 @@ MonoBehaviour:
   attackSFX: event:/SFX/Weapons/Melee/Melee_Trident_stab
   damage: 5
   weaponAnimation: 1
-  center: {x: 0, y: 0, z: 0}
-  halfExtents: {x: 0, y: 0, z: 0}
-  attackInterval: 1
+  center: {x: 2.6, y: 0, z: 5}
+  halfExtents: {x: 5.3, y: 2.6, z: 13.5}
+  attackInterval: 2

@@ -16,7 +16,7 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
 
     public Animator PlayerAnim { get => playerAnim; set => playerAnim = value; }
 
-    private Animator playerAnim;
+    protected Animator playerAnim;
     public float AttackInterval => attackInterval;
     public float attackInterval = 1f;
 
@@ -25,7 +25,7 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
         weaponAnimationName = Animations.GetWeaponAnimation(weaponAnimation);
     }
 
-    public void DoAttackAnimation()
+    public virtual void DoAttackAnimation()
     {
         FMODUnity.RuntimeManager.PlayOneShot(attackSFX, transform.position);
         playerAnim.Play(weaponAnimationName);
@@ -37,7 +37,7 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
         return (hits.Length > 0);
     }
 
-    public void Attack()
+    public virtual void Attack()
     {
         if (CheckForHits(out Collider[] hits))
         {

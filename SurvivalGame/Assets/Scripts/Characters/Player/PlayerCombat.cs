@@ -6,6 +6,7 @@ public class PlayerCombat : BaseCombat
 {
 	public static System.Action<WeaponItem> EquipWeaponEvent;
 	public static System.Action<int> HealingPlayerEvent;
+	public static System.Action<int> OnChangeHpPlayerEvent;
 
 	[Header("Player Settings: ")]
 	[SerializeField] private Animator anim;
@@ -23,6 +24,7 @@ public class PlayerCombat : BaseCombat
 
 	protected override void Awake()
 	{
+		OnChangeHpPlayerEvent += x => ChangeSpriteBasedOnLives();
 		VirtualController.Instance.AttackActionPerformed += () => TryAttack();
 		EquipWeaponEvent += Equip;
 		base.Awake();
@@ -63,6 +65,7 @@ public class PlayerCombat : BaseCombat
 
 	private void OnDestroy()
 	{
+		OnChangeHpPlayerEvent -= x => ChangeSpriteBasedOnLives();
 		EquipWeaponEvent -= Equip;
 	}
 
@@ -96,7 +99,7 @@ public class PlayerCombat : BaseCombat
 		if (_amount == 0) return;
 
 		base.ChangeHealth(_amount);
-		ChangeSpriteBasedOnLives();
+		OnChangeHpPlayerEvent?.Invoke(_amount);
 	}
 
 	protected override void OnDeath()

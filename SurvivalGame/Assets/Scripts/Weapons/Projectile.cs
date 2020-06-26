@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
         {
             damagable.TakeDamage(damage);
         }
-        Destroy(gameObject, 1f);
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)

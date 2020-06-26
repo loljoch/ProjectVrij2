@@ -12,6 +12,7 @@ public class RangedWeapon : MonoBehaviour, IWeapon
     [SerializeField] private Animations.WeaponAnimation weaponAnimation;
     private string weaponAnimationName;
 
+    [SerializeField] private Item ammo;
     [SerializeField] private Rigidbody projectile;
     public Animator PlayerAnim { get => playerAnim; set => playerAnim = value; }
 
@@ -27,6 +28,11 @@ public class RangedWeapon : MonoBehaviour, IWeapon
 
     public void DoAttackAnimation()
     {
+        if(ammo != null)
+        {
+            if (!UIManager.Instance.inventory.Contains(ammo.id)) return;
+            UIManager.Instance.inventory.RemoveItem(ammo.id, 1);
+        }
         playerAnim.Play(weaponAnimationName);
     }
 

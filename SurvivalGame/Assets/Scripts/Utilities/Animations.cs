@@ -21,7 +21,7 @@ public class Animations
         Stab,
         Punch,
         Smash,
-        Shield,
+        Block,
         SpearThrow,
         Crossbow
     }

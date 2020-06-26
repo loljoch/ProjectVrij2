@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef2a499c25c87742b8c915f3a64471b, type: 3}
+  m_Name: 12_Unarmed
+  m_EditorClassIdentifier: 
+  id: 12
+  name: Unarmed
+  sprite: {fileID: 21300000, guid: 4fdefe7704c5d274ba99336da0ba22bb, type: 3}
+  useCases: 1
+  maxQuantity: 0
+  weaponPrefab: {fileID: 3711892605667990058, guid: 3518652b985c55d4bb0b9037f45a1219,
+    type: 3}

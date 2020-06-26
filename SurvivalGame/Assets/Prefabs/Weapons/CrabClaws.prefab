@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3781054895884936772}
   - component: {fileID: 4925728569053000492}
   m_Layer: 0
-  m_Name: wapen_krabhandschoenen
+  m_Name: CrabClaws
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3711892605667990058}
-  m_LocalRotation: {x: -0.09229551, y: -0.7010577, z: 0.09229585, w: 0.7010572}
-  m_LocalPosition: {x: 0.32, y: -0.16, z: -0.33}
+  m_LocalRotation: {x: -0.23789476, y: -0.76908094, z: -0.04655812, w: 0.59139913}
+  m_LocalPosition: {x: 0.47, y: 0.07, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3fa920b7c5ad6624db177c88fecc7b39, type: 2}
+  - {fileID: 2100000, guid: b95129eefef4f5a4c9bdf31634a26f85, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSFX: event:/SFX/Weapons/Melee/Melee_krab_klauwen
-  damage: 0
+  damage: 3
   weaponAnimation: 2
-  center: {x: 1.5, y: -1, z: 0}
+  center: {x: 1.5, y: 0, z: 0}
   halfExtents: {x: 2, y: 2, z: 2}
   attackInterval: 0.3

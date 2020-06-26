@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1426772292553389347}
   - component: {fileID: 5582161454532229138}
   - component: {fileID: 6157406006176531269}
-  - component: {fileID: 4966989964837067157}
+  - component: {fileID: 6580327560225771542}
   m_Layer: 0
-  m_Name: wapen_hamer
+  m_Name: Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7176627942500311445}
-  m_LocalRotation: {x: -0.08573176, y: 0.000000119209204, z: -0.00000004470345, w: 0.9963183}
-  m_LocalPosition: {x: 1.37, y: -0.03, z: 0.12}
+  m_LocalRotation: {x: -0.1278754, y: 0.33275566, z: 0.45202234, w: 0.81767803}
+  m_LocalPosition: {x: 0.65996456, y: 0.6599248, z: 0.7001465}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +101,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4966989964837067157
+--- !u!114 &6580327560225771542
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7176627942500311445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc2891ba274262e4ea5098eed00a6173, type: 3}
+  m_Script: {fileID: 11500000, guid: f36144b10accda34f9896d1fbcc72b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackSFX: event:/SFX/Weapons/Melee/Melee_hamer_swing

@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8138755102016581707}
   - component: {fileID: 2286377792552449941}
   - component: {fileID: 424257816646520208}
+  - component: {fileID: 2077945846}
   m_Layer: 0
-  m_Name: wapen_harpoen
+  m_Name: Harpoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6421916948420038129}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.038883537, y: -0.005786083, z: -0.10145846}
+  m_LocalRotation: {x: 0.5821673, y: -0.75574625, z: 0.1492584, w: 0.26009777}
+  m_LocalPosition: {x: -0.02, y: 0.32, z: -0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,3 +80,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2077945846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6421916948420038129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f45dedef4bd4353438479fea7956d620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSFX: event:/SFX/Weapons/Ranged/Ranged_harpoen_afvuur
+  damage: 0
+  weaponAnimation: 6
+  ammo: {fileID: 0}
+  projectile: {fileID: 3712410317884955141, guid: 2a7c74c79b6f64d47b8f9627e159a554,
+    type: 3}
+  attackInterval: 1
+  projectileSpeed: 60

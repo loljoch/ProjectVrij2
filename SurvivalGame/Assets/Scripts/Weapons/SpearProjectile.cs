@@ -6,8 +6,7 @@ public class SpearProjectile : Projectile
 
     protected override void OnHit(IDamagable damagable)
     {
-        base.OnHit(damagable);
         Instantiate(itemDropSpear, transform.position + Vector3.up, Quaternion.identity);
-        Destroy(gameObject);
+        base.OnHit(damagable);
     }
 }

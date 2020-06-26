@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368121072951025286}
-  m_LocalRotation: {x: -0.047159605, y: -0.7283271, z: -0.67637426, w: -0.09916507}
-  m_LocalPosition: {x: -0.12, y: 0.24, z: -0.23}
+  m_LocalRotation: {x: 0.5821673, y: -0.75574625, z: 0.1492584, w: 0.26009777}
+  m_LocalPosition: {x: -0.02, y: 0.32, z: -0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,6 +95,7 @@ MonoBehaviour:
   attackSFX: event:/SFX/Weapons/Ranged/Ranged_kruisboog_afvuur
   damage: 2
   weaponAnimation: 6
+  ammo: {fileID: 11400000, guid: acc1531f6d97ded4782230aa12c0c271, type: 2}
   projectile: {fileID: 3712410317884955141, guid: dfb0f446ad8c1234a83519e608cfb8fe,
     type: 3}
   attackInterval: 3

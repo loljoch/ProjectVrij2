@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4389526639230470732}
   - component: {fileID: -8792828786999293410}
   - component: {fileID: 3712410317884955141}
-  - component: {fileID: 3819966179996694592}
+  - component: {fileID: 7158483313909277594}
   m_Layer: 9
   m_Name: Crossbow_bolt
   m_TagString: Untagged
@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2654429100669697680}
-  m_Mesh: {fileID: 7614247011520618935, guid: 29e5ce32377bf5b4d99ec8c0f1d81b8a, type: 3}
+  m_Mesh: {fileID: -9072066751474054322, guid: 29e5ce32377bf5b4d99ec8c0f1d81b8a, type: 3}
 --- !u!23 &4389526639230470732
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62,8 +62,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: cba5a6fee25cf184eb498aa19b389b5c, type: 2}
-  - {fileID: 2100000, guid: 85abed081ba52a44b98e4c5b148715aa, type: 2}
-  - {fileID: 2100000, guid: c9f5896ce8eb1b147b2a84f7dc121d81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,9 +109,9 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
---- !u!65 &3819966179996694592
+--- !u!65 &7158483313909277594
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,5 +122,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.9140396, y: 0.23342727, z: 0.72971874}
+  m_Size: {x: 0.72971874, y: 0.23342727, z: 4.9140396}
   m_Center: {x: 0, y: 0, z: 0}
