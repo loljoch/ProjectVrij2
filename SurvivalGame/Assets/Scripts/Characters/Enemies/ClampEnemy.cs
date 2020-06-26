@@ -18,7 +18,7 @@
             LookAtPlayer();
         }
 
-        if (distance < attackRange)
+        if (distance < baseAttackRange)
         {
             if (!TryAttack())
             {

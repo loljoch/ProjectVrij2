@@ -15,6 +15,6 @@ public class Trader : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        UIManager.Instance.tradeScreen.DynamicShowHide(this);
+        UIManager.Instance.tradeScreen.Show(this);
     }
 }

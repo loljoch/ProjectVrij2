@@ -4,17 +4,33 @@ using UnityEngine.UI;
 
 public class PlayerCombat : BaseCombat
 {
+	public static System.Action<WeaponItem> EquipWeaponEvent;
 	public static System.Action<int> HealingPlayerEvent;
 
 	[Header("Player Settings: ")]
+	[SerializeField] private Animator anim;
 	[SerializeField] private List<Image> heartSprites = new List<Image>();
 	[SerializeField] private Sprite fullHeart = null;
 	[SerializeField] private Sprite brokenHeart = null;
 
+	[Header("Equipment settings: ")]
+	public WeaponItem weaponItem;
+	[HideInInspector] public Transform current3dWeapon;
+	[SerializeField] private Transform weaponHand;
+	private IWeapon weapon;
+
+	protected override float AttackInterval => weapon.AttackInterval;
+
 	protected override void Awake()
 	{
 		VirtualController.Instance.AttackActionPerformed += () => TryAttack();
+		EquipWeaponEvent += Equip;
 		base.Awake();
+	}
+
+	private void Start()
+	{
+		EquipWeaponEvent?.Invoke(weaponItem);
 	}
 
 	private void ChangeSpriteBasedOnLives()
@@ -45,6 +61,30 @@ public class PlayerCombat : BaseCombat
 		}
 	}
 
+	private void OnDestroy()
+	{
+		EquipWeaponEvent -= Equip;
+	}
+
+	public void Equip(WeaponItem weapon)
+	{
+		weaponItem = weapon;
+
+		if (current3dWeapon != null)
+		{
+			Destroy(current3dWeapon.gameObject);
+		}
+
+		current3dWeapon = Instantiate(weapon.weaponPrefab, weaponHand).transform;
+		this.weapon = current3dWeapon.GetComponent<IWeapon>();
+		this.weapon.PlayerAnim = anim;
+	}
+
+	protected override void Attack()
+	{
+		weapon.DoAttackAnimation();
+	}
+
 	#region HealthFunctions
 	protected override void ChangeHealth(int _amount)
 	{
@@ -59,9 +99,9 @@ public class PlayerCombat : BaseCombat
 		Debug.Log("Player Death");
 		Destroy(gameObject, 1f);
 	}
-    #endregion
+	#endregion
 
-    private void OnEnable()
+	private void OnEnable()
 	{
 		HealingPlayerEvent += Heal;
 	}
