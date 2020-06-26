@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Weapons
+    second: {fileID: 2100000, guid: 3fa920b7c5ad6624db177c88fecc7b39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: pasted__bln_aluminium1
     second: {fileID: 2100000, guid: b331cb1bce02f7646a25b096324d53e8, type: 2}
   - first:
