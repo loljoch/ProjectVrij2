@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 2856485311225026795}
   - component: {fileID: 7880241330619367350}
   - component: {fileID: 8939715181066826887}
+  - component: {fileID: 5884187256682054265}
   m_Layer: 0
-  m_Name: wapen_kruisboog
+  m_Name: Crossbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368121072951025286}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.038883537, y: 0.00108792, z: -0.19556133}
+  m_LocalRotation: {x: -0.047159605, y: -0.7283271, z: -0.67637426, w: -0.09916507}
+  m_LocalPosition: {x: -0.12, y: 0.24, z: -0.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,3 +83,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5884187256682054265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368121072951025286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f45dedef4bd4353438479fea7956d620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSFX: event:/SFX/Weapons/Ranged/Ranged_kruisboog_afvuur
+  damage: 2
+  weaponAnimation: 6
+  projectile: {fileID: 3712410317884955141, guid: dfb0f446ad8c1234a83519e608cfb8fe,
+    type: 3}
+  attackInterval: 3
+  projectileSpeed: 30

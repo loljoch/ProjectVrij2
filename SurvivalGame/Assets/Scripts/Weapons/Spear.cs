@@ -32,7 +32,7 @@ public class Spear : MonoBehaviour, IWeapon
     public void Attack()
     {
         FMODUnity.RuntimeManager.PlayOneShot(attackSFX, transform.position);
-        var spear = Instantiate(throwingSpear, transform.position, transform.rotation);
-        spear.velocity = transform.forward * projectileSpeed;
+        var spear = Instantiate(throwingSpear, transform.position, playerAnim.transform.rotation);
+        spear.velocity = playerAnim.transform.forward * projectileSpeed + (Vector3.up * projectileSpeed*0.1f);
     }
 }

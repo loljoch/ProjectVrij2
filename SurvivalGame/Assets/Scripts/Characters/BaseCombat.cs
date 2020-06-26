@@ -103,6 +103,11 @@ public abstract class BaseCombat : MonoBehaviour, IDamagable
 #if UNITY_EDITOR
     protected virtual void OnDrawGizmosSelected()
     {
+        if (baseAttackFrom == null)
+        {
+            baseAttackFrom = transform;
+        }
+
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(AttackFrom.position, AttackRange);
 

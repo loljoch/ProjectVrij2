@@ -10,10 +10,12 @@ public class Projectile : MonoBehaviour
         {
             damagable.TakeDamage(damage);
         }
+        Destroy(gameObject, 1f);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.layer == LayerMasks.Player) return;
         OnHit(collision.gameObject.GetComponent<IDamagable>());
     }
 }

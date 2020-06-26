@@ -34,8 +34,10 @@ public class Inventory : ItemStorage
 
     private void OnDestroy()
     {
-        VirtualController.Instance.InventoryActionPerformed -= DynamicShowHide;
-
+        if(VirtualController.Instance != null)
+        {
+            VirtualController.Instance.InventoryActionPerformed -= DynamicShowHide;
+        }
     }
 
     public override void Show()
