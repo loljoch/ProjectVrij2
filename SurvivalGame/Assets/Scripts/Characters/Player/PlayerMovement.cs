@@ -6,8 +6,7 @@ public class PlayerMovement : BaseMovement
 	[Header("Audio settings: ")]
 	[FMODUnity.EventRef]
 	[SerializeField] private string walkingSound;
-	[FMODUnity.EventRef]
-	[SerializeField] private string idleSound;
+	private FMOD.Studio.EventInstance walkingSoundEvent;
 
 
 	private Vector3 movementDirection;
@@ -16,11 +15,8 @@ public class PlayerMovement : BaseMovement
 	{
 		set
 		{
-			if(isMoving != value)
-			{
-				FMODUnity.RuntimeManager.PlayOneShot((value) ? walkingSound : idleSound);
-				isMoving = value;
-			}
+			walkingSoundEvent.setParameterByName("FADE moving", (value) ? 1 : 0);
+			isMoving = value;
 		}
 	}
 	private bool isMoving = true;
@@ -29,6 +25,8 @@ public class PlayerMovement : BaseMovement
 	{
 		base.Awake();
 		VirtualController.Instance.MovementActionPerformed += TranslateInput;
+		walkingSoundEvent = FMODUnity.RuntimeManager.CreateInstance(walkingSound);
+		walkingSoundEvent.start();
 	}
 
 	private void FixedUpdate()

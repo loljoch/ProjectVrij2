@@ -17,12 +17,6 @@ public class ObtainFeedback : MonoBehaviour
         Inventory.OnObtainItem -= SpawnMessage;
     }
 
-    [Button]
-    public void FooMessage()
-    {
-        SpawnMessage(1, 2);
-    }
-
     private void SpawnMessage(int itemId, int quantity)
     {
         Item item = ItemInformation.itemsById[itemId];

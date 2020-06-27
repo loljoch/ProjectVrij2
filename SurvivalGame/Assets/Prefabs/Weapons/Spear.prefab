@@ -95,7 +95,8 @@ MonoBehaviour:
   attackSFX: event:/SFX/Weapons/Ranged/Ranged_kruisboog_projectile
   damage: 0
   weaponAnimation: 5
-  throwingSpear: {fileID: -6687481698714833044, guid: dd691d3ff440c6e4f97c694b28be4081,
+  ammo: {fileID: 11400000, guid: cdde6c04e5090b940904a440fa601ae6, type: 2}
+  projectile: {fileID: -6687481698714833044, guid: dd691d3ff440c6e4f97c694b28be4081,
     type: 3}
   attackInterval: 2
   projectileSpeed: 80

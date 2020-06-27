@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{23a1e11d-a4c8-4135-ab22-6c6f303c23eb}">
+		<property name="name">
+			<value>FADE music</value>
+		</property>
+		<relationship name="folder">
+			<destination>{a64981c6-46da-4293-b235-18bc6dc66378}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{8ec64e80-1059-415e-b61f-89a7f6928bb3}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{8ec64e80-1059-415e-b61f-89a7f6928bb3}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.99000006914138794</value>
+		</property>
+	</object>
+</objects>

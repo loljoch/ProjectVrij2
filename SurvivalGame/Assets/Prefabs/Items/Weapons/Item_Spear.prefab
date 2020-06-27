@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1296726324630673118}
   - component: {fileID: 7597497531073020591}
   - component: {fileID: -4414888775982015578}
-  - component: {fileID: 4373935476172953253}
+  - component: {fileID: 4427193813735958170}
   m_Layer: 8
-  m_Name: Spear
+  m_Name: Item_Spear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8210061535944308439}
-  m_Mesh: {fileID: 8142724638417267561, guid: 95e256c6b9d547849b0bdb57f269cec5, type: 3}
+  m_Mesh: {fileID: 8142724638417267561, guid: d563a2ed1a7184e4db2a4f5173952bcf, type: 3}
 --- !u!23 &1296726324630673118
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4373935476172953253
+--- !u!65 &4427193813735958170
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,5 +124,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18.041275, y: 1.0641329, z: 1.0641329}
-  m_Center: {x: -1.22513, y: 0, z: 0}
+  m_Size: {x: 1.0641327, y: 1.0641329, z: 18.041275}
+  m_Center: {x: 0, y: 0, z: -1.22513}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{dadc9818-ff0d-4c67-b390-9f79b106d03c}">
+		<property name="name">
+			<value>FADE moving</value>
+		</property>
+		<relationship name="folder">
+			<destination>{a64981c6-46da-4293-b235-18bc6dc66378}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{03526a93-8052-4bf8-bc95-ad1612dfdc45}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{03526a93-8052-4bf8-bc95-ad1612dfdc45}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

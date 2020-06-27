@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using Extensions.Generics.Singleton;
+using TMPro;
 
 public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
 {
     [SerializeField] private Button dropItemButton;
     [SerializeField] private Button consumeButton;
     [SerializeField] private Button equipButton;
+    [SerializeField] private TextMeshProUGUI equipButtonText;
     [SerializeField] private Button cancelButton;
 
+    [SerializeField] private PlayerCombat playerCombat;
+    [SerializeField] private WeaponItem unarmed;
     private int cItemID = -1;
+
 
     protected override void Awake()
     {
@@ -37,15 +42,14 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
         PlayerCombat.EquipWeaponEvent?.Invoke(weapon);
     }
 
+    public void UnEquip()
+    {
+        PlayerCombat.EquipWeaponEvent?.Invoke(unarmed);
+    }
+
     public void Show(int itemId, Vector3 pos)
     {
         UIManager.Instance.inventory.SetLastSelected();
-        if (cItemID == itemId)
-        {
-            gameObject.SetActive(true);
-            dropItemButton.Select();
-            return;
-        }
 
         cItemID = itemId;
         transform.position = pos;
@@ -72,6 +76,19 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
                         break;
                     case UseCases.Weapon:
                         equipButton.gameObject.SetActive(true);
+                        if(playerCombat.weaponItem.id == itemId)
+                        {
+                            equipButton.onClick.RemoveListener(Equip);
+                            equipButton.onClick.AddListener(UnEquip);
+
+                            equipButtonText.text = "Unequip";
+                        } else
+                        {
+                            equipButton.onClick.RemoveListener(UnEquip);
+                            equipButton.onClick.AddListener(Equip);
+
+                            equipButtonText.text = "Equip";
+                        }
                         SetNavigation(dropItemButton, equipButton, cancelButton);
                         exitLoop = true;
                         break;

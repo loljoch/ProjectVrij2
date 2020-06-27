@@ -11,6 +11,7 @@ public class TradeOffer : Selectable, ISubmitHandler, IPointerClickHandler, IEve
     private ScriptableObjects.TradeOffer offer;
 
     private Action<ScriptableObjects.TradeOffer, Vector3> OnSelectAction;
+    private DetailedTradeOffer detailedTrade;
 
     public void Initialize(ScriptableObjects.TradeOffer tradeOffer, ref DetailedTradeOffer detailedTrade)
     {
@@ -22,11 +23,21 @@ public class TradeOffer : Selectable, ISubmitHandler, IPointerClickHandler, IEve
         itemName.text = item.name;
 
         OnSelectAction += detailedTrade.SetOffer;
+        this.detailedTrade = detailedTrade;
     }
 
     private void Trade()
     {
+        if (!detailedTrade.canTrade) return;
+
+        for (int i = 0; i < offer.neededItems.Length; i++)
+        {
+            var item = offer.neededItems[i];
+            UIManager.Instance.inventory.RemoveItem(item.item.id, item.quantity);
+        }
+
         UIManager.Instance.inventory.AddItem(offer.item.id);
+        
     }
 
     public override void OnPointerEnter(PointerEventData eventData)

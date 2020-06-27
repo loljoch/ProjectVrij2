@@ -33,7 +33,7 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
 
     private bool CheckForHits(out Collider[] hits)
     {
-        hits = Physics.OverlapBox(transform.position + center, halfExtents, transform.rotation);
+        hits = Physics.OverlapBox(transform.position + center, halfExtents, transform.rotation, LayerMasks.Enemy);
         return (hits.Length > 0);
     }
 

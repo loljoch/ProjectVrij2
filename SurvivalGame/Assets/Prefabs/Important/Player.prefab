@@ -1253,8 +1253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 25
   smoothDampRotation: 0.15
-  walkingSound: event:/SFX/Player/Player_movement
-  idleSound: event:/SFX/Player/Player_idle
+  walkingSound: event:/SFX/Player/Player_movement_idle
 --- !u!114 &5493984322337361781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1297,7 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f5ccc84ec03b04aa282b2ab2f61d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 6
   baseAttackRange: 5
   baseAttackInterval: 1
   baseDamage: 1
@@ -1310,9 +1309,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  fullHeart: {fileID: 21300000, guid: 20a90cf1b2b6cca4db5735e6b5380a4f, type: 3}
-  brokenHeart: {fileID: 21300000, guid: a81c6dc78f7449145aa6b5e4393cd575, type: 3}
-  weaponItem: {fileID: 11400000, guid: a55af5abf3eec8045b46841c5acc8e9b, type: 2}
+  fullHeart: {fileID: 21300000, guid: b680d5275b139c94abd82c5659f09ced, type: 3}
+  brokenHeart: {fileID: 21300000, guid: e5ec2dd848f21404ea63d929210d35eb, type: 3}
+  emptyHeart: {fileID: 0}
+  weaponItem: {fileID: 11400000, guid: 3e2c4f75fd916a6498bf6436e3d9a9d7, type: 2}
   current3dWeapon: {fileID: 0}
   weaponHand: {fileID: 581154955849844772}
 --- !u!114 &2186177897730488461

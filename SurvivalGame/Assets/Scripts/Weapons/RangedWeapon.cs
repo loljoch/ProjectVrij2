@@ -12,7 +12,7 @@ public class RangedWeapon : MonoBehaviour, IWeapon
     [SerializeField] private Animations.WeaponAnimation weaponAnimation;
     private string weaponAnimationName;
 
-    [SerializeField] private Item ammo;
+    [SerializeField] protected Item ammo;
     [SerializeField] private Rigidbody projectile;
     public Animator PlayerAnim { get => playerAnim; set => playerAnim = value; }
 
@@ -26,7 +26,7 @@ public class RangedWeapon : MonoBehaviour, IWeapon
         weaponAnimationName = Animations.GetWeaponAnimation(weaponAnimation);
     }
 
-    public void DoAttackAnimation()
+    public virtual void DoAttackAnimation()
     {
         if(ammo != null)
         {
@@ -36,7 +36,7 @@ public class RangedWeapon : MonoBehaviour, IWeapon
         playerAnim.Play(weaponAnimationName);
     }
 
-    public void Attack()
+    public virtual void Attack()
     {
         FMODUnity.RuntimeManager.PlayOneShot(attackSFX, transform.position);
         var proj = Instantiate(projectile, transform.position, playerAnim.transform.rotation);
