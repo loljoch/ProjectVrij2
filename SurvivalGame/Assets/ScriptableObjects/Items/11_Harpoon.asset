@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 11
   name: Harpoon
-  sprite: {fileID: 21300000, guid: 58f0c17e47cbc7843b3d51debb5f3962, type: 3}
+  sprite: {fileID: 21300000, guid: 7d23c4239ee3d5b44a8b0ea03d351b82, type: 3}
   useCases: 1
   maxQuantity: 1
   weaponPrefab: {fileID: 6421916948420038129, guid: 0b9f5c493079da84099766e0fe83a0c3,

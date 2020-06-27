@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   name: Coral Dagger
-  sprite: {fileID: 21300000, guid: 8f11bf178a31eb048ad0adc687615b29, type: 3}
+  sprite: {fileID: 21300000, guid: 9ff5377ab8c7fe54ea0970a1fabf8a42, type: 3}
   useCases: 1
   maxQuantity: 1
   weaponPrefab: {fileID: 3670703347706587507, guid: 458eb0928def5014cbaa9993fddb732a,

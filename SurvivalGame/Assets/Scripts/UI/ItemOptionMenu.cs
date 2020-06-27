@@ -5,7 +5,6 @@ using TMPro;
 
 public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
 {
-    [SerializeField] private Button dropItemButton;
     [SerializeField] private Button consumeButton;
     [SerializeField] private Button equipButton;
     [SerializeField] private TextMeshProUGUI equipButtonText;
@@ -21,7 +20,6 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
         consumeButton.onClick.AddListener(EatItem);
         equipButton.onClick.AddListener(Equip);
 
-        dropItemButton.onClick.AddListener(Hide);
         consumeButton.onClick.AddListener(Hide);
         equipButton.onClick.AddListener(Hide);
         cancelButton.onClick.AddListener(Hide);
@@ -60,6 +58,9 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
 
         UseCases itemUseCases = ItemInformation.itemsById[itemId].useCases;
 
+        //button to select
+        Button selectMe = null;
+
         //Processes all possible usecases
         var useCaseValues = System.Enum.GetValues(typeof(UseCases));
         bool exitLoop = false;
@@ -71,7 +72,8 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
                 {
                     case UseCases.Consumable:
                         consumeButton.gameObject.SetActive(true);
-                        SetNavigation(dropItemButton, consumeButton, cancelButton);
+                        SetNavigation(consumeButton, consumeButton, cancelButton);
+                        selectMe = consumeButton;
                         exitLoop = true;
                         break;
                     case UseCases.Weapon:
@@ -89,7 +91,8 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
 
                             equipButtonText.text = "Equip";
                         }
-                        SetNavigation(dropItemButton, equipButton, cancelButton);
+                        SetNavigation(equipButton, equipButton, cancelButton);
+                        selectMe = equipButton;
                         exitLoop = true;
                         break;
                     default:
@@ -101,10 +104,14 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
         }
 
         //If loop was not broken it means no buttons were added
-        if (!exitLoop) SetNavigation(dropItemButton, cancelButton);
+        if (!exitLoop)
+        {
+            SetNavigation(cancelButton, cancelButton);
+            selectMe = cancelButton;
+        }
 
         gameObject.SetActive(true);
-        dropItemButton.Select();
+        selectMe.Select();
     }
 
     public void Hide()

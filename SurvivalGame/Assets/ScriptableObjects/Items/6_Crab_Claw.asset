@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 6
   name: Crab Claw
-  sprite: {fileID: 21300000, guid: bbdc5cfdaaac00b489d9fd2a1f67fd90, type: 3}
+  sprite: {fileID: 21300000, guid: 2adc205fc54cee840a625dede717f8d5, type: 3}
   useCases: 1
   maxQuantity: 1
-  weaponPrefab: {fileID: 3670703347706587507, guid: 458eb0928def5014cbaa9993fddb732a,
+  weaponPrefab: {fileID: 3711892605667990058, guid: 323823fe9eaa8b741a09472c8d02d6f6,
     type: 3}

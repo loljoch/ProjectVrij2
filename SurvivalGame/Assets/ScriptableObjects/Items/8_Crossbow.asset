@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 8
   name: Crossbow
-  sprite: {fileID: 21300000, guid: b81fff25817e9d2419daf65166a90e11, type: 3}
+  sprite: {fileID: 21300000, guid: e1a12133d51dfec40a15bf096a0ee20c, type: 3}
   useCases: 1
   maxQuantity: 1
   weaponPrefab: {fileID: 1368121072951025286, guid: 095d19585d502a64393679028b729bea,
