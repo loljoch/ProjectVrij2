@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5455502131711060250}
   - component: {fileID: 1768048934876206563}
   - component: {fileID: 1092552140366177823}
-  - component: {fileID: 9139096142909443440}
+  - component: {fileID: -2826206437904133142}
+  - component: {fileID: 5508508016323314586}
   m_Layer: 8
   m_Name: Item_PlantFibre
   m_TagString: Untagged
@@ -96,7 +97,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.6162531, y: 1.6428983, z: 4.580394}
   m_Center: {x: -0.12839822, y: 0.5711496, z: 0.036491644}
---- !u!114 &9139096142909443440
+--- !u!114 &-2826206437904133142
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,3 +110,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 0
+--- !u!54 &5508508016323314586
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51097806569464127}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
