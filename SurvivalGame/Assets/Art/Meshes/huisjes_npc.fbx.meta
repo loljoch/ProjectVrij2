@@ -1,11 +1,76 @@
 fileFormatVersion: 2
 guid: 56005c6b305f46546aa13966fa0d4f9c
 ModelImporter:
-  serializedVersion: 26
+  serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: anker
+    second: {fileID: 2100000, guid: 21f829d10cdef214092f6cd44c168600, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bln_aluminium
+    second: {fileID: 2100000, guid: b331cb1bce02f7646a25b096324d53e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lmb_anker
+    second: {fileID: 2100000, guid: 21f829d10cdef214092f6cd44c168600, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lmb_groen3
+    second: {fileID: 2100000, guid: e26acc7fcabc6e945810f268f39ac0aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lmb_pot
+    second: {fileID: 2100000, guid: e9c0489699cca934b941e24185301ef1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lmb_riet
+    second: {fileID: 2100000, guid: 21bdeda3741c02346a6d083149395fb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lmb_turqoise
+    second: {fileID: 2100000, guid: 78ad9a8978672164cb6c2ce7f5f5914b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lmb_wit1_dubbelzijdig
+    second: {fileID: 2100000, guid: 6e9d379e063afac4ba82e797a8b0f2cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lmb_zandPlant
+    second: {fileID: 2100000, guid: 652e1ec259a43d04bb846cd9352d07ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lmb_zandStrand
+    second: {fileID: 2100000, guid: 610c37a9641856a4b9739dac13b38176, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__lambert2
+    second: {fileID: 2100000, guid: 8837adfb78d572d4683a8e7908426c51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: schelp
+    second: {fileID: 2100000, guid: 0b86e471805726e4693f8f6081b224ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: zeester
+    second: {fileID: 2100000, guid: 7c4e52f6d3370ae458c6654a0c8e7aaf, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -34,7 +99,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -69,7 +134,6 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -81,14 +145,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
