@@ -65,8 +65,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBoidsController: {fileID: 0}
   boidType: 1
-  moveSpeed: 4
-  rotationPercentage: 0.09
+  moveSpeed: 20
+  rotationPercentage: 0.9
   separationProximity: 15
   neighbourDetectRadius: 100
 --- !u!1001 &5017510731540242546

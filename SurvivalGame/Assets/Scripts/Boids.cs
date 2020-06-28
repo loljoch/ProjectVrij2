@@ -119,7 +119,7 @@ public class Boids : MonoBehaviour
 		if (_groupSize > 0)
 		{
 			// Calculate center and add Vector to Goal.
-			_alignment = (_alignment / _groupSize) + (parentBoidsController.GetGoalPosition() - transform.position);
+			_alignment = (_alignment / _groupSize) + (parentBoidsController.GetGoalPosition()); // - transform.position
 			_cohesion = (_alignment + _separation) - transform.position;
 			if (_cohesion != Vector3.zero)
 			{
