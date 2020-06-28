@@ -4,15 +4,16 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
 {
     [Header("Sound settings")]
     [FMODUnity.EventRef]
-    [SerializeField] private string attackSFX;
+    [SerializeField] protected string attackSFX;
 
-    [SerializeField] private int damage;
+    [SerializeField] protected int damage;
     [SerializeField] private Animations.WeaponAnimation weaponAnimation;
     private string weaponAnimationName;
 
     [Header("Collider")]
     [SerializeField] private Vector3 center;
     [SerializeField] private Vector3 halfExtents;
+    [SerializeField] private Transform hitDetection;
 
     public Animator PlayerAnim { get => playerAnim; set => playerAnim = value; }
 
@@ -28,11 +29,12 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
     public virtual void DoAttackAnimation()
     {
         playerAnim.Play(weaponAnimationName);
+        Debug.Log("I did attack animation");
     }
 
-    private bool CheckForHits(out Collider[] hits)
+    protected bool CheckForHits(out Collider[] hits)
     {
-        hits = Physics.OverlapBox(transform.position + center, halfExtents, transform.rotation, LayerMasks.Enemy);
+        hits = Physics.OverlapBox(hitDetection.position + center, halfExtents, hitDetection.rotation, LayerMasks.Enemy);
         return (hits.Length > 0);
     }
 
@@ -51,7 +53,7 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position + center, halfExtents);
+        Gizmos.DrawWireCube(hitDetection.position + center, halfExtents);
     }
 }
 

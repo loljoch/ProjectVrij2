@@ -111,6 +111,7 @@ public class PlayerCombat : BaseCombat
 
 	public void WeaponAttack()
 	{
+		Debug.Log("Weapon attack");
 		weapon.Attack();
 	}
     #endregion

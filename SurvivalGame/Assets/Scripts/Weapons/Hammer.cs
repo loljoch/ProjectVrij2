@@ -1,8 +1,18 @@
-﻿public class Hammer : MeleeWeapon
+﻿using UnityEngine;
+
+public class Hammer : MeleeWeapon
 {
     public override void Attack()
     {
-        base.Attack();
-        //Stun
+        if (CheckForHits(out Collider[] hits))
+        {
+            for (int i = 0; i < hits.Length; i++)
+            {
+                var hit = hits[i].GetComponent<IDamagable>();
+                hit.TakeDamage(damage);
+                hit.Stun(1f);                
+            }
+            FMODUnity.RuntimeManager.PlayOneShot(attackSFX, transform.position);
+        }
     }
 }
