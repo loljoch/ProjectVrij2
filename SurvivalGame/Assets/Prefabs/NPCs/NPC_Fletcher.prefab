@@ -567,6 +567,7 @@ GameObject:
   - component: {fileID: 7390003636457613459}
   - component: {fileID: 1607001140872619094}
   - component: {fileID: 8301409001485748106}
+  - component: {fileID: 1083307490479545258}
   m_Layer: 11
   m_Name: NPC_Fletcher
   m_TagString: Untagged
@@ -604,10 +605,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightEffect: {fileID: 8301409001485748106}
-  offers: []
+  offers:
+  - {fileID: 11400000, guid: d5b9c1e3c848b634c9c1c1d79d83f52f, type: 2}
+  - {fileID: 11400000, guid: 23c0b811f56e148449ef8b39016b362b, type: 2}
+  - {fileID: 11400000, guid: 80480f5d6d3203b4184ebfe4b647791f, type: 2}
   currentEXP: 0
   nextLevelEXP: 100
-  useName: Fletcher
+  useName: Fletchling
+  greetingSFX: event:/SFX/NPC/Fletcher/Fletcher_Trade_begin
+  goodbyeSFX: event:/SFX/NPC/Fletcher/Fletcher_Trade_complete
 --- !u!114 &8301409001485748106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,6 +711,29 @@ MonoBehaviour:
   seeThroughBorderColor: {r: 0, g: 0, b: 0, a: 1}
   seeThroughBorderWidth: 0.45
   rmsCount: 2
+--- !u!114 &1083307490479545258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390003636457613456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/NPC/Fletcher/Fletcher_background
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &7476550845285231527
 GameObject:
   m_ObjectHideFlags: 0

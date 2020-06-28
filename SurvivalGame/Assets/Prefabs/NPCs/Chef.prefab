@@ -47,10 +47,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightEffect: {fileID: 6847710257366125791}
-  offers: []
+  offers:
+  - {fileID: 11400000, guid: 435bb5f5bed31534697147114361fae5, type: 2}
+  - {fileID: 11400000, guid: c1ef8256270539647867dbeafb01a4d7, type: 2}
+  - {fileID: 11400000, guid: d6504f1d81caa174290818f615f26164, type: 2}
+  - {fileID: 11400000, guid: 528084a256c7b2f41a72e2c444d56fe1, type: 2}
+  - {fileID: 11400000, guid: fe45d5946186a414dbf346eea6184bb8, type: 2}
   currentEXP: 0
   nextLevelEXP: 100
-  useName: Chef
+  useName: "B\xF6rk"
+  greetingSFX: event:/SFX/NPC/Kok/Kok_Trade_begin
+  goodbyeSFX: event:/SFX/NPC/Kok/Kok_Trade_complete
 --- !u!114 &6847710257366125791
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,7 +14,9 @@ public class Trader : MonoBehaviour, IInteractable
     [SerializeField] private string useName;
 
     [Header("Sound settings: ")]
+    [FMODUnity.EventRef]
     [SerializeField] private string greetingSFX;
+    [FMODUnity.EventRef]
     public string goodbyeSFX;
 
     public float HoldTime => 0;

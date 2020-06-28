@@ -53,9 +53,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5e9e2dfc0e4b90c4da67fdf72fd159d2, type: 2}
   - {fileID: 11400000, guid: 8a252acc78e180b4cb069c954c79bdcf, type: 2}
   - {fileID: 11400000, guid: f3449ac894242ac488e8dd6aa1453673, type: 2}
+  - {fileID: 11400000, guid: 6d0d8bbe35320564684a56efba329811, type: 2}
   currentEXP: 0
   nextLevelEXP: 100
   useName: Blacksmith Hammerface
+  greetingSFX: event:/SFX/NPC/Smid/Smid_Trade_begin
+  goodbyeSFX: event:/SFX/NPC/Smid/Smid_Trade_complete
 --- !u!114 &415323803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +240,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6960972817775613273}
     m_Modifications:
+    - target: {fileID: -8513295442312858733, guid: e65e83644f6d6e94d9ae6aba85486332,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.0000021019619
+      objectReference: {fileID: 0}
+    - target: {fileID: -8513295442312858733, guid: e65e83644f6d6e94d9ae6aba85486332,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 97.62681
+      objectReference: {fileID: 0}
+    - target: {fileID: -8513295442312858733, guid: e65e83644f6d6e94d9ae6aba85486332,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 75.90003
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: e65e83644f6d6e94d9ae6aba85486332,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9c64309d229d8cd41bde97f58eb35d2b, type: 2}
     - target: {fileID: -4216859302048453862, guid: e65e83644f6d6e94d9ae6aba85486332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -245,7 +268,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: e65e83644f6d6e94d9ae6aba85486332,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e65e83644f6d6e94d9ae6aba85486332,
         type: 3}
@@ -296,6 +319,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HammerFace
+      objectReference: {fileID: 0}
+    - target: {fileID: 3650047403433741548, guid: e65e83644f6d6e94d9ae6aba85486332,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 2.0439675
+      objectReference: {fileID: 0}
+    - target: {fileID: 3650047403433741548, guid: e65e83644f6d6e94d9ae6aba85486332,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.5650701
+      objectReference: {fileID: 0}
+    - target: {fileID: 3650047403433741548, guid: e65e83644f6d6e94d9ae6aba85486332,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 4.6820297
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325988826721351047, guid: e65e83644f6d6e94d9ae6aba85486332,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -2.0831962
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325988826721351047, guid: e65e83644f6d6e94d9ae6aba85486332,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.39664173
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325988826721351047, guid: e65e83644f6d6e94d9ae6aba85486332,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 16.171242
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65e83644f6d6e94d9ae6aba85486332, type: 3}

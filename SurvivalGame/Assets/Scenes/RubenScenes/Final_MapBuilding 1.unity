@@ -68452,8 +68452,7 @@ MonoBehaviour:
   - {fileID: 1355489946025153309}
   - {fileID: 1355489945999504336}
   - {fileID: 1355489947400314708}
-  itemId: 0
-  itemAmount: 1
+  itemPickUpSFX: 
 --- !u!114 &1355489946824092130
 MonoBehaviour:
   m_ObjectHideFlags: 0
