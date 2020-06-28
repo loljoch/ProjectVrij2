@@ -47,8 +47,8 @@ MonoBehaviour:
   parentBoidsController: {fileID: 0}
   boidType: 1
   moveSpeed: 3
-  rotationPercentage: 0.25
-  separationProximity: 5
+  rotationPercentage: 0.1
+  separationProximity: 11
   neighbourDetectRadius: 100
 --- !u!95 &1852967326326523920
 Animator:
