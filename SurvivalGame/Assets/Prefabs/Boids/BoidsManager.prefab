@@ -10,9 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7085604205379375034}
   - component: {fileID: 7085604205379375035}
-  - component: {fileID: 7085604205379375033}
-  - component: {fileID: 7085604205379375039}
-  - component: {fileID: 7085604205379375032}
   m_Layer: 0
   m_Name: BoidsManager
   m_TagString: Untagged
@@ -48,57 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabBoid: {fileID: 0}
   numBoids: 8
-  allBoidGameObjects: []
-  spawnRadius: 20
-  goalObject: {fileID: 0}
---- !u!114 &7085604205379375033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7085604205379375012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 382e8f8a7646f7a4d8cdc520616a3fc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabBoid: {fileID: 0}
-  numBoids: 6
-  allBoidGameObjects: []
-  spawnRadius: 20
-  goalObject: {fileID: 0}
---- !u!114 &7085604205379375039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7085604205379375012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 382e8f8a7646f7a4d8cdc520616a3fc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabBoid: {fileID: 0}
-  numBoids: 3
-  allBoidGameObjects: []
-  spawnRadius: 20
-  goalObject: {fileID: 0}
---- !u!114 &7085604205379375032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7085604205379375012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 382e8f8a7646f7a4d8cdc520616a3fc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabBoid: {fileID: 0}
-  numBoids: 2
   allBoidGameObjects: []
   spawnRadius: 20
   goalObject: {fileID: 0}
