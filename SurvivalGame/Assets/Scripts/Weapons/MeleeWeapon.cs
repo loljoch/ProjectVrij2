@@ -2,31 +2,42 @@
 
 public class MeleeWeapon : MonoBehaviour, IWeapon
 {
+    [Header("Sound settings")]
+    [FMODUnity.EventRef]
+    [SerializeField] private string attackSFX;
+
     [SerializeField] private int damage;
-    [SerializeField] private string animationName;
+    [SerializeField] private Animations.WeaponAnimation weaponAnimation;
+    private string weaponAnimationName;
 
     [Header("Collider")]
     [SerializeField] private Vector3 center;
     [SerializeField] private Vector3 halfExtents;
 
-    public Animator PlayerAnim { get; set; }
+    public Animator PlayerAnim { get => playerAnim; set => playerAnim = value; }
 
-    private Animator playerAnim;
+    protected Animator playerAnim;
     public float AttackInterval => attackInterval;
     public float attackInterval = 1f;
 
-    public void DoAttackAnimation()
+    private void Awake()
     {
-        playerAnim.Play(animationName);
+        weaponAnimationName = Animations.GetWeaponAnimation(weaponAnimation);
+    }
+
+    public virtual void DoAttackAnimation()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(attackSFX, transform.position);
+        playerAnim.Play(weaponAnimationName);
     }
 
     private bool CheckForHits(out Collider[] hits)
     {
-        hits = Physics.OverlapBox(transform.position + center, halfExtents);
+        hits = Physics.OverlapBox(transform.position + center, halfExtents, transform.rotation, LayerMasks.Enemy);
         return (hits.Length > 0);
     }
 
-    public void Attack()
+    public virtual void Attack()
     {
         if (CheckForHits(out Collider[] hits))
         {

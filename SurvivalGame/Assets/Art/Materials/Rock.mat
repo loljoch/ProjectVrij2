@@ -72,6 +72,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
+    - _FlipColors: 0
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
@@ -93,6 +94,7 @@ Material:
     - _StepWidth: 0.429
     - _Surface: 0
     - _UVSec: 0
+    - _WithBackface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:

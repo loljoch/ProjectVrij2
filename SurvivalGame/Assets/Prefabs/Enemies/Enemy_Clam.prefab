@@ -945,12 +945,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 4
-  attackRange: 25
-  attackInterval: 2
+  baseAttackRange: 5
+  baseAttackInterval: 1
   baseDamage: 1
   hitMask:
     serializedVersion: 2
     m_Bits: 512
+  baseAttackFrom: {fileID: 8216837215941392038}
   spotRange: 100
   movingToPlayerRange: 90
   player: {fileID: 0}

@@ -1,7 +1,4 @@
-﻿using EasyAttributes;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ObtainFeedback : MonoBehaviour
 {
@@ -15,12 +12,6 @@ public class ObtainFeedback : MonoBehaviour
     private void OnDestroy()
     {
         Inventory.OnObtainItem -= SpawnMessage;
-    }
-
-    [Button]
-    public void FooMessage()
-    {
-        SpawnMessage(1, 2);
     }
 
     private void SpawnMessage(int itemId, int quantity)

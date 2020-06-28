@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5199f6cd7de0ba42a89e64d84f349b4, type: 3}
+  m_Name: Lily_LootTable
+  m_EditorClassIdentifier: 
+  chanceDrops:
+  - itemPrefab: {fileID: 51097806569464127, guid: a8329fec95163d744af72611603fc321,
+      type: 3}
+    dropChance: 50
+    dropAmount: 1
+  - itemPrefab: {fileID: 51097806569464127, guid: a8329fec95163d744af72611603fc321,
+      type: 3}
+    dropChance: 50
+    dropAmount: 1
+  guaranteedDrops:
+  - itemPrefab: {fileID: 51097806569464127, guid: a8329fec95163d744af72611603fc321,
+      type: 3}
+    dropAmount: 1

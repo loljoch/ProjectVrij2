@@ -1,8 +1,12 @@
-﻿using UnityEngine;
+﻿using HighlightPlus;
+using ScriptableObjects;
+using UnityEngine;
 
 
 public abstract class Harvestable : MonoBehaviour, IInteractable
 {
+    [SerializeField] private HighlightEffect highlightEffect;
+
     public string UseName => useName;
     [SerializeField] protected string useName;
 
@@ -10,11 +14,14 @@ public abstract class Harvestable : MonoBehaviour, IInteractable
     [SerializeField] protected float interactTime = 2f;
 
     public string InteractionType => interactionType;
+
     [SerializeField] private string interactionType = "harvest the ";
 
-    [SerializeField] protected GameObject dropPrefab;
+    public bool HighLighted { set => highlightEffect.highlighted = value; }
 
-    public void Interact()
+    [SerializeField] protected LootDrop lootDrop;
+
+    public virtual void Interact()
     {
         VirtualController.Instance.InteractHoldActionPerformed += EndHarvest;
         VirtualController.Instance.InteractHoldActionCanceled += CancelHarvest;

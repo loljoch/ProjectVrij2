@@ -227,3 +227,11 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Cancel Item Options
       m_Flags: 0
+    - m_Name: 
+      m_Id: fecd267f-9e76-4d93-ad04-c91a58c351fc
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Cancel Item Options
+      m_Flags: 0

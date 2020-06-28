@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using EasyAttributes;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,12 +7,14 @@ public class PlayerCombat : BaseCombat
 {
 	public static System.Action<WeaponItem> EquipWeaponEvent;
 	public static System.Action<int> HealingPlayerEvent;
+	public static System.Action<int> OnChangeHpPlayerEvent;
 
 	[Header("Player Settings: ")]
 	[SerializeField] private Animator anim;
 	[SerializeField] private List<Image> heartSprites = new List<Image>();
 	[SerializeField] private Sprite fullHeart = null;
-	[SerializeField] private Sprite brokenHeart = null;
+	[SerializeField] private Sprite halfHeart = null;
+	[SerializeField] private Sprite emptyHeart = null;
 
 	[Header("Equipment settings: ")]
 	public WeaponItem weaponItem;
@@ -23,9 +26,17 @@ public class PlayerCombat : BaseCombat
 
 	protected override void Awake()
 	{
+		OnChangeHpPlayerEvent += x => ChangeSpriteBasedOnLives();
 		VirtualController.Instance.AttackActionPerformed += () => TryAttack();
 		EquipWeaponEvent += Equip;
 		base.Awake();
+		ChangeSpriteBasedOnLives();
+	}
+
+	[Button]
+	private void FooTakeDamage()
+	{
+		base.TakeDamage(1);
 	}
 
 	private void Start()
@@ -35,38 +46,38 @@ public class PlayerCombat : BaseCombat
 
 	private void ChangeSpriteBasedOnLives()
 	{
-		for (int i = 0; i < heartSprites.Count; i++)
+		int fullHearts = currentHealth / 2;
+		int halfHearts = currentHealth % 2;
+
+		int index = 0;
+
+		for (int i = 0; i < fullHearts; i++)
 		{
-			if (i < currentHealth)
-			{
-				heartSprites[i].sprite = fullHeart;
-			}
-			else
-			{
-				heartSprites[i].sprite = brokenHeart;
-			}
+			heartSprites[i].sprite = fullHeart;
+			index++;
+		}
 
-			if (i < currentHealth)
-			{
-				heartSprites[i].enabled = true;
-			}
+		if (halfHearts == 1)
+		{
+			heartSprites[index].sprite = halfHeart;
+			index++;
+		}
 
-			//Als je de sprites wilt disabelen.
-			/* 
-			else
-			{
-				heartSprites[i].enabled = false;
-			}
-			*/
+		for (int i = index; i < heartSprites.Count; i++)
+		{
+			heartSprites[i].sprite = emptyHeart;
 		}
 	}
 
 	private void OnDestroy()
 	{
+		OnChangeHpPlayerEvent -= x => ChangeSpriteBasedOnLives();
 		EquipWeaponEvent -= Equip;
 	}
 
-	public void Equip(WeaponItem weapon)
+    #region EquipmentFunctions
+	[EasyAttributes.Button]
+    public void Equip(WeaponItem weapon)
 	{
 		weaponItem = weapon;
 
@@ -80,18 +91,29 @@ public class PlayerCombat : BaseCombat
 		this.weapon.PlayerAnim = anim;
 	}
 
-	protected override void Attack()
+    #endregion
+
+
+    #region CombatFunctions
+    protected override void Attack()
 	{
 		weapon.DoAttackAnimation();
 	}
 
-	#region HealthFunctions
-	protected override void ChangeHealth(int _amount)
+	public void WeaponAttack()
 	{
+		weapon.Attack();
+	}
+    #endregion
+
+    #region HealthFunctions
+    protected override void ChangeHealth(int _amount)
+	{
+		Debug.Log("Changed health");
 		if (_amount == 0) return;
 
 		base.ChangeHealth(_amount);
-		ChangeSpriteBasedOnLives();
+		OnChangeHpPlayerEvent?.Invoke(_amount);
 	}
 
 	protected override void OnDeath()

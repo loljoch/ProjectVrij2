@@ -1,22 +1,25 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using Extensions.Generics.Singleton;
+using TMPro;
 
 public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
 {
-    [SerializeField] private Button dropItemButton;
     [SerializeField] private Button consumeButton;
     [SerializeField] private Button equipButton;
+    [SerializeField] private TextMeshProUGUI equipButtonText;
     [SerializeField] private Button cancelButton;
 
+    [SerializeField] private PlayerCombat playerCombat;
+    [SerializeField] private WeaponItem unarmed;
     private int cItemID = -1;
+
 
     protected override void Awake()
     {
         consumeButton.onClick.AddListener(EatItem);
         equipButton.onClick.AddListener(Equip);
 
-        dropItemButton.onClick.AddListener(Hide);
         consumeButton.onClick.AddListener(Hide);
         equipButton.onClick.AddListener(Hide);
         cancelButton.onClick.AddListener(Hide);
@@ -37,15 +40,14 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
         PlayerCombat.EquipWeaponEvent?.Invoke(weapon);
     }
 
+    public void UnEquip()
+    {
+        PlayerCombat.EquipWeaponEvent?.Invoke(unarmed);
+    }
+
     public void Show(int itemId, Vector3 pos)
     {
         UIManager.Instance.inventory.SetLastSelected();
-        if (cItemID == itemId)
-        {
-            gameObject.SetActive(true);
-            dropItemButton.Select();
-            return;
-        }
 
         cItemID = itemId;
         transform.position = pos;
@@ -55,6 +57,9 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
         equipButton.gameObject.SetActive(false);
 
         UseCases itemUseCases = ItemInformation.itemsById[itemId].useCases;
+
+        //button to select
+        Button selectMe = null;
 
         //Processes all possible usecases
         var useCaseValues = System.Enum.GetValues(typeof(UseCases));
@@ -67,12 +72,27 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
                 {
                     case UseCases.Consumable:
                         consumeButton.gameObject.SetActive(true);
-                        SetNavigation(dropItemButton, consumeButton, cancelButton);
+                        SetNavigation(consumeButton, consumeButton, cancelButton);
+                        selectMe = consumeButton;
                         exitLoop = true;
                         break;
                     case UseCases.Weapon:
                         equipButton.gameObject.SetActive(true);
-                        SetNavigation(dropItemButton, equipButton, cancelButton);
+                        if(playerCombat.weaponItem.id == itemId)
+                        {
+                            equipButton.onClick.RemoveListener(Equip);
+                            equipButton.onClick.AddListener(UnEquip);
+
+                            equipButtonText.text = "Unequip";
+                        } else
+                        {
+                            equipButton.onClick.RemoveListener(UnEquip);
+                            equipButton.onClick.AddListener(Equip);
+
+                            equipButtonText.text = "Equip";
+                        }
+                        SetNavigation(equipButton, equipButton, cancelButton);
+                        selectMe = equipButton;
                         exitLoop = true;
                         break;
                     default:
@@ -84,10 +104,14 @@ public class ItemOptionMenu : GenericSingleton<ItemOptionMenu, ItemOptionMenu>
         }
 
         //If loop was not broken it means no buttons were added
-        if (!exitLoop) SetNavigation(dropItemButton, cancelButton);
+        if (!exitLoop)
+        {
+            SetNavigation(cancelButton, cancelButton);
+            selectMe = cancelButton;
+        }
 
         gameObject.SetActive(true);
-        dropItemButton.Select();
+        selectMe.Select();
     }
 
     public void Hide()
