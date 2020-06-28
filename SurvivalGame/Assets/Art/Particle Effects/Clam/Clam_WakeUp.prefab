@@ -4663,7 +4663,7 @@ GameObject:
   - component: {fileID: 7750624913622882233}
   - component: {fileID: 7750624913622889957}
   m_Layer: 0
-  m_Name: Clam_WakeUp 1
+  m_Name: Clam_WakeUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4678,7 +4678,7 @@ Transform:
   m_GameObject: {fileID: 7750624913608076797}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.55899, y: 0, z: 0.0000022248}
-  m_LocalScale: {x: 21.70372, y: 21.70372, z: 21.70372}
+  m_LocalScale: {x: 13.763329, y: 13.763329, z: 13.763329}
   m_Children:
   - {fileID: 3054743424387975960}
   - {fileID: 8579091946038792934}
@@ -4697,9 +4697,9 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7750624913608076797}
   serializedVersion: 6
-  lengthInSec: 1
+  lengthInSec: 3
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 1
   cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5199f6cd7de0ba42a89e64d84f349b4, type: 3}
+  m_Name: Clam_LootTable
+  m_EditorClassIdentifier: 
+  chanceDrops:
+  - itemID: 17
+    itemPrefab: {fileID: 7154099130654226256, guid: eae5d91b54a6e5c43bca061ce102fdc1,
+      type: 3}
+    dropChance: 50
+    dropAmount: 1
+  guaranteedDrops:
+  - itemID: 25
+    itemPrefab: {fileID: 4208935629761943703, guid: 84a5b4adadf0d3d438922e580355b1d2,
+      type: 3}
+    dropAmount: 2

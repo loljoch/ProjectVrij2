@@ -18,6 +18,19 @@ public class Shield : MeleeWeapon
         if(damage < 0)
         {
             PlayerCombat.HealingPlayerEvent?.Invoke(Mathf.Abs(damage));
+            StunEnemy();
+        }
+    }
+
+    private void StunEnemy()
+    {
+        if (CheckForHits(out Collider[] hits))
+        {
+            for (int i = 0; i < hits.Length; i++)
+            {
+                hits[i].GetComponent<IDamagable>().Stun(1.5f);
+            }
+            FMODUnity.RuntimeManager.PlayOneShot(attackSFX, transform.position);
         }
     }
 }

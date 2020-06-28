@@ -24,4 +24,10 @@ public class Animations
         SpearThrow,
         Crossbow
     }
+
+    public static class Clamp
+    {
+        public static string WakeUp = "WakeUp";
+        public static string AOE = "AOEAttack";
+    }
 }
