@@ -29,7 +29,6 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
     public virtual void DoAttackAnimation()
     {
         playerAnim.Play(weaponAnimationName);
-        Debug.Log("I did attack animation");
     }
 
     protected bool CheckForHits(out Collider[] hits)

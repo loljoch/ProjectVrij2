@@ -18984,7 +18984,7 @@ GameObject:
   - component: {fileID: 10880154}
   - component: {fileID: 11450948}
   m_Layer: 0
-  m_Name: Lightning Explosion
+  m_Name: Eel_TailWhip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19019,7 +19019,7 @@ ParticleSystem:
   serializedVersion: 6
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 1
   cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}

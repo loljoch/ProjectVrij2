@@ -22,10 +22,6 @@ public class ClampEnemy : BaseEnemy, IInteractable
 	protected override bool IsStunned { get => base.IsStunned; 
 		set 
 		{ 
-			if(value == false)
-			{
-				Debug.Log("Stun is over");
-			}
 			base.IsStunned = value;
 			StopAttacking();
 		} 
