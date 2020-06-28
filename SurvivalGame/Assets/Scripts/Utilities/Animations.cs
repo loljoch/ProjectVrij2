@@ -1,5 +1,4 @@
 ﻿//Common animation names
-
 using System;
 
 public class Animations
@@ -9,9 +8,6 @@ public class Animations
     public static string Attack = "Attack";
     public static string TakeDamage = "TakeDamage";
     public static string Death = "Death";
-<<<<<<< HEAD
-}
-=======
 
     public static string GetWeaponAnimation(WeaponAnimation animation)
     {
@@ -29,4 +25,3 @@ public class Animations
         Crossbow
     }
 }
->>>>>>> WouterBranch

@@ -9,6 +9,14 @@ public class PlayerCombat : BaseCombat
 	public static System.Action<int> HealingPlayerEvent;
 	public static System.Action<int> OnChangeHpPlayerEvent;
 
+	[Header("Audio settings: ")]
+	[FMODUnity.EventRef]
+	[SerializeField] private string attackGruntSound;
+	[FMODUnity.EventRef]
+	[SerializeField] private string healSound;
+	[FMODUnity.EventRef]
+	[SerializeField] private string onhitSound;
+
 	[Header("Player Settings: ")]
 	[SerializeField] private Animator anim;
 	[SerializeField] private List<Image> heartSprites = new List<Image>();
@@ -97,6 +105,7 @@ public class PlayerCombat : BaseCombat
     #region CombatFunctions
     protected override void Attack()
 	{
+		FMODUnity.RuntimeManager.PlayOneShot(attackGruntSound, transform.position);
 		weapon.DoAttackAnimation();
 	}
 
@@ -109,10 +118,11 @@ public class PlayerCombat : BaseCombat
     #region HealthFunctions
     protected override void ChangeHealth(int _amount)
 	{
-		Debug.Log("Changed health");
 		if (_amount == 0) return;
 
 		base.ChangeHealth(_amount);
+		FMODUnity.RuntimeManager.PlayOneShot((_amount < 0) ? attackGruntSound : healSound, transform.position);
+		
 		OnChangeHpPlayerEvent?.Invoke(_amount);
 	}
 
