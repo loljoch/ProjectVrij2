@@ -7,6 +7,6 @@ public class LayerMasks
 {
 	public static LayerMask Player => LayerMask.GetMask("Player");
 	public static LayerMask ItemDrop => LayerMask.GetMask("ItemDrop");
-	public static LayerMask Interactable => LayerMask.GetMask("Interactable") | LayerMask.GetMask("InteractableWalkthrough");
+	public static LayerMask Interactable => LayerMask.GetMask("Interactable", "InteractableWalkthrough");
 	public static LayerMask Enemy => LayerMask.GetMask("Enemy");
 }

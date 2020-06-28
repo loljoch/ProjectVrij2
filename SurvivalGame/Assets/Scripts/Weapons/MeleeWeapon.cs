@@ -27,7 +27,6 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
 
     public virtual void DoAttackAnimation()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(attackSFX, transform.position);
         playerAnim.Play(weaponAnimationName);
     }
 
@@ -45,6 +44,7 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
             {
                 hits[i].GetComponent<IDamagable>().TakeDamage(damage);
             }
+            FMODUnity.RuntimeManager.PlayOneShot(attackSFX, transform.position);
         }
     }
 
