@@ -66,8 +66,8 @@ MonoBehaviour:
   parentBoidsController: {fileID: 0}
   boidType: 1
   moveSpeed: 2
-  rotationPercentage: 0.06
-  separationProximity: 8
+  rotationPercentage: 0.1
+  separationProximity: 1
   neighbourDetectRadius: 100
 --- !u!1001 &7610653380137992382
 PrefabInstance:
