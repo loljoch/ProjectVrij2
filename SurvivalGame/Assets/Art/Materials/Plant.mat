@@ -87,7 +87,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularFalloff: 0.003
     - _SpecularHighlights: 1
-    - _SpecularSize: 0.045
+    - _SpecularSize: 0.038
     - _SrcBlend: 1
     - _StepAmount: 1
     - _StepWidth: 0.25
