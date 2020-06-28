@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/PimScenes/MainMenu.unity
+    guid: e5424f1c355642a4883272a92b4c9f6f
+  - enabled: 1
     path: Assets/Scenes/PimScenes/TestScene.unity
     guid: 7d44522683a68bf4293dcfc4b18b5a4b
   - enabled: 1
