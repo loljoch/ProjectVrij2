@@ -1441,6 +1441,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   baseAttackFrom: {fileID: 581154955849844772}
+  attackGruntSound: event:/SFX/Player/Player_weapons
+  healSound: event:/SFX/Trades/Item_gather_parel
+  onhitSound: event:/SFX/Player/Player_hit
   anim: {fileID: 7998035272797023683}
   heartSprites:
   - {fileID: 0}
@@ -1508,7 +1511,7 @@ MonoBehaviour:
   ignoreObjectVisibility: 0
   reflectionProbes: 0
   depthClip: 0
-  ignore: 0
+  ignore: 1
   _highlighted: 0
   fadeInDuration: 0
   fadeOutDuration: 0
@@ -1570,7 +1573,7 @@ MonoBehaviour:
   seeThrough: 1
   seeThroughOccluderMask:
     serializedVersion: 2
-    m_Bits: 8193
+    m_Bits: 4294967295
   seeThroughOccluderThreshold: 0.1
   seeThroughOccluderCheckInterval: 0.5
   seeThroughIntensity: 0.8

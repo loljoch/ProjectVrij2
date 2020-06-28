@@ -32,8 +32,8 @@ public class RangedWeapon : MonoBehaviour, IWeapon
         {
             if (!UIManager.Instance.inventory.Contains(ammo.id)) return;
             UIManager.Instance.inventory.RemoveItem(ammo.id, 1);
+            playerAnim.Play(weaponAnimationName);
         }
-        playerAnim.Play(weaponAnimationName);
     }
 
     public virtual void Attack()

@@ -1,5 +1,4 @@
 ﻿//Common animation names
-
 using System;
 
 public class Animations
