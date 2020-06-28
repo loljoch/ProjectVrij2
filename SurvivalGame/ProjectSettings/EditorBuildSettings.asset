@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/PimScenes/TestScene.unity
     guid: 7d44522683a68bf4293dcfc4b18b5a4b
   - enabled: 1
-    path: Assets/Scenes/WouterScenes/Wouter_Interior.unity
-    guid: 589c4173645247c46abc52dc8653ae3b
+    path: Assets/Scenes/PimScenes/InteriorScene.unity
+    guid: 786b8bc08a72e704b8872e0938c6cbeb
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e5d72397579e16844b398acc739a8c2a,
       type: 2}
