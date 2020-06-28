@@ -1675,6 +1675,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Clam_V2
       objectReference: {fileID: 0}
+    - target: {fileID: 5076786315597135909, guid: 570bb3cd3f19bb74f806bace63434ed3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8083688211511882294, guid: 570bb3cd3f19bb74f806bace63434ed3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1729,11 +1734,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172668827785324, guid: 570bb3cd3f19bb74f806bace63434ed3,
-        type: 3}
-      propertyPath: baseAttackRange
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570bb3cd3f19bb74f806bace63434ed3, type: 3}
@@ -1803,11 +1803,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PufferFishEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4320741222604878579, guid: 1e81f6b6b9dc29740bb0bf14ffbb8ff5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e81f6b6b9dc29740bb0bf14ffbb8ff5, type: 3}

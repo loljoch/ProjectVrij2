@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 4
-  baseAttackRange: 20
+  baseAttackRange: 30
   baseAttackInterval: 1
   baseDamage: 1
   hitMask:

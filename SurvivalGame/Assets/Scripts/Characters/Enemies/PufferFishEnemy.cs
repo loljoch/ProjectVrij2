@@ -1,4 +1,4 @@
-﻿public class PufferFishEnemy : BaseEnemy
+﻿public class PufferFishEnemy : BaseEnemyBehaviour
 {
 	protected override void Awake()
 	{
@@ -14,6 +14,31 @@
 		anim.SetTrigger(Animations.Idle);
 	}
 
+	private void Update()
+	{
+		float _distance = DistanceToPlayer;
+
+		if (_distance > spotRange)
+		{
+			anim.SetTrigger("Spikes");
+			LookAtPlayer();
+		}
+
+		if (_distance < movingToPlayerRange)
+		{
+			MoveTowardsPlayer();
+			return;
+		}
+
+		if(_distance < baseAttackRange)
+		{
+			Destroy(this);
+		}
+	}
+}
+
+
+	/*
 	private void Update()
 	{
 		if (isAttacking) return;
@@ -46,4 +71,4 @@
 			MoveTowardsPlayer();
 		}
 	}
-}
+	*/

@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 4320741222604878591}
   - component: {fileID: 4320741222604878589}
   m_Layer: 0
-  m_Name: PufferFishEnemy
+  m_Name: PufferfishEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d177571ef7ba2c547bb1a3dbb651b705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 10
   smoothDampRotation: 0.15
 --- !u!114 &4320741222604878589
 MonoBehaviour:
@@ -219,16 +219,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1c2a70d7d558b469883c77d986277e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
-  baseAttackRange: 4
-  baseAttackInterval: 0
+  maxHealth: 1
+  baseAttackRange: 10
+  baseAttackInterval: 1
   baseDamage: 1
   hitMask:
     serializedVersion: 2
     m_Bits: 512
   baseAttackFrom: {fileID: 0}
-  spotRange: 50
-  movingToPlayerRange: 40
+  spotRange: 30
+  movingToPlayerRange: 20
   player: {fileID: 0}
 --- !u!1 &4433034634276479587
 GameObject:
