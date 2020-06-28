@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1932694523552810327}
   - component: {fileID: 6048673776005793857}
   m_Layer: 8
-  m_Name: Item_Zwerfhout
+  m_Name: Item_Driftwood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 5
+  itemDropSFX: event:/SFX/Trades/Item_drop
 --- !u!54 &6048673776005793857
 Rigidbody:
   m_ObjectHideFlags: 0

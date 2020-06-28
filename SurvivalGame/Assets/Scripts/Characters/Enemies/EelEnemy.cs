@@ -31,6 +31,15 @@ public class EelEnemy : BaseEnemy
 	[SerializeField] private float AOEAttackRange;
 	[SerializeField] private int AOEAttackDamage;
 
+	[Header("Sounds settings: ")]
+	[FMODUnity.EventRef]
+	[SerializeField] private string tailwhipSFX;
+	[FMODUnity.EventRef]
+	[SerializeField] private string aoeattackSFX;
+	[FMODUnity.EventRef]
+	[SerializeField] private string deathSFX;
+
+
 	protected override void Awake()
 	{
 		base.Awake();
@@ -58,10 +67,12 @@ public class EelEnemy : BaseEnemy
 		int rAttack = Random.Range(0, 2);
 		if (rAttack > 0)
 		{
+			FMODUnity.RuntimeManager.PlayOneShot(tailwhipSFX, transform.position);
 			anim.SetBool(Animations.Attack, true);
 			isAttacking = true;
 		} else
 		{
+			FMODUnity.RuntimeManager.PlayOneShot(aoeattackSFX, transform.position);
 			anim.SetBool(Animations.Clamp.AOE, true);
 			isAttacking = true;
 		}
@@ -95,6 +106,12 @@ public class EelEnemy : BaseEnemy
 	{
 		isDead = true;
 		anim.SetTrigger(Animations.Death);
+	}
+
+	public override void Die()
+	{
+		FMODUnity.RuntimeManager.PlayOneShot(deathSFX, transform.position);
+		base.Die();
 	}
 
 

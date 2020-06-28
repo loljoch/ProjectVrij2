@@ -15,6 +15,14 @@ public class ItemDrop : MonoBehaviour, IItemDrop
     private bool pickedUp = false;
     private float currentTime = 0;
 
+    [FMODUnity.EventRef]
+    [SerializeField] private string itemDropSFX;
+
+    private void Awake()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(itemDropSFX, transform.position);
+    }
+
     private void Update()
     {
         currentTime += Time.deltaTime;

@@ -797,6 +797,9 @@ MonoBehaviour:
   useName: Clam
   interactTime: 0
   interactionType: 'open the '
+  attackSFX: event:/SFX/Enemies/Clam/Clam_meleeattack
+  aoeattackSFX: event:/SFX/Enemies/Clam/Clam_aOE_shockwave
+  deathSFX: event:/SFX/Enemies/Clam/Clam_death
 --- !u!135 &8296172668827785327
 SphereCollider:
   m_ObjectHideFlags: 0

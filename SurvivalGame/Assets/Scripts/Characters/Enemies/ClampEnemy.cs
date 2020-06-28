@@ -48,6 +48,15 @@ public class ClampEnemy : BaseEnemy, IInteractable
 
 	public bool HighLighted { set => highlightEffect.highlighted = value; }
 
+	[Header("Sounds settings: ")]
+	[FMODUnity.EventRef]
+	[SerializeField] private string attackSFX;
+	[FMODUnity.EventRef]
+	[SerializeField] private string aoeattackSFX;
+	[FMODUnity.EventRef]
+	[SerializeField] private string deathSFX;
+
+
 	protected override void Awake()
 	{
 		base.Awake();
@@ -78,10 +87,12 @@ public class ClampEnemy : BaseEnemy, IInteractable
 		yield return new WaitForSeconds(0.1f);
 		if (canMelee)
 		{
+			FMODUnity.RuntimeManager.PlayOneShot(attackSFX, transform.position);
 			anim.SetBool(Animations.Attack, true);
 			isAttacking = true;
 		} else if(canAOE)
 		{
+			FMODUnity.RuntimeManager.PlayOneShot(aoeattackSFX, transform.position);
 			anim.SetBool(Animations.Clamp.AOE, true);
 			isAttacking = true;
 		}
@@ -152,6 +163,12 @@ public class ClampEnemy : BaseEnemy, IInteractable
 	{
 		anim.SetBool("WakeUp", true);
 		gameObject.layer = LayerMask.NameToLayer("Default");
+	}
+
+	public override void Die()
+	{
+		FMODUnity.RuntimeManager.PlayOneShot(deathSFX, transform.position);
+		base.Die();
 	}
 
 	protected override void OnDrawGizmosSelected()

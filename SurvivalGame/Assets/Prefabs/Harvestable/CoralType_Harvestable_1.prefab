@@ -112,6 +112,7 @@ MonoBehaviour:
   interactTime: 2
   interactionType: 'harvest the '
   lootDrop: {fileID: 11400000, guid: c1131b82e571b894ab532c9f682daceb, type: 2}
+  finishHarvestSFX: event:/SFX/Trades/Item_gather_koraal
 --- !u!114 &5903437617591445213
 MonoBehaviour:
   m_ObjectHideFlags: 0

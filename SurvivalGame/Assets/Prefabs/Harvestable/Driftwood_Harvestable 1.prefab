@@ -101,6 +101,7 @@ MonoBehaviour:
   interactTime: 0
   interactionType: 'pick up the '
   lootDrop: {fileID: 11400000, guid: 0dd86949e3dc78145a596c71a25ab0d1, type: 2}
+  endHarvestSFX: event:/SFX/Trades/Item_gather_hout
 --- !u!114 &6482115343221070518
 MonoBehaviour:
   m_ObjectHideFlags: 0

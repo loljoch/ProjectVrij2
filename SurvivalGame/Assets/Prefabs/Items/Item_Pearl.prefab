@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 17
+  itemDropSFX: event:/SFX/Trades/Item_gather_parel
 --- !u!54 &650546084611849662
 Rigidbody:
   m_ObjectHideFlags: 0

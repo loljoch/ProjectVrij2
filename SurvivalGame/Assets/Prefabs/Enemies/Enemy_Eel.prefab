@@ -1787,7 +1787,7 @@ MonoBehaviour:
   rend:
   - {fileID: 4906497213924513579}
   - {fileID: 6482494226651770023}
-  loot: {fileID: 0}
+  loot: {fileID: 11400000, guid: 96cc0b42d3780cb4c99f51f5666a57ac, type: 2}
   eelAnim: {fileID: 928646528622459992}
   meleeAttackPosition: {fileID: 8949944995909962380}
   meleeAttackRange: 6.9
@@ -1795,6 +1795,9 @@ MonoBehaviour:
   AOEAttackPosition: {fileID: 8949944995887431027}
   AOEAttackRange: 7
   AOEAttackDamage: 2
+  tailwhipSFX: event:/SFX/Enemies/Aal/Aal_tailwhip
+  aoeattackSFX: event:/SFX/Enemies/Aal/Aal_AOE_charge
+  deathSFX: event:/SFX/Enemies/Aal/Aal_death
 --- !u!114 &8949944997164199902
 MonoBehaviour:
   m_ObjectHideFlags: 0

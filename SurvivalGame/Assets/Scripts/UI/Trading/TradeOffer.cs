@@ -37,6 +37,7 @@ public class TradeOffer : Selectable, ISubmitHandler, IPointerClickHandler, IEve
         }
 
         UIManager.Instance.inventory.AddItem(offer.item.id);
+        detailedTrade.SetOffer(offer, transform.position);
         
     }
 

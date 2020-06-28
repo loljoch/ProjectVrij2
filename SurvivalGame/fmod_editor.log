@@ -9,7 +9,7 @@
 [LOG] DownMix::init                            : done.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001E06ECAD878 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000020F5C77BE88 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -24,19 +24,19 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 719776
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 79808
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000088260AF5DC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FD0AAFF37C
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB0A5BC330
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB0A5BC300
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB0A5BC400
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB0A5BC4C0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E13ED12758
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFAE874C330
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFAE874C300
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFAE874C400
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFAE874C4C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000020F377BFC68
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Clam_awaken', format=2, channels=2, frequency=48000, lengthbytes=9440, lengthpcm=62423, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.377589.
-[LOG] SoundI::release                          :  (000001E13EA829E8)
-[LOG] SoundI::release                          :     SFX - Audio - Clam_awaken (000001E04CE55728)
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Aal_AOE_charge', format=2, channels=2, frequency=48000, lengthbytes=46560, lengthpcm=224282, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.831153.
+[LOG] SoundI::release                          :  (0000020F38CDB188)
+[LOG] SoundI::release                          :     SFX - Audio - Aal_AOE_charge (0000020F3A2817B8)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
@@ -45,19 +45,19 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 719776
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 79808
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000088260AF5DC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FD0AAFF37C
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB0A5BC330
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB0A5BC300
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB0A5BC400
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB0A5BC4C0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E0496E8B58
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFAE874C330
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFAE874C300
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFAE874C400
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFAE874C4C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000020F377C06B8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Clam_awaken', format=2, channels=2, frequency=48000, lengthbytes=9440, lengthpcm=62423, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.377589.
-[LOG] SoundI::release                          :  (000001E09AE51918)
-[LOG] SoundI::release                          :     SFX - Audio - Clam_awaken (000001E04CE565C8)
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Aal_dash_attack', format=2, channels=2, frequency=48000, lengthbytes=6368, lengthpcm=62423, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.362924.
+[LOG] SoundI::release                          :  (0000020F38CDB018)
+[LOG] SoundI::release                          :     SFX - Audio - Aal_dash_attack (0000020F3A2805D8)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
@@ -66,19 +66,19 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 719776
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 79808
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000088260AF5DC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FD0AAFF37C
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB0A5BC330
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB0A5BC300
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB0A5BC400
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB0A5BC4C0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E13ED12B78
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFAE874C330
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFAE874C300
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFAE874C400
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFAE874C4C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000020F377C04A8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Clam_awaken', format=2, channels=2, frequency=48000, lengthbytes=9440, lengthpcm=62423, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.377589.
-[LOG] SoundI::release                          :  (000001E13EA82598)
-[LOG] SoundI::release                          :     SFX - Audio - Clam_awaken (000001E04CE53848)
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Aal_death', format=2, channels=2, frequency=48000, lengthbytes=11264, lengthpcm=139996, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.323442.
+[LOG] SoundI::release                          :  (0000020F38CDB188)
+[LOG] SoundI::release                          :     SFX - Audio - Aal_death (0000020F3A2817B8)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
@@ -87,19 +87,19 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 719776
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 79808
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000088260AF5DC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FD0AAFF37C
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB0A5BC330
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB0A5BC300
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB0A5BC400
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB0A5BC4C0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E13E463368
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFAE874C330
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFAE874C300
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFAE874C400
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFAE874C4C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000020F377C04A8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Clam_awaken', format=2, channels=2, frequency=48000, lengthbytes=9440, lengthpcm=62423, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.377589.
-[LOG] SoundI::release                          :  (000001E13E50A2E8)
-[LOG] SoundI::release                          :     SFX - Audio - Clam_awaken (000001E04CE55728)
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Aal_stunned', format=2, channels=2, frequency=48000, lengthbytes=7584, lengthpcm=139996, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.255985.
+[LOG] SoundI::release                          :  (0000020F38CDAEA8)
+[LOG] SoundI::release                          :     SFX - Audio - Aal_stunned (0000020F3A2817B8)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
@@ -108,19 +108,109 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 719776
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 79808
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000088260AF5DC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FD0AAFF37C
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB0A5BC330
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB0A5BC300
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB0A5BC400
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB0A5BC4C0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E0AE63EFF8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFAE874C330
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFAE874C300
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFAE874C400
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFAE874C4C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000020F377BFE78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Clam_death', format=2, channels=2, frequency=48000, lengthbytes=12512, lengthpcm=139996, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.345107.
-[LOG] SoundI::release                          :  (000001DE274D50C8)
-[LOG] SoundI::release                          :     SFX - Audio - Clam_death (000001E04CE565C8)
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Aal_swimcycle_3', format=2, channels=2, frequency=48000, lengthbytes=2528, lengthpcm=62423, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058753.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 719776
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 79808
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FD0AAFF37C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFAE874C330
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFAE874C300
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFAE874C400
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFAE874C4C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000020F377BFE78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Aal_idle_1', format=2, channels=2, frequency=48000, lengthbytes=10400, lengthpcm=139996, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.038185.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 719776
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 79808
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FD0AAFF37C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFAE874C330
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFAE874C300
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFAE874C400
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFAE874C4C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000020F377BFE78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Aal_idle_3', format=2, channels=2, frequency=48000, lengthbytes=2752, lengthpcm=62423, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.035816.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 719776
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 79808
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FD0AAFF37C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFAE874C330
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFAE874C300
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFAE874C400
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFAE874C4C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000020F377BFE78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Aal_swimcycle_1', format=2, channels=2, frequency=48000, lengthbytes=2240, lengthpcm=62423, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.061064.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 719776
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 79808
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FD0AAFF37C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFAE874C330
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFAE874C300
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFAE874C400
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFAE874C4C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000020F377BFE78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Aal_swimcycle_2', format=2, channels=2, frequency=48000, lengthbytes=2368, lengthpcm=62423, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.064964.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 719776
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 79808
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FD0AAFF37C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFAE874C330
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFAE874C300
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFAE874C400
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFAE874C4C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000020F377BFE78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Aal_idle_2', format=2, channels=2, frequency=48000, lengthbytes=3424, lengthpcm=62423, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.035637.
+[LOG] SoundI::release                          :  (0000020F38CDAEA8)
+[LOG] SoundI::release                          :     SFX - Audio - Aal_idle_1 (0000020F3A2805D8)
+[LOG] SoundI::release                          :  (0000020F38CDA8E8)
+[LOG] SoundI::release                          :     SFX - Audio - Aal_idle_2 (0000020F3A281958)
+[LOG] SoundI::release                          :  (0000020F38CDB2F8)
+[LOG] SoundI::release                          :     SFX - Audio - Aal_idle_3 (0000020F3A280AB8)
+[LOG] SoundI::release                          :  (0000020F38CDB188)
+[LOG] SoundI::release                          :     SFX - Audio - Aal_swimcycle_1 (0000020F3A280C58)
+[LOG] SoundI::release                          :  (0000020F38CDAA58)
+[LOG] SoundI::release                          :     SFX - Audio - Aal_swimcycle_2 (0000020F3A280918)
+[LOG] SoundI::release                          :  (0000020F38CDB018)
+[LOG] SoundI::release                          :     SFX - Audio - Aal_swimcycle_3 (0000020F3A2817B8)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
@@ -129,19 +219,19 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 719776
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 79808
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000088260AF5DC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FD0AAFF37C
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB0A5BC330
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB0A5BC300
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB0A5BC400
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB0A5BC4C0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E0AE63EFF8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFAE874C330
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFAE874C300
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFAE874C400
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFAE874C4C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000020F377C08C8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Clam_asleep', format=2, channels=2, frequency=48000, lengthbytes=5632, lengthpcm=62423, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.236974.
-[LOG] SoundI::release                          :  (000001DE274D50C8)
-[LOG] SoundI::release                          :     SFX - Audio - Clam_asleep (000001E04CE55728)
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='SFX - Audio - Aal_tail_whip', format=2, channels=2, frequency=48000, lengthbytes=17088, lengthpcm=139996, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.427947.
+[LOG] SoundI::release                          :  (0000020F38CDAEA8)
+[LOG] SoundI::release                          :     SFX - Audio - Aal_tail_whip (0000020F3A2805D8)
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 

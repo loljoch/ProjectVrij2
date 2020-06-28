@@ -257,6 +257,7 @@ MonoBehaviour:
   interactTime: 2
   interactionType: 'pluck '
   lootDrop: {fileID: 11400000, guid: 70b7e2b893b64474abfdfa9e9adb656b, type: 2}
+  finishHarvestSFX: event:/SFX/Trades/Item_gather_mango
 --- !u!114 &3195099946545177353
 MonoBehaviour:
   m_ObjectHideFlags: 0

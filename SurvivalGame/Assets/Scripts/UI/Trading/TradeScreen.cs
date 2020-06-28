@@ -8,6 +8,8 @@ public class TradeScreen : MonoBehaviour
     [SerializeField] private TradeOffer tradeOfferPrefab;
     [SerializeField] private DetailedTradeOffer detailedTradeOffer;
 
+    private Trader cTrader;
+
     private void Awake()
     {
         if (player == null)
@@ -18,6 +20,7 @@ public class TradeScreen : MonoBehaviour
 
     public void DynamicShowHide(Trader trader)
     {
+        cTrader = trader;
         if (gameObject.activeSelf)
         {
             Hide();
@@ -61,6 +64,10 @@ public class TradeScreen : MonoBehaviour
 
     private void Hide()
     {
+        if(cTrader != null)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(cTrader.goodbyeSFX, cTrader.transform.position);
+        }
         VirtualController.Instance.CancelItemOptionsPerformed -= Hide;
         player.OnLostInteractable -= Hide;
         gameObject.SetActive(false);

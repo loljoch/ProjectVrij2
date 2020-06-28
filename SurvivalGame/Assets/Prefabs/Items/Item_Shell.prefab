@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 2
+  itemDropSFX: event:/SFX/Trades/Item_drop
 --- !u!54 &-7514565263514859946
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6193751079153460051}
   - component: {fileID: 6193751079153460048}
   m_Layer: 8
-  m_Name: ItemDrop_Spear
+  m_Name: Item_Spear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 7
+  itemDropSFX: event:/SFX/Trades/Item_drop
 --- !u!54 &6193751079153460051
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -12,16 +12,10 @@ public class Inventory : ItemStorage
     /// </summary>
     public static Action<int, int> OnObtainItem;
 
-    [Header("Foo settings: ")]
-    public int itemId = 0;
-    public int itemAmount = 1;
+    [Header("Sound settings: ")]
+    [FMODUnity.EventRef]
+    [SerializeField] private string itemPickUpSFX;
     private ItemSlot lastSelected;
-
-    [Button]
-    private void FooAddItem()
-    {
-        AddItem(itemId, itemAmount);
-    }
 
     protected override void Awake()
     {
@@ -66,6 +60,7 @@ public class Inventory : ItemStorage
         if (success)
         {
             OnObtainItem?.Invoke(itemId, quantity);
+            FMODUnity.RuntimeManager.PlayOneShot(itemPickUpSFX, transform.position);
         }
 
         return success;

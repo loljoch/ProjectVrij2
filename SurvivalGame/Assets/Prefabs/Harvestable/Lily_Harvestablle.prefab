@@ -138,6 +138,7 @@ MonoBehaviour:
   interactTime: 2
   interactionType: 'harvest the '
   lootDrop: {fileID: 11400000, guid: af190f368249ca34e97df661064b8344, type: 2}
+  finishHarvestSFX: event:/SFX/Trades/Item_gather_kelp
 --- !u!114 &3853073819571798776
 MonoBehaviour:
   m_ObjectHideFlags: 0
