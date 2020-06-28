@@ -67,7 +67,7 @@ MonoBehaviour:
   boidType: 1
   moveSpeed: 2
   rotationPercentage: 0.1
-  separationProximity: 1
+  separationProximity: 15
   neighbourDetectRadius: 100
 --- !u!1001 &7610653380137992382
 PrefabInstance:
