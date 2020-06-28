@@ -16,4 +16,4 @@ MonoBehaviour:
   name: Clam Shell
   sprite: {fileID: 21300000, guid: 12001c8dc3810d54497961e180de6cfc, type: 3}
   useCases: 0
-  maxQuantity: 3
+  maxQuantity: 69

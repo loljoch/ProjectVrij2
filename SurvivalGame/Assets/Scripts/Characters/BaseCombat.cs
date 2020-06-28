@@ -21,6 +21,8 @@ public abstract class BaseCombat : MonoBehaviour, IDamagable
     protected int currentHealth = 0;
 
     protected float nextAttack = 0;
+    protected virtual bool IsStunned { get => isStunned; set => isStunned = value; }
+    protected bool isStunned = false;
 
     protected virtual void Awake()
     {
@@ -61,6 +63,11 @@ public abstract class BaseCombat : MonoBehaviour, IDamagable
                 hits[i].GetComponent<IDamagable>().TakeDamage(Damage);
             }
         }
+    }
+
+    public virtual void Stun(float time)
+    {
+        
     }
     #endregion
 
@@ -122,4 +129,5 @@ public abstract class BaseCombat : MonoBehaviour, IDamagable
 public interface IDamagable
 {
     void TakeDamage(int _damageTaken);
+    void Stun(float time);
 }

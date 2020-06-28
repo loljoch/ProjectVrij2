@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
     //Look for interactable objects
     private void CastRay()
     {
-        var colliders = Physics.OverlapBox((transform.forward * forwardMultiplier) + boxOrigin + transform.position, boxSize, Quaternion.identity, LayerMasks.Interactable);
+        var colliders = Physics.OverlapBox((transform.forward * forwardMultiplier) + boxOrigin + transform.position, boxSize, Quaternion.identity, LayerMasks.AllInteractable);
 
         if(colliders.Length > 0)
         {
