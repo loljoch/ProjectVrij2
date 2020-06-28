@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Metal_DarkBlue
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: c33d3b5e30f695249b0037438f29b92d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -68,10 +68,17 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
+    - _SpecularFalloff: 0.003
     - _SpecularHighlights: 1
+    - _SpecularSize: 0.045
     - _SrcBlend: 1
+    - _StepAmount: 1
+    - _StepWidth: 0.25
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.0163, g: 0.058, b: 0.167, a: 1}
+    - _Emission: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ShadowTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _Specular: {r: 1, g: 1, b: 1, a: 1}
