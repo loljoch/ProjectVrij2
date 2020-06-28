@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Interior
-  m_Shader: {fileID: 4800000, guid: c33d3b5e30f695249b0037438f29b92d, type: 3}
+  m_Shader: {fileID: 4800000, guid: 8f44542c1f069f34c8082d64598b6b01, type: 3}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -81,7 +81,7 @@ Material:
     m_Colors:
     - _AmbientColor: {r: 0.60628664, g: 0.60628664, b: 0.60628664, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Emission: {r: 4, g: 2.0705884, b: 0, a: 1}
+    - _Emission: {r: 0.65205944, g: 0.33797845, b: 0, a: 1}
     - _EmissionColor: {r: 7.464265, g: 3.351909, b: 0, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
