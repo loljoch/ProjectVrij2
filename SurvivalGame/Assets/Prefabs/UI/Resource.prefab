@@ -319,8 +319,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -707,8 +707,6 @@ MonoBehaviour:
   itemSprite: {fileID: 2052748808362161406}
   itemName: {fileID: 2052748807906108040}
   tradeAmounts: {fileID: 2936071324942587316}
-  amountNeeded: {fileID: 2052748808763813602}
-  amountYouHave: {fileID: 2052748807471214713}
   canTrade: {fileID: 7444169724550430227}
 --- !u!1 &3183738584561698117
 GameObject:

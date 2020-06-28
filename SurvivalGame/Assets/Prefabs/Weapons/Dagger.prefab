@@ -95,6 +95,6 @@ MonoBehaviour:
   attackSFX: event:/SFX/Weapons/Melee/Melee_Dolk_slash
   damage: 1
   weaponAnimation: 0
-  center: {x: 3, y: 0, z: 1.4}
-  halfExtents: {x: 4.5, y: 1.6, z: 3.5}
+  center: {x: 1.5, y: 0, z: 0.7}
+  halfExtents: {x: 2.25, y: 0.8, z: 1.75}
   attackInterval: 1

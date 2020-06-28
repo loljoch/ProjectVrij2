@@ -8,6 +8,8 @@ public class PlayerMovement : BaseMovement
 	[SerializeField] private string walkingSound;
 	private FMOD.Studio.EventInstance walkingSoundEvent;
 
+	private Animator anim;
+
 
 	private Vector3 movementDirection;
 
@@ -15,7 +17,9 @@ public class PlayerMovement : BaseMovement
 	{
 		set
 		{
-			walkingSoundEvent.setParameterByName("FADE moving", (value) ? 1 : 0);
+			int v = value ? 1 : 0;
+			walkingSoundEvent.setParameterByName("FADE moving", v);
+			anim.SetInteger("IsWalking", v);
 			isMoving = value;
 		}
 	}
@@ -25,6 +29,7 @@ public class PlayerMovement : BaseMovement
 	{
 		base.Awake();
 		VirtualController.Instance.MovementActionPerformed += TranslateInput;
+		anim = GetComponent<Animator>();
 		walkingSoundEvent = FMODUnity.RuntimeManager.CreateInstance(walkingSound);
 		walkingSoundEvent.start();
 	}

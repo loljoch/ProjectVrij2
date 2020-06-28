@@ -95,6 +95,6 @@ MonoBehaviour:
   attackSFX: event:/SFX/Weapons/Melee/Melee_krab_klauwen
   damage: 3
   weaponAnimation: 2
-  center: {x: 1.5, y: 0, z: 0}
-  halfExtents: {x: 2, y: 2, z: 2}
+  center: {x: 0.75, y: 0, z: 0}
+  halfExtents: {x: 1, y: 1, z: 1}
   attackInterval: 0.3

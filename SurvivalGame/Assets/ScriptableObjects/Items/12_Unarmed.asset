@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   name: Unarmed
-  sprite: {fileID: 21300000, guid: 4fdefe7704c5d274ba99336da0ba22bb, type: 3}
+  sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   useCases: 1
   maxQuantity: 0
   weaponPrefab: {fileID: 3711892605667990058, guid: 3518652b985c55d4bb0b9037f45a1219,

@@ -46,6 +46,6 @@ MonoBehaviour:
   attackSFX: event:/SFX/Weapons/Melee/Melee_Impact_enemy
   damage: 1
   weaponAnimation: 2
-  center: {x: 1.5, y: 0, z: 0}
-  halfExtents: {x: 2, y: 2, z: 2}
+  center: {x: 0.7, y: 0, z: 0}
+  halfExtents: {x: 1, y: 1, z: 1}
   attackInterval: 0.3

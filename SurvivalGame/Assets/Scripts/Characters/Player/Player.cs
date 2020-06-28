@@ -1,5 +1,4 @@
-﻿using UnityEditorInternal;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour
 {
@@ -19,9 +18,8 @@ public class Player : MonoBehaviour
     {
         VirtualController.Instance.InteractPressActionPerformed += TryInteract;
 
-        OnFindInteractable += (obj) => currentInteractable = obj;
-
-        OnLostInteractable += () => currentInteractable = null;
+        OnFindInteractable += FoundInteractable;
+        OnLostInteractable += LostInteractable;
     }
 
     private void FixedUpdate()
@@ -71,7 +69,19 @@ public class Player : MonoBehaviour
         }
     }
 
-#if UNITY_EDITOR
+    private void FoundInteractable(IInteractable obj)
+    {
+        if (currentInteractable != null && currentInteractable != obj) LostInteractable();
+        currentInteractable = obj;
+        currentInteractable.HighLighted = true;
+    }
+
+    private void LostInteractable()
+    {
+        currentInteractable.HighLighted = false;
+        currentInteractable = null;
+    }
+
     private void OnDrawGizmosSelected()
     {
         GUIStyle style = new GUIStyle();
@@ -89,5 +99,4 @@ public class Player : MonoBehaviour
         UnityEditor.Handles.Label((transform.forward * forwardMultiplier) + boxOrigin + transform.position, "Interactable cast", style);
 
     }
-#endif
 }

@@ -116,6 +116,6 @@ MonoBehaviour:
   attackSFX: event:/SFX/Weapons/Melee/Melee_hamer_swing
   damage: 3
   weaponAnimation: 3
-  center: {x: 4, y: 0, z: 0}
-  halfExtents: {x: 3, y: 4, z: 4}
+  center: {x: 2, y: 0, z: 0}
+  halfExtents: {x: 1.5, y: 2, z: 2}
   attackInterval: 2.5

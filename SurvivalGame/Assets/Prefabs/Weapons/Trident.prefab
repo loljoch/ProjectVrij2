@@ -95,6 +95,6 @@ MonoBehaviour:
   attackSFX: event:/SFX/Weapons/Melee/Melee_Trident_stab
   damage: 5
   weaponAnimation: 1
-  center: {x: 2.6, y: 0, z: 5}
-  halfExtents: {x: 5.3, y: 2.6, z: 13.5}
+  center: {x: 1.3, y: 0, z: 2.5}
+  halfExtents: {x: 2.65, y: 1.3, z: 7.75}
   attackInterval: 2

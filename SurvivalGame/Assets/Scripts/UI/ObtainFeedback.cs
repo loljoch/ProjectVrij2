@@ -1,7 +1,4 @@
-﻿using EasyAttributes;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ObtainFeedback : MonoBehaviour
 {
