@@ -20,8 +20,8 @@ public class EnvironmentZone : MonoBehaviour
     private void Awake()
     {
         MusicSystem ms = MusicSystem.Instance;
-
-        OnEnterZone += ms.NewEnvironment;
+        if (ms == null) return;
+        //OnEnterZone += ms.NewEnvironment;
         OnEnterZone += x =>
         {
             directionalLight.color = lightColor;
