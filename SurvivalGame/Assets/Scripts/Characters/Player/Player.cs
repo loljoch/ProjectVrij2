@@ -82,21 +82,21 @@ public class Player : MonoBehaviour
         currentInteractable = null;
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        GUIStyle style = new GUIStyle();
-        style.normal.textColor = Color.yellow;
-        style.fontSize = 24;
+    //private void OnDrawGizmosSelected()
+    //{
+    //    GUIStyle style = new GUIStyle();
+    //    style.normal.textColor = Color.yellow;
+    //    style.fontSize = 24;
 
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, range);
-        UnityEditor.Handles.Label(transform.position + Vector3.up * range, "Item pick-up range", style);
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawWireSphere(transform.position, range);
+    //    UnityEditor.Handles.Label(transform.position + Vector3.up * range, "Item pick-up range", style);
 
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireCube((transform.forward * forwardMultiplier) + boxOrigin + transform.position, boxSize);
-        style.normal.textColor = Color.green;
-        style.fontSize = 16;
-        UnityEditor.Handles.Label((transform.forward * forwardMultiplier) + boxOrigin + transform.position, "Interactable cast", style);
+    //    Gizmos.color = Color.green;
+    //    Gizmos.DrawWireCube((transform.forward * forwardMultiplier) + boxOrigin + transform.position, boxSize);
+    //    style.normal.textColor = Color.green;
+    //    style.fontSize = 16;
+    //    UnityEditor.Handles.Label((transform.forward * forwardMultiplier) + boxOrigin + transform.position, "Interactable cast", style);
 
-    }
+    //}
 }

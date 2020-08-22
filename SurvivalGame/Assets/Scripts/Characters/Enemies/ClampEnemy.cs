@@ -171,34 +171,34 @@ public class ClampEnemy : BaseEnemy, IInteractable
 		base.Die();
 	}
 
-	protected override void OnDrawGizmosSelected()
-	{
-		base.OnDrawGizmosSelected();
+	//protected override void OnDrawGizmosSelected()
+	//{
+	//	base.OnDrawGizmosSelected();
 
-		GUIStyle style = new GUIStyle();
-		style.normal.textColor = Color.red;
-		style.fontSize = 18;
+	//	GUIStyle style = new GUIStyle();
+	//	style.normal.textColor = Color.red;
+	//	style.fontSize = 18;
 
-		Gizmos.color = Color.red;
-		UnityEditor.Handles.Label(meleeAttackPosition.position + Vector3.up * meleeAttackRange, "Melee attack", style);
-		Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackRange);
+	//	Gizmos.color = Color.red;
+	//	UnityEditor.Handles.Label(meleeAttackPosition.position + Vector3.up * meleeAttackRange, "Melee attack", style);
+	//	Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackRange);
 
-		UnityEditor.Handles.Label(AOEAttackPosition.position + Vector3.up * AOEAttackRange, "AOE attack", style);
-		Gizmos.DrawWireSphere(AOEAttackPosition.position, AOEAttackRange);
+	//	UnityEditor.Handles.Label(AOEAttackPosition.position + Vector3.up * AOEAttackRange, "AOE attack", style);
+	//	Gizmos.DrawWireSphere(AOEAttackPosition.position, AOEAttackRange);
 
-		style.fontSize = 14;
-		style.normal.textColor = Color.blue;
-		Gizmos.color = Color.blue;
+	//	style.fontSize = 14;
+	//	style.normal.textColor = Color.blue;
+	//	Gizmos.color = Color.blue;
 
-		if (GetBrothren(out Collider[] hits))
-		{
-			UnityEditor.Handles.Label(transform.position + Vector3.up, "Awaken lines", style);
-			for (int i = 0; i < hits.Length; i++)
-			{
-				if (!hits[i].HasComponent<ClampEnemy>()) continue;
-				Gizmos.DrawLine(transform.position + Vector3.up, hits[i].transform.position + Vector3.up);
-			}
-		}
-	}
+	//	if (GetBrothren(out Collider[] hits))
+	//	{
+	//		UnityEditor.Handles.Label(transform.position + Vector3.up, "Awaken lines", style);
+	//		for (int i = 0; i < hits.Length; i++)
+	//		{
+	//			if (!hits[i].HasComponent<ClampEnemy>()) continue;
+	//			Gizmos.DrawLine(transform.position + Vector3.up, hits[i].transform.position + Vector3.up);
+	//		}
+	//	}
+	//}
 
 }

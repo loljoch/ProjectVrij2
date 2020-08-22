@@ -1781,7 +1781,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   baseAttackFrom: {fileID: 2645442089022862558}
-  spotRange: 50
+  spotRange: 35
   movingToPlayerRange: 40
   player: {fileID: 0}
   rend:

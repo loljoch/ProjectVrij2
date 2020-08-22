@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName ="ItemInformation", menuName ="Game/ItemInformation", order =1)]
-public class ItemInformationObject : ScriptableSingleton<ItemInformationObject>
+public class ItemInformationObject : ScriptableObject
 {
     public Int_Item itemsById;
 }

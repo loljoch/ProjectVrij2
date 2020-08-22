@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 10
   name: Eel Warhammer
-  sprite: {fileID: 21300000, guid: bbed8e2d3bd756848bfe82330aef5ff2, type: 3}
+  sprite: {fileID: 21300000, guid: 61d0a81d09e83294896ba82d346a2aec, type: 3}
   useCases: 1
   maxQuantity: 1
   weaponPrefab: {fileID: 7176627942500311445, guid: 2f8993176ba64ee408511685d618e2a7,

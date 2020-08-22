@@ -48,6 +48,7 @@ public class EelEnemy : BaseEnemy
 
 	private void Update()
 	{
+		if (DistanceToPlayer > spotRange) return;
 		if (isAttacking || IsStunned || isDead) return;
 
 		LookAtPlayer();
@@ -115,20 +116,20 @@ public class EelEnemy : BaseEnemy
 	}
 
 
-	protected override void OnDrawGizmosSelected()
-	{
-		base.OnDrawGizmosSelected();
+	//protected override void OnDrawGizmosSelected()
+	//{
+	//	base.OnDrawGizmosSelected();
 
-		GUIStyle style = new GUIStyle();
-		style.normal.textColor = Color.red;
-		style.fontSize = 18;
+	//	GUIStyle style = new GUIStyle();
+	//	style.normal.textColor = Color.red;
+	//	style.fontSize = 18;
 
-		Gizmos.color = Color.red;
-		UnityEditor.Handles.Label(meleeAttackPosition.position + Vector3.up * meleeAttackRange, "Melee attack", style);
-		Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackRange);
+	//	Gizmos.color = Color.red;
+	//	UnityEditor.Handles.Label(meleeAttackPosition.position + Vector3.up * meleeAttackRange, "Melee attack", style);
+	//	Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackRange);
 
-		UnityEditor.Handles.Label(AOEAttackPosition.position + Vector3.up * AOEAttackRange, "AOE attack", style);
-		Gizmos.DrawWireSphere(AOEAttackPosition.position, AOEAttackRange);
-	}
+	//	UnityEditor.Handles.Label(AOEAttackPosition.position + Vector3.up * AOEAttackRange, "AOE attack", style);
+	//	Gizmos.DrawWireSphere(AOEAttackPosition.position, AOEAttackRange);
+	//}
 
 }
